@@ -139,10 +139,91 @@ $(function () {
       return query.test(txt);
     },
     'show': function() {
-      $(this).removeClass('hideByDestinationDropDown ');
+      $(this).removeClass('hideByDestinationDropDown');
     },
     'hide': function() {
-      $(this).addClass('hideByDestinationDropDown ');
+      $(this).addClass('hideByDestinationDropDown');
+    },
+    'onAfter': function () {
+      anythingThere();
+    }
+});
+});
+
+
+$(function () {
+  $('#SelectBox-ByFeature').quicksearch('.educationAbroadItemWrapper', {
+    'delay': 100,
+    'selector': '.Feature > ul',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
+                 'prepareQuery': function (val) {
+      return new RegExp(val, "i");
+    },
+    'testQuery': function (query, txt, _row) {
+      return query.test(txt);
+    },
+    'show': function() {
+      $(this).removeClass('hideByFeatureDropDown');
+    },
+    'hide': function() {
+      $(this).addClass('hideByFeatureDropDown');
+    },
+    'onAfter': function () {
+      anythingThere();
+    }
+});
+});
+
+
+$(function () {
+  $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
+    'delay': 100,
+    'selector': '.Institution > ul',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
+                 'prepareQuery': function (val) {
+      return new RegExp(val, "i");
+    },
+    'testQuery': function (query, txt, _row) {
+      return query.test(txt);
+    },
+    'show': function() {
+      $(this).removeClass('hideByInstitutionDropDown');
+    },
+    'hide': function() {
+      $(this).addClass('hideByInstitutionDropDown');
+    },
+    'onAfter': function () {
+      anythingThere();
+    }
+});
+});
+
+
+$(function () {
+  $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
+    'delay': 100,
+    'selector': '.ProgramFee > ul',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
+                 'prepareQuery': function (val) {
+      return new RegExp(val, "i");
+    },
+    'testQuery': function (query, txt, _row) {
+      return query.test(txt);
+    },
+    'show': function() {
+      $(this).removeClass('hideByProgramFeeDropDown');
+    },
+    'hide': function() {
+      $(this).addClass('hideByProgramFeeDropDown');
     },
     'onAfter': function () {
       anythingThere();
@@ -156,7 +237,7 @@ var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere(){
 
-visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByLanguageDropDown, .hideByTermDropDown, .hideByProviderDropDown, .hideByFieldOfStudyDropDown, .hideByDestinationDropDown');
+visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByInstitutionDropDown, .hideByProgramFeeDropDown, .hideByFeatureDropDown, .hideByLanguageDropDown, .hideByTermDropDown, .hideByProviderDropDown, .hideByFieldOfStudyDropDown, .hideByDestinationDropDown');
 
   if( visibleItems.length == 0) {
       $( ".noResultsToShow" ).show();
