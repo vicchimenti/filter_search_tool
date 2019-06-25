@@ -27,7 +27,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByProvider').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.Provider > ul',
+    'selector': '.provider > ul',
     'bind': 'change',
                 'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -50,7 +50,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByFieldOfStudy').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.FieldOfStudy > ul',
+    'selector': '.fieldOfStudy > ul',
     'bind': 'change',
                 'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -74,7 +74,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByTerm').quicksearch('div.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.Term > ul',
+    'selector': '.term > ul',
     'bind': 'change',
                 'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -103,7 +103,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByLanguage').quicksearch('div.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.Language > ul',
+    'selector': '.language > ul',
                 'bind': 'change',
                 'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -127,7 +127,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByDestination').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.Destination > ul',
+    'selector': '.destination > ul',
     'stripeRows': ['even', 'odd'],
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
@@ -154,7 +154,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByFeature').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.Feature > ul',
+    'selector': '.features > ul',
     'stripeRows': ['even', 'odd'],
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
@@ -181,7 +181,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.Institution > ul',
+    'selector': '.institution > ul',
     'stripeRows': ['even', 'odd'],
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
@@ -208,7 +208,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.ProgramFee > ul',
+    'selector': '.programFee > ul',
     'stripeRows': ['even', 'odd'],
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
