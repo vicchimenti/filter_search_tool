@@ -2,25 +2,27 @@ try {
   /* -- Store all the things -- */
   var program = content.get("Program Name");
   var generalDescription = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='General Description' output='normal' display_field='value' />");
-  var externalWebsiteLink = content.get("External Website Link");
-  var provider = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Provider' output='normal' display_field='value' />");
-  var listOfProviders = "";
-  var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
-  var listOfStudyAreas = "";
-  var term = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Term' output='normal' display_field='value' />");
-  var listOfTerms = "";
-  var language = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Language of Instruction' output='normal' display_field='value' />");
-  var listOfLanguages = "";
   var destination = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Destination' output='normal' display_field='value' />");
   var listOfDestinations = "";
-  var features = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Features' output='normal' display_field='value' />");
-  var listOfFeatures = "";
-  var institution = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Institution' output='normal' display_field='value' />");
-  var listOfInstitutions = "";
+  var term = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Term' output='normal' display_field='value' />");
+  var listOfTerms = "";
   var programFee = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Fee' output='normal' display_field='value' />");
   var listOfProgramFees = "";
+  var programImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Image' output='normal' display_field='value' />");
+  var externalWebsiteLink = content.get("External Website Link");
+  var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
+  var listOfStudyAreas = "";
+  var institution = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Institution' output='normal' display_field='value' />");
+  var listOfInstitutions = "";
+  var features = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Features' output='normal' display_field='value' />");
+  var listOfFeatures = "";
+  var provider = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Provider' output='normal' display_field='value' />");
+  var listOfProviders = "";
+  var language = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Language of Instruction' output='normal' display_field='value' />");
+  var listOfLanguages = "";
+  var gpa = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='GPA' output='normal' display_field='value' />");
 
-  // var deadline = content.get("Deadline");
+  // var deadline = content.get("Deadline"); ****** We may add a deadline field for aplication dates later
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent">';
   var endingHTML = '</div></div>\n';
@@ -101,9 +103,9 @@ try {
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
   document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
-  if(deadline != "") {
-    document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
-  }
+  // if(deadline != "") {
+  //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
+  // }
   document.write('</div>');
   document.write(endingHTML);
 
