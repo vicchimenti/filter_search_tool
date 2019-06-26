@@ -8,7 +8,8 @@ try {
   var listOfTerms = "";
   var programFee = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Fee' output='normal' display_field='value' />");
   var listOfProgramFees = "";
-  var programImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Image' output='normal' display_field='value' />");
+  // TODO: ***************    update program image t4 parameters *******************************************
+  var programImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='media' name='Program Image' output='selective output' display_field='value' />");
   var externalWebsiteLink = content.get("External Website Link");
   var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
   var listOfStudyAreas = "";
@@ -114,7 +115,7 @@ try {
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="providers"><h4>Providers</h4><ul> ' +  listOfProviders + '</ul></div>');
-  document.write('<div class="providers"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
   // document.write('<div class="programItemDetails">'); *** not sure we need this line
 
   // if(deadline != "") {
