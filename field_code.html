@@ -14,22 +14,47 @@ Last Modified 20190624
       <input type="text" class="form-control" name="searchthispage" value="" id="id_search" placeholder="Search by Keyword" autofocus aria-label="Search Keyword" />
     </div>
 
-    <!-- Search By Providers -->
+    <!-- Search By Destination -->
     <div class="col-xs-12 col-md-4 input input-wrap">
-      <label for="SelectBox-ByProvider">Providers</label>
+      <label for="SelectBox-ByDestination">Destination</label>
       <div class="select-input">
-        <select name="SelectBox-ByProvider" id="SelectBox-ByProvider">
-          <option value="All Providers">All Providers</option>
-          <option value="AIFS">AIFS Study Abroad</option>
-          <option value="API">API</option>
-          <option value="Albers">Albers School of Business & Economics</option>
-          <option value="American College of Greece">American College of Greece</option>
-          <option value="Augsburg College">Augsburg College - Center for Global Education & Experience</option>
-          <option value="Australian Catholic University">Australian Catholic University</option>
-          <option value="CAPA">CAPA</option>
-          <option value="CEA Study Abroad">CEA Study Abroad</option>
-          <option value="Calcutta Club">Calcutta Club</option>
-          <option value="Campus Ministry">Campus Ministry</option>
+        <select name="SelectBox-ByDestination" id="SelectBox-ByDestination">
+          <option value="All Destinations">All Destinations</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Australia">Australia</option>
+          <option value="Australia">United States</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Search By Term -->
+    <div class="col-xs-12 col-md-4 input input-wrap">
+      <label for="SelectBox-ByTerm">Term</label>
+      <div class="select-input">
+        <select name="SelectBox-ByTerm" id="SelectBox-ByTerm">
+          <option value="All Terms">All Terms</option>
+          <option value="Academic Year">Academic Year</option>
+          <option value="Fall Quarter">Fall Quarter</option>
+          <option value="Fall Semester">Fall Semester</option>
+          <option value="Fall-Winter Quarters">Fall-Winter Quarters</option>
+          <option value="Winter Quarter">Winter Quarter</option>
+          <option value="Winter-Spring Quarters">Winter-Spring Quarters</option>
+          <option value="Spring Semester">Spring Quarter</option>
+          <option value="Spring Semester">Spring Semester</option>
+          <option value="Spring Semester">Summer Quarter</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Search By Fees -->
+    <div class="col-xs-12 col-md-4 input input-wrap">
+      <label for="SelectBox-ByProgramFee">Program Fee</label>
+      <div class="select-input">
+        <select name="SelectBox-ByProgramFee" id="SelectBox-ByProgramFee">
+          <option value="All Fees">All Fees</option>
+          <option value="Less Than 3000">0 - 3000</option>
+          <option value="Less Than 10000">3001 - 9999</option>
+          <option value="10000 Or Greater">10000 or Greater</option>
         </select>
       </div>
     </div>
@@ -54,19 +79,30 @@ Last Modified 20190624
       </div>
     </div>
 
-    <!-- Search By Term -->
+    <!-- Search By Features -->
     <div class="col-xs-12 col-md-4 input input-wrap">
-      <label for="SelectBox-ByTerm">Term</label>
+      <label for="SelectBox-ByFeature">Features</label>
       <div class="select-input">
-        <select name="SelectBox-ByTerm" id="SelectBox-ByTerm">
-          <option value="All Terms">All Terms</option>
-          <option value="Academic Year">Academic Year</option>
-          <option value="Fall Quarter">Fall Quarter</option>
-          <option value="Fall Semester">Fall Semester</option>
-          <option value="Fall-Winter Quarters">Fall-Winter Quarters</option>
-          <option value="Winter Quarter">Winter Quarter</option>
-          <option value="Winter-Spring Quarters">Winter-Spring Quarters</option>
-          <option value="Spring Semester">Spring Semester</option>
+        <select name="SelectBox-ByFeature" id="SelectBox-ByFeature">
+          <option value="All Features">All Features</option>
+          <option value="Research Experiences">Research Experiences</option>
+          <option value="Language Intensive Program">Language Intensive Program</option>
+          <option value="Hybrid Program">Hybrid Program</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Search By Providers -->
+    <div class="col-xs-12 col-md-4 input input-wrap">
+      <label for="SelectBox-ByProvider">Providers</label>
+      <div class="select-input">
+        <select name="SelectBox-ByProvider" id="SelectBox-ByProvider">
+          <option value="All Providers">All Providers</option>
+          <option value="Sponsered">SU Sponsored</option>
+          <option value="Exchange">SU Exchange</option>
+          <option value="Faculty Long">Faculty Led - Long Term</option>
+          <option value="Faculty Short">Faculty Led - Short Term</option>
+          <option value="Non-Credit">Non-Credit</option>
         </select>
       </div>
     </div>
@@ -83,34 +119,24 @@ Last Modified 20190624
       </div>
     </div>
 
-    <!-- Search By Destination -->
+    <!-- Search By GPA -->
     <div class="col-xs-12 col-md-4 input input-wrap">
-      <label for="SelectBox-ByDestination">Destination</label>
+      <label for="SelectBox-ByGPA">Minimum GPA</label>
       <div class="select-input">
-        <select name="SelectBox-ByDestination" id="SelectBox-ByDestination">
-          <option value="All Destinations">All Destinations</option>
-          <option value="Argentina">Argentina</option>
-          <option value="Australia">Australia</option>
-          <option value="Australia">United States</option>
+        <select name="SelectBox-ByGPA" id="SelectBox-ByGPA">
+          <option value="No GPA Requirement">No GPA Requirement</option>
+          <option value="2.0 Minimum">2.0</option>
+          <option value="2.5 Minimum">2.5</option>
+          <option value="2.5 Minimum">3.0</option>
+          <option value="2.5 Minimum">3.5</option>
+          <option value="2.5 Minimum">4.0</option>
         </select>
       </div>
     </div>
 
-    <!-- Search By Features -->
-    <div class="col-xs-12 col-md-4 input input-wrap">
-      <label for="SelectBox-ByFeature">Features</label>
-      <div class="select-input">
-        <select name="SelectBox-ByFeature" id="SelectBox-ByFeature">
-          <option value="All Features">All Features</option>
-          <option value="Research Experiences">Research Experiences</option>
-          <option value="Language Intensive Program">Language Intensive Program</option>
-          <option value="Hybrid Program">Hybrid Program</option>
-        </select>
-      </div>
-    </div>
 
-    <!-- Search By Institution -->
-    <div class="col-xs-12 col-md-4 input input-wrap">
+    <!-- Search By Institution *********  Search Field Currently deactivated **** -->
+    <!-- <div class="col-xs-12 col-md-4 input input-wrap">
       <label for="SelectBox-ByInstitution">Institution</label>
       <div class="select-input">
         <select name="SelectBox-ByInstitution" id="SelectBox-ByInstitution">
@@ -120,20 +146,7 @@ Last Modified 20190624
           <option value="Seattle University">Seattle University</option>
         </select>
       </div>
-    </div>
-
-    <!-- Search By Fees -->
-    <div class="col-xs-12 col-md-4 input input-wrap">
-      <label for="SelectBox-ByProgramFee">Program Fee</label>
-      <div class="select-input">
-        <select name="SelectBox-ByProgramFee" id="SelectBox-ByProgramFee">
-          <option value="All Fees">All Fees</option>
-          <option value="Less Than 3000">0 - 3000</option>
-          <option value="Less Than 10000">3001 - 9999</option>
-          <option value="10000 Or Greater">10000 or Greater</option>
-        </select>
-      </div>
-    </div>
+    </div> -->
 
 
 </fieldset>
