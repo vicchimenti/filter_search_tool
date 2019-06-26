@@ -21,6 +21,7 @@ try {
   var language = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Language of Instruction' output='normal' display_field='value' />");
   var listOfLanguages = "";
   var gpa = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='GPA' output='normal' display_field='value' />");
+  var listOfGPA = "";
 
   // var deadline = content.get("Deadline"); ****** We may add a deadline field for aplication dates later
   /* -- Prepare all the things -- */
@@ -91,6 +92,14 @@ try {
     }
   }
 
+  /* parse the list of gpa ranges, add <span> tags*/
+  if (gpa != "") {
+    var arrayOfGPA = gpa.split(',');
+    for (i=0; i < arrayOfGPA.length; i++) {
+      listOfGPA += '<li>' + arrayOfGPA[i] + '</li>';
+    }
+  }
+
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<h3>' + program + '</h3>\n');
@@ -98,16 +107,15 @@ try {
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
-  // write program image here
+  document.write('<div class="programImage"><img src="programImage"></div>'); // ********* test and update image link if necessary ************
   document.write('<p><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit website<span class="fas fa-external-link-alt"></span></a></p>')
-  // document.write('<div class="programItemDetails">'); *** not sure we need this line
   document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
   document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="providers"><h4>Providers</h4><ul> ' +  listOfProviders + '</ul></div>');
-  //write gpa display here
-
+  document.write('<div class="providers"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  // document.write('<div class="programItemDetails">'); *** not sure we need this line
 
   // if(deadline != "") {
   //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
