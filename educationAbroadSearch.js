@@ -27,36 +27,6 @@ try {
   var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent">';
   var endingHTML = '</div></div>\n';
 
-  /* parse the list of providers, add <span> tags*/
-  if (provider != "") {
-    var arrayOfProviders = provider.split(',');
-    for (i=0; i < arrayOfProviders.length; i++) {
-      listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
-    }
-  }
-  /* parse the list of study areas, add <span> tags*/
-  if (fieldOfStudy != "") {
-    var arrayOfStudyAreas = fieldOfStudy.split(', ');
-    for (i=0; i < arrayOfStudyAreas.length; i++) {
-      listOfStudyAreas += '<li>' + listOfStudyAreas[i] + '</li>';
-    }
-  }
-  /* parse the list of academic terms, add <span> tags*/
-  if (term != "") {
-    var arrayOfTerms = term.split(',');
-    for (i=0; i < arrayOfTerms.length; i++) {
-      listOfTerms += '<li>' + arrayOfTerms[i] + '</li>';
-    }
-  }
-
-  /* parse the list of languages, add <span> tags*/
-  if (language != "") {
-    var arrayOfLanguages = language.split(',');
-    for (i=0; i < arrayOfLanguages.length; i++) {
-      listOfLanguages += '<li>' + arrayOfLanguages[i] + '</li>';
-    }
-  }
-
   /* parse the list of destinations, add <span> tags*/
   if (destination != "") {
     var arrayOfDestinations = destination.split(',');
@@ -65,19 +35,11 @@ try {
     }
   }
 
-  /* parse the list of features, add <span> tags*/
-  if (features != "") {
-    var arrayOfFeatures = features.split(',');
-    for (i=0; i < arrayOfFeatures.length; i++) {
-      listOfFeatures += '<li>' + arrayOfFeatures[i] + '</li>';
-    }
-  }
-
-  /* parse the list of institutions, add <span> tags*/
-  if (institution != "") {
-    var arrayOfInstitutions = institution.split(',');
-    for (i=0; i < arrayOfInstitutions.length; i++) {
-      listOfInstitutions += '<li>' + arrayOfInstitutions[i] + '</li>';
+  /* parse the list of academic terms, add <span> tags*/
+  if (term != "") {
+    var arrayOfTerms = term.split(',');
+    for (i=0; i < arrayOfTerms.length; i++) {
+      listOfTerms += '<li>' + arrayOfTerms[i] + '</li>';
     }
   }
 
@@ -89,26 +51,71 @@ try {
     }
   }
 
+  /* parse the list of study areas, add <span> tags*/
+  if (fieldOfStudy != "") {
+    var arrayOfStudyAreas = fieldOfStudy.split(', ');
+    for (i=0; i < arrayOfStudyAreas.length; i++) {
+      listOfStudyAreas += '<li>' + listOfStudyAreas[i] + '</li>';
+    }
+  }
+
+  /* parse the list of institutions, add <span> tags*/
+  if (institution != "") {
+    var arrayOfInstitutions = institution.split(',');
+    for (i=0; i < arrayOfInstitutions.length; i++) {
+      listOfInstitutions += '<li>' + arrayOfInstitutions[i] + '</li>';
+    }
+  }
+
+  /* parse the list of features, add <span> tags*/
+  if (features != "") {
+    var arrayOfFeatures = features.split(',');
+    for (i=0; i < arrayOfFeatures.length; i++) {
+      listOfFeatures += '<li>' + arrayOfFeatures[i] + '</li>';
+    }
+  }
+
+  /* parse the list of providers, add <span> tags*/
+  if (provider != "") {
+    var arrayOfProviders = provider.split(',');
+    for (i=0; i < arrayOfProviders.length; i++) {
+      listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
+    }
+  }
+
+  /* parse the list of languages, add <span> tags*/
+  if (language != "") {
+    var arrayOfLanguages = language.split(',');
+    for (i=0; i < arrayOfLanguages.length; i++) {
+      listOfLanguages += '<li>' + arrayOfLanguages[i] + '</li>';
+    }
+  }
+
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  document.write('<h3>' + program + '</h3>\n')
-  document.write('<div class="descriptionWrapper">' + generalDescription + '</div>')
-  document.write('<p><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit website<span class="fas fa-external-link-alt"></span></a></p>')
-  document.write('<div class="programItemDetails">');
-  document.write('<div class="providers"><h4>Providers</h4><ul> ' +  listOfProviders + '</ul></div>');
-  document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
-  document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
-  document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
+  document.write('<h3>' + program + '</h3>\n');
+  document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
-  document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
-  document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
+  document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
+  // write program image here
+  document.write('<p><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit website<span class="fas fa-external-link-alt"></span></a></p>')
+  // document.write('<div class="programItemDetails">'); *** not sure we need this line
+  document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
+  document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
+  document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
+  document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
+  document.write('<div class="providers"><h4>Providers</h4><ul> ' +  listOfProviders + '</ul></div>');
+  //write gpa display here
+
+
   // if(deadline != "") {
   //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
-  // }
+  // } ****** If we need to add a deadline field
   document.write('</div>');
   document.write(endingHTML);
 
-    } catch(err) {
-    document.write(err.message);
+  /* -- Error Checking -- */
+  } catch(err) {
+  document.write(err.message);
 }
