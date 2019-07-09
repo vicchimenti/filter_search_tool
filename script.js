@@ -154,6 +154,30 @@ $(function () {
 
 
 $(function () {
+  $('#SelectBox-ByProvider').quicksearch('.educationAbroadItemWrapper', {
+    'delay': 100,
+    'selector': '.provider > ul',
+    'bind': 'change',
+                'prepareQuery': function (val) {
+      return new RegExp(val, "i");
+    },
+    'testQuery': function (query, txt, _row) {
+      return query.test(txt);
+    },
+    'show': function() {
+      $(this).removeClass('hideByProviderDropDown');
+    },
+    'hide': function() {
+      $(this).addClass('hideByProviderDropDown');
+    },
+    'onAfter': function () {
+      anythingThere();
+    }
+  });
+});
+
+
+$(function () {
   $('#SelectBox-ByLanguage').quicksearch('div.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.language > ul',
@@ -178,9 +202,9 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByProvider').quicksearch('.educationAbroadItemWrapper', {
+  $('#SelectBox-ByGPA').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.provider > ul',
+    'selector': '.gpa > ul',
     'bind': 'change',
                 'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -189,10 +213,10 @@ $(function () {
       return query.test(txt);
     },
     'show': function() {
-      $(this).removeClass('hideByProviderDropDown');
+      $(this).removeClass('hideByGPADropDown');
     },
     'hide': function() {
-      $(this).addClass('hideByProviderDropDown');
+      $(this).addClass('hideByGPADropDown');
     },
     'onAfter': function () {
       anythingThere();
@@ -231,7 +255,7 @@ $(function () {
 var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByInstitutionDropDown, .hideByFeatureDropDown, .hideByLanguageDropDown, .hideByProviderDropDown');
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByInstitutionDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
 
   if( visibleItems.length == 0) {
     $( ".noResultsToShow" ).show();
@@ -241,3 +265,12 @@ function anythingThere() {
 }
 
 </script>
+
+
+
+
+// var options = ["1", "2", "3", "4", "5"];
+// $('#select').empty();
+// $.each(options, function(i, p) {
+//     $('#select').append($('<option></option>').val(p).html(p));
+// });
