@@ -127,33 +127,6 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.institution > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-                 'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByInstitutionDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByInstitutionDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-});
-
-
-$(function () {
   $('#SelectBox-ByFeature').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.features > ul',
@@ -220,6 +193,33 @@ $(function () {
     },
     'hide': function() {
       $(this).addClass('hideByProviderDropDown');
+    },
+    'onAfter': function () {
+      anythingThere();
+    }
+  });
+});
+
+
+$(function () {
+  $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
+    'delay': 100,
+    'selector': '.institution > ul',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
+                 'prepareQuery': function (val) {
+      return new RegExp(val, "i");
+    },
+    'testQuery': function (query, txt, _row) {
+      return query.test(txt);
+    },
+    'show': function() {
+      $(this).removeClass('hideByInstitutionDropDown');
+    },
+    'hide': function() {
+      $(this).addClass('hideByInstitutionDropDown');
     },
     'onAfter': function () {
       anythingThere();
