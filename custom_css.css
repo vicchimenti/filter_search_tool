@@ -35,7 +35,7 @@
     border-radius: 17px;
     width: 100%;
 }
-.hideByTextbox, .hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByInstitutionDropDown, .hideByFeatureDropDown, .hideByLanguageDropDown, .hideByProviderDropDown {
+.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown {
     display: none;
 }
 
