@@ -28,7 +28,7 @@ try {
   // var institution = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Institution' output='normal' display_field='value' />");
   // var listOfInstitutions = "";
 
-  
+
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent">';
   var endingHTML = '</div></div>\n';
