@@ -52,7 +52,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByTerm').quicksearch('div.educationAbroadItemWrapper', {
+  $('#SelectBox-ByTerm').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.term > ul',
     'bind': 'change',
@@ -76,7 +76,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByProgramFee').quicksearch('div.educationAbroadItemWrapper', {
+  $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.programFee > ul',
     'bind': 'change',
@@ -178,7 +178,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByLanguage').quicksearch('div.educationAbroadItemWrapper', {
+  $('#SelectBox-ByLanguage').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.language > ul',
     'bind': 'change',
