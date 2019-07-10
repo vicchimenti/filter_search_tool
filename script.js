@@ -76,7 +76,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
+  $('#SelectBox-ByProgramFee').quicksearch('div.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.programFee > ul',
     'bind': 'change',
