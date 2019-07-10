@@ -27,6 +27,8 @@ try {
   // ************ Remove Institution per notes  ********************//
   // var institution = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Institution' output='normal' display_field='value' />");
   // var listOfInstitutions = "";
+
+  
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent">';
   var endingHTML = '</div></div>\n';
@@ -95,6 +97,7 @@ try {
     }
   }
 
+
   //  ************** remove institutions per notes   ***************  //
   // /* parse the list of institutions, add <span> tags*/
   // if (institution != "") {
@@ -103,6 +106,7 @@ try {
   //     listOfInstitutions += '<li>' + arrayOfInstitutions[i] + '</li>';
   //   }
   // }
+
 
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
@@ -118,12 +122,15 @@ try {
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="providers"><h4>Providers</h4><ul> ' +  listOfProviders + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+
+
   // document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
   // document.write('<div class="programItemDetails">'); *** not sure we need this line
-
   // if(deadline != "") {
   //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
   // } ****** If we need to add a deadline field
+
+
   document.write('</div>');
   document.write(endingHTML);
 
