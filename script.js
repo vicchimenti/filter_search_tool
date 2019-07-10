@@ -32,7 +32,7 @@ $(function () {
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
     'minValLength': 2,
-                 'prepareQuery': function (val) {
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -56,7 +56,7 @@ $(function () {
     'delay': 100,
     'selector': '.term > ul',
     'bind': 'change',
-                'prepareQuery': function (val) {
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -79,11 +79,8 @@ $(function () {
   $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.programFee > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-                 'prepareQuery': function (val) {
+    'bind': 'change',
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -106,8 +103,11 @@ $(function () {
   $('#SelectBox-ByFieldOfStudy').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.fieldOfStudy > ul',
-    'bind': 'change',
-                'prepareQuery': function (val) {
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -134,7 +134,7 @@ $(function () {
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
     'minValLength': 2,
-                 'prepareQuery': function (val) {
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -158,7 +158,7 @@ $(function () {
     'delay': 100,
     'selector': '.provider > ul',
     'bind': 'change',
-                'prepareQuery': function (val) {
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -181,8 +181,8 @@ $(function () {
   $('#SelectBox-ByLanguage').quicksearch('div.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.language > ul',
-                'bind': 'change',
-                'prepareQuery': function (val) {
+    'bind': 'change',
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -206,7 +206,7 @@ $(function () {
     'delay': 100,
     'selector': '.gpa > ul',
     'bind': 'change',
-                'prepareQuery': function (val) {
+    'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
     'testQuery': function (query, txt, _row) {
@@ -257,7 +257,7 @@ var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
   visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
-  // .hideByInstitutionDropDown, 
+  // .hideByInstitutionDropDown,
 
   if( visibleItems.length == 0) {
     $( ".noResultsToShow" ).show();
