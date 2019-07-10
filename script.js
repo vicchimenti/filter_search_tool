@@ -225,37 +225,39 @@ $(function () {
 });
 
 
-$(function () {
-  $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.institution > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-                 'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByInstitutionDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByInstitutionDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-});
+//  ******************* Remove Institution per Notes  *******************  //
+// $(function () {
+//   $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
+//     'delay': 100,
+//     'selector': '.institution > ul',
+//     'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//                  'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByInstitutionDropDown');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByInstitutionDropDown');
+//     },
+//     'onAfter': function () {
+//       anythingThere();
+//     }
+//   });
+// });
 
 
 var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByInstitutionDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
+  // .hideByInstitutionDropDown, 
 
   if( visibleItems.length == 0) {
     $( ".noResultsToShow" ).show();
