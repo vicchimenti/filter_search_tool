@@ -57,3 +57,41 @@
   //         </select>
   //     </div>
   // </div> -->
+
+
+
+
+
+
+
+    // var deadline = content.get("Deadline"); ****** We may add a deadline field for aplication dates later
+    // ************ Remove Institution per notes  ********************//
+    // var institution = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Institution' output='normal' display_field='value' />");
+    // var listOfInstitutions = "";
+
+
+
+
+      //  ************** remove institutions per notes   ***************  //
+      // /* parse the list of institutions, add <span> tags*/
+      // if (institution != "") {
+      //   var arrayOfInstitutions = institution.split(',');
+      //   for (i=0; i < arrayOfInstitutions.length; i++) {
+      //     listOfInstitutions += '<li>' + arrayOfInstitutions[i] + '</li>';
+      //   }
+      // }
+
+
+
+
+        // document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
+        // document.write('<div class="programItemDetails">'); *** not sure we need this line
+        // if(deadline != "") {
+        //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
+        // } ****** If we need to add a deadline field
+
+
+
+
+
+        

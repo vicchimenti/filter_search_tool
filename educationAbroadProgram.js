@@ -15,18 +15,12 @@ try {
   var listOfStudyAreas = "";
   var features = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Features' output='normal' display_field='value' />");
   var listOfFeatures = "";
-  var provider = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Provider' output='normal' display_field='value' />");
-  var listOfProviders = "";
+  var type = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Type' output='normal' display_field='value' />");
+  var listOfTypes = "";
   var language = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Language' output='normal' display_field='value' />");
   var listOfLanguages = "";
   var gpa = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='GPA' output='normal' display_field='value' />");
   var listOfGPA = "";
-
-
-  // var deadline = content.get("Deadline"); ****** We may add a deadline field for aplication dates later
-  // ************ Remove Institution per notes  ********************//
-  // var institution = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Institution' output='normal' display_field='value' />");
-  // var listOfInstitutions = "";
 
 
   /* -- Prepare all the things -- */
@@ -73,11 +67,11 @@ try {
     }
   }
 
-  /* parse the list of providers, add <span> tags*/
-  if (provider != "") {
-    var arrayOfProviders = provider.split(',');
-    for (i=0; i < arrayOfProviders.length; i++) {
-      listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
+  /* parse the list of types, add <span> tags*/
+  if (type != "") {
+    var arrayOfTypes = provider.split(',');
+    for (i=0; i < arrayOfTypes.length; i++) {
+      listOfTypes += '<li>' + arrayOfTypes[i] + '</li>';
     }
   }
 
@@ -98,16 +92,6 @@ try {
   }
 
 
-  //  ************** remove institutions per notes   ***************  //
-  // /* parse the list of institutions, add <span> tags*/
-  // if (institution != "") {
-  //   var arrayOfInstitutions = institution.split(',');
-  //   for (i=0; i < arrayOfInstitutions.length; i++) {
-  //     listOfInstitutions += '<li>' + arrayOfInstitutions[i] + '</li>';
-  //   }
-  // }
-
-
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<h3>' + program + '</h3>\n');
@@ -119,18 +103,9 @@ try {
   document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit website<span class="fas fa-external-link-alt"></span></a></div>')
   document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
-  document.write('<div class="providers"><h4>Providers</h4><ul> ' +  listOfProviders + '</ul></div>');
+  document.write('<div class="type"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
-
-
-  // document.write('<div class="institution"><h4>Institutions</h4><ul>' +  listOfInstitutions + '</ul></div>');
-  // document.write('<div class="programItemDetails">'); *** not sure we need this line
-  // if(deadline != "") {
-  //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
-  // } ****** If we need to add a deadline field
-
-
   document.write('</div>');
   document.write(endingHTML);
 
