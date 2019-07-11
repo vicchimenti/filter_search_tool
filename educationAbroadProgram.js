@@ -15,7 +15,7 @@ try {
   var listOfStudyAreas = "";
   var features = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Features' output='normal' display_field='value' />");
   var listOfFeatures = "";
-  var type = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Type' output='normal' display_field='value' />");
+  var programType = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Type' output='normal' display_field='value' />");
   var listOfTypes = "";
   var language = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Language' output='normal' display_field='value' />");
   var listOfLanguages = "";
@@ -68,8 +68,8 @@ try {
   }
 
   /* parse the list of types, add <span> tags*/
-  if (type != "") {
-    var arrayOfTypes = provider.split(',');
+  if (programType != "") {
+    var arrayOfTypes = programType.split(',');
     for (i=0; i < arrayOfTypes.length; i++) {
       listOfTypes += '<li>' + arrayOfTypes[i] + '</li>';
     }
