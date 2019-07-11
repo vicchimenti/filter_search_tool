@@ -75,6 +75,7 @@ $(function () {
 });
 
 
+// TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
 $(function () {
   $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
