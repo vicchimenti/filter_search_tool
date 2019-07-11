@@ -55,7 +55,7 @@ try {
   if (fieldOfStudy != "") {
     var arrayOfStudyAreas = fieldOfStudy.split(', ');
     for (i=0; i < arrayOfStudyAreas.length; i++) {
-      listOfStudyAreas += '<li>' + listOfStudyAreas[i] + '</li>';
+      listOfStudyAreas += '<li>' + arrayOfStudyAreas[i] + '</li>';
     }
   }
 
