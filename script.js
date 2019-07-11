@@ -154,9 +154,9 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByProvider').quicksearch('.educationAbroadItemWrapper', {
+  $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.provider > ul',
+    'selector': '.type > ul',
     'bind': 'change',
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -165,10 +165,10 @@ $(function () {
       return query.test(txt);
     },
     'show': function() {
-      $(this).removeClass('hideByProviderDropDown');
+      $(this).removeClass('hideByProgramTyperDropDown');
     },
     'hide': function() {
-      $(this).addClass('hideByProviderDropDown');
+      $(this).addClass('hideByProgramTypeDropDown');
     },
     'onAfter': function () {
       anythingThere();
@@ -256,7 +256,7 @@ $(function () {
 var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
   // .hideByInstitutionDropDown,
 
   if( visibleItems.length == 0) {
