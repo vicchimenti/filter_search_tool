@@ -1,7 +1,7 @@
 <script>
 
 $(function () {
-  $('#id_search').quicksearch('.educationAbroadItemWrapper', {
+  $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
     'selector': ['h3, p'],
     'stripeRows': ['even', 'odd'],
@@ -25,9 +25,9 @@ $(function () {
 
 
 $(function () {
-  $('#input-27855').quicksearch('.educationAbroadItemWrapper', {
+  $('select#input-27855').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.destination > ul',
+    'selector': 'div.destination > ul',
     'stripeRows': ['even', 'odd'],
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
@@ -39,10 +39,10 @@ $(function () {
       return query.test(txt);
     },
     'show': function() {
-      $(this).removeClass('hideByDestinationDropDown');
+      $(this).removeClass('hideByDestinationDropDownMenu');
     },
     'hide': function() {
-      $(this).addClass('hideByDestinationDropDown');
+      $(this).addClass('hideByDestinationDropDownMenu');
     },
     'onAfter': function () {
       anythingThere();
@@ -55,7 +55,10 @@ $(function () {
   $('#input-27863').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.term > ul',
-    'bind': 'change',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
@@ -80,7 +83,10 @@ $(function () {
   $('#input-27864').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.programFee > ul',
-    'bind': 'change',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
@@ -158,7 +164,10 @@ $(function () {
   $('#input-27865').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.type > ul',
-    'bind': 'change',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
@@ -182,7 +191,10 @@ $(function () {
   $('#input-27866').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.language > ul',
-    'bind': 'change',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
@@ -203,10 +215,13 @@ $(function () {
 
 
 $(function () {
-  $('#input-27867').quicksearch('.educationAbroadItemWrapper', {
+  $('select#input-27867.width-100.form-control.gpaDropDownMenu').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.gpa > ul',
-    'bind': 'change',
+    'stripeRows': ['even', 'odd'],
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
@@ -229,7 +244,7 @@ $(function () {
 var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDownMenu, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
 
   if( visibleItems.length == 0) {
     $( ".noResultsToShow" ).show();

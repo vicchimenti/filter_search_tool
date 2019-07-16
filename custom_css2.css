@@ -85,7 +85,7 @@ button.btn.btn-primary.pull-right.js-submit {
     width: 100%;
 }
 
-.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown {
+.hideByTextbox, .hideByDestinationDropDownMenu, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown {
     display: none;
 }
 
