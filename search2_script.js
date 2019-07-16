@@ -25,7 +25,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByDestination').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27855').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.destination > ul',
     'stripeRows': ['even', 'odd'],
