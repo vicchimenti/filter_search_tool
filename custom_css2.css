@@ -18,12 +18,38 @@ button.btn.btn-primary.pull-right.js-submit {
   }
 }
 
-#filterField{
+#filterField {
     padding: 15px 0 30px 0;
     border-top: 0;
 }
 
-#filterField input[type=text] {
+#\32 162 input[type=text] {
+    color: #333333;
+    font-weight: 400;
+    font-size: 1.4rem;
+    height: 34px;
+    padding: 5px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#\32 162 select {
+    color: #333333;
+    font-weight: 400;
+    font-size: 1.4rem;
+    height: 34px;
+    padding: 5px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    width: 100%;
+}
+
+/* #filterField input[type=text] {
     color: #333333;
     font-weight: 400;
     font-size: 1.4rem;
@@ -47,7 +73,7 @@ button.btn.btn-primary.pull-right.js-submit {
     border: 1px solid #ccc;
     border-radius: 17px;
     width: 100%;
-}
+} */
 
 .hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown {
     display: none;
