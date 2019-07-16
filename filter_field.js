@@ -30,7 +30,7 @@ try {
 	document.write('<div id="filterFieldWrapper" class="contentItem vspace hspace" data-posistion-default="ZoneB" data-position-selected="ZoneB" role="group" aria-label="search and filter">\n  <div id="filterField">');
     document.write('<div class="filterFieldInstructions">' + fieldInstructions + '</div>\n');
     document.write(fieldFieldCode + ' </div> \n');
-    //document.write('<div class="noResultsToShow">' + message + '</div>\n');
+    document.write('<div class="noResultsToShow">' + message + '</div>\n');
     document.write('</div>');
   }
 } catch(err) {
@@ -38,7 +38,7 @@ try {
 }
 
 
-/*
+
 <section class="filterFieldWrapper contentItem" id="id<t4 type='meta' meta='content_id' />">
   <div class="filterfield">
     <div class="filterFieldInstructions">
@@ -50,4 +50,3 @@ try {
   </div>
   <div class="noResultsToShow"></div>
 </section>
-*/
