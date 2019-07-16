@@ -1,6 +1,6 @@
 try {
   var fieldInstructions = content.get("Instructions");
-  var fieldFieldCode = content.get("Field Code");
+  var fieldFieldCode = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Zone' output='normal' display_field='value' />");
   var fieldNoResultsMessage = content.get("No Results Message");
   var message = "";
   var fieldZone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Zone' output='normal' display_field='value' />");
