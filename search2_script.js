@@ -75,6 +75,7 @@ $(function () {
 });
 
 
+// TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
 $(function () {
   $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
@@ -154,9 +155,9 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByProvider').quicksearch('.educationAbroadItemWrapper', {
+  $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.provider > ul',
+    'selector': '.type > ul',
     'bind': 'change',
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
@@ -165,10 +166,10 @@ $(function () {
       return query.test(txt);
     },
     'show': function() {
-      $(this).removeClass('hideByProviderDropDown');
+      $(this).removeClass('hideByProgramTyperDropDown');
     },
     'hide': function() {
-      $(this).addClass('hideByProviderDropDown');
+      $(this).addClass('hideByProgramTypeDropDown');
     },
     'onAfter': function () {
       anythingThere();
@@ -225,39 +226,10 @@ $(function () {
 });
 
 
-//  ******************* Remove Institution per Notes  *******************  //
-// $(function () {
-//   $('#SelectBox-ByInstitution').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 100,
-//     'selector': '.institution > ul',
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//                  'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByInstitutionDropDown');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByInstitutionDropDown');
-//     },
-//     'onAfter': function () {
-//       anythingThere();
-//     }
-//   });
-// });
-
-
 var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProviderDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
-  // .hideByInstitutionDropDown,
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByGPADropDown');
 
   if( visibleItems.length == 0) {
     $( ".noResultsToShow" ).show();
@@ -267,12 +239,3 @@ function anythingThere() {
 }
 
 </script>
-
-
-
-
-// var options = ["1", "2", "3", "4", "5"];
-// $('#select').empty();
-// $.each(options, function(i, p) {
-//     $('#select').append($('<option></option>').val(p).html(p));
-// });
