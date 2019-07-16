@@ -1,7 +1,7 @@
 <script>
 
 $(function () {
-  $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
+  $('#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
     'selector': ['h3, p'],
     'stripeRows': ['even', 'odd'],
@@ -52,7 +52,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByTerm').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27863').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.term > ul',
     'bind': 'change',
@@ -77,7 +77,7 @@ $(function () {
 
 // TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
 $(function () {
-  $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27864').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.programFee > ul',
     'bind': 'change',
@@ -101,7 +101,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByFieldOfStudy').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27856').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.fieldOfStudy > ul',
     'stripeRows': ['even', 'odd'],
@@ -128,7 +128,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByFeature').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27858').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.features > ul',
     'stripeRows': ['even', 'odd'],
@@ -155,7 +155,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27865').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.type > ul',
     'bind': 'change',
@@ -179,7 +179,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByLanguage').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27866').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.language > ul',
     'bind': 'change',
@@ -203,7 +203,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByGPA').quicksearch('.educationAbroadItemWrapper', {
+  $('#input-27867').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.gpa > ul',
     'bind': 'change',
