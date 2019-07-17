@@ -21,6 +21,8 @@ try {
   var listOfLanguages = "";
   var gpa = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='GPA' output='normal' display_field='value' />");
   var listOfGPA = "";
+  var housing = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Housing Accommodations' output='normal' display_field='value' />");
+  var listOfHousing = "";
 
 
   /* -- Prepare all the things -- */
@@ -83,6 +85,14 @@ try {
     }
   }
 
+  /* parse the list of housing, add <span> tags*/
+  if (housing != "") {
+    var arrayOfHousing = housing.split(',');
+    for (i=0; i < arrayOfHousing.length; i++) {
+      listOfHousing += '<li>' + arrayOfHousing[i] + '</li>';
+    }
+  }
+
   /* parse the list of gpa ranges, add <span> tags*/
   if (gpa != "") {
     var arrayOfGPA = gpa.split(',');
@@ -105,6 +115,7 @@ try {
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
   document.write('<div class="type"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
+  document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
   document.write(endingHTML);
 
