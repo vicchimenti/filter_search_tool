@@ -29,12 +29,12 @@ $(function () {
     var $val = $('.destination');
     $($val).filter(function(i, e) {
         console.log("Filter");
-        if ($(e).text() != $key)
+        if ($(e).text() != $key) {
             $(this).addClass('hideByDestinationDropDownMenu');
-
-        else {
+            console.log("add");
+        } else {
             $(this).removeClass('hideByDestinationDropDownMenu');
-        console.log("this");
+            console.log("remove");
         }
     }).change();
     console.log("change");
