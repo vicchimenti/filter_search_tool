@@ -2,6 +2,24 @@
 
 
 
+
+// <!-- Search By GPA -->
+// <!-- GPA Search Field Removed by Request **********
+//     <div class="col-xs-12 col-md-4 input input-wrap">
+//     <label for="SelectBox-ByGPA">Minimum GPA</label>
+//     <div class="select-input">
+//         <select name="SelectBox-ByGPA" id="SelectBox-ByGPA">
+//             <option value="" disabled selected hidden>Select a GPA...</option>
+//             <option value="2.0">2.0</option>
+//             <option value="2.5">2.5</option>
+//             <option value="2.75">2.75</option>
+//             <option value="3.0">3.0</option>
+//         </select>
+//     </div>
+// </div> -->
+
+
+
 // var options = ["1", "2", "3", "4", "5"];
 // $('#select').empty();
 // $.each(options, function(i, p) {
@@ -89,9 +107,3 @@
         // if(deadline != "") {
         //   document.write('<div class="Deadline"><h4>Deadline</h4><ul><li>' +  deadline + '</li></ul></div>');
         // } ****** If we need to add a deadline field
-
-
-
-
-
-        
