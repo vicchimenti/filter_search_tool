@@ -1,5 +1,23 @@
 <script>
 
+$( "div" ).filter( $( "#unique" ) );
+
+$(function () {
+    function listFilter(educationAbroadItemWrapper, educationAbroadItem) {
+        var form = $("<form>").attr({"class":"filterform","action":"#"}),
+            input = $("<input>").attr({"class":"filterinput","type":"text"});
+
+        $(form).append(input).appendTo(educationAbroadItemWrapper);
+
+        $(input).change( function () {
+
+        }).keyup( function () {
+            $(this).change();
+        });
+    }
+})
+
+
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -23,6 +41,18 @@ $(function () {
   });
 });
 
+$(function () {
+    console.log("Here");
+    var $key = $('select#input-27855');
+    var $val = $('.educationAbroadItemWrapper .educationAbroadItem .destination');
+    $($val).filter(function(i, e) {
+        console.log("Filter");
+        return $(e).text() != $key;
+        $(this).addClass('hideByDestinationDropDownMenu');
+        console.log("this");
+    }).change();
+    console.log("change");
+});
 
 $(function () {
   $('select#input-27855').quicksearch('.educationAbroadItemWrapper', {
