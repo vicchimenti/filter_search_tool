@@ -47,9 +47,13 @@ $(function () {
     var $val = $('.educationAbroadItemWrapper .educationAbroadItem .destination');
     $($val).filter(function(i, e) {
         console.log("Filter");
-        return $(e).text() != $key;
-        $(this).addClass('hideByDestinationDropDownMenu');
+        if ($(e).text() != $key)
+            $(this).addClass('hideByDestinationDropDownMenu');
+
+        else {
+            $(this).removeClass('hideByDestinationDropDownMenu');
         console.log("this");
+        }
     }).change();
     console.log("change");
 });
