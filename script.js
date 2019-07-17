@@ -157,7 +157,7 @@ $(function () {
 $(function () {
   $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': '.type > ul',
+    'selector': '.programType > ul',
     'bind': 'change',
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
