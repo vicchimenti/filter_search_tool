@@ -23,11 +23,28 @@ $(function () {
   });
 });
 
+$(function () {
+    console.log("Here");
+    var $key = $('select#input-27855');
+    var $val = $('.destination');
+    $($val).filter(function(i, e) {
+        console.log("Filter");
+        if ($(e).text() != $key)
+            $(this).addClass('hideByDestinationDropDownMenu');
+
+        else {
+            $(this).removeClass('hideByDestinationDropDownMenu');
+        console.log("this");
+        }
+    }).change();
+    console.log("change");
+});
+
 
 $(function () {
   $('select#input-27855').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
-    'selector': 'div.destination > ul',
+    'selector': '.destination > ul',
     'stripeRows': ['even', 'odd'],
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
