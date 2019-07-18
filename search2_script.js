@@ -27,7 +27,7 @@ $(function () {
     console.log("Here");
     var $key = $('#input-27855 option');
     var $val = $('.destination');
-    $('form :input').change(function() {
+    $('select option:selected').change(function() {
         console.log("change");
         $($val).filter(function(i, e) {
             console.log("Filter");
