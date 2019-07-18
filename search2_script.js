@@ -25,9 +25,9 @@ $(function () {
 
 $(function () {
     console.log("Here");
-    var $key = $('#input-27855');
+    var $key = $('#input-27855 option:selected');
     var $val = $('.destination');
-    console.log("change");
+    console.log($key);
     $($val).filter(function(i, e) {
         console.log("Filter");
         if ($(e).text() != $key) {
@@ -42,6 +42,16 @@ $(function () {
     console.log("done");
 });
 
+$(function () {
+    var $key = $('#input-27855 option');
+    var $val = $('.destination');
+    $($val).filter(function(i, e) {
+        if ($(e).text() != $key)
+            $(this).parent().addClass('hideByDestinationDropDownMenu');
+        else
+            $(this).parent().removeClass('hideByDestinationDropDownMenu');
+    });
+});
 
 $(function () {
   $('select#input-27855').quicksearch('.educationAbroadItemWrapper', {
