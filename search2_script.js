@@ -25,19 +25,23 @@ $(function () {
 
 $(function () {
     console.log("Here");
-    var $key = $('select#input-27855');
+    var $key = $('#input-27855 option');
     var $val = $('.destination');
-    $($val).filter(function(i, e) {
-        console.log("Filter");
-        if ($(e).text() != $key) {
-            $(this).addClass('hideByDestinationDropDownMenu');
-            console.log("add");
-        } else {
-            $(this).removeClass('hideByDestinationDropDownMenu');
-            console.log("remove");
-        }
-    }).change();
-    console.log("change");
+    $('form :input').change(function() {
+        console.log("change");
+        $($val).filter(function(i, e) {
+            console.log("Filter");
+            if ($(e).text() != $key) {
+                $(this).parent().addClass('hideByDestinationDropDownMenu');
+                console.log("add");
+            } else {
+                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+                console.log("remove");
+            }
+        });
+        console.log("changed");
+    });
+    console.log("done");
 });
 
 
