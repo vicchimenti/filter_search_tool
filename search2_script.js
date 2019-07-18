@@ -25,22 +25,41 @@ $(function () {
 
 $(function () {
     console.log("Here");
-    var $key = $('#input-27855 option:selected');
-    var $val = $('.destination');
-    console.log($key);
-    $($val).filter(function(i, e) {
-        console.log("Filter");
-        if ($(e).text() != $key) {
-            $(this).parent().addClass('hideByDestinationDropDownMenu');
-            console.log("add");
-        } else {
-            $(this).parent().removeClass('hideByDestinationDropDownMenu');
-            console.log("remove");
-        }
-        console.log("changed");
+    $('#input-27855').change(function() {
+        var $val = $('.destination');
+        var $dest = $(this).val();
+        $($val).filter(function(i, e) {
+            console.log("Filter");
+            if ($(e).text() != $dest) {
+                $(this).parent().addClass('hideByDestinationDropDownMenu');
+                console.log("add");
+            } else {
+                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+                console.log("remove");
+            }
+            console.log("changed");
+        });
     });
     console.log("done");
 });
+
+$(function () {
+    $('#input-27855').on('change', function() {
+      var dest = $(this).val();
+      $('.destinations').each(function() {
+        var $matches = $('.destintion li').filter(function() {
+          return $(this).text() === dest
+        });
+        if(!$matches.length){
+           // hide this destination div
+        }else{
+           // show it
+        }
+
+      });
+    });
+})
+
 
 $(function () {
     var $key = $('#input-27855 option');
