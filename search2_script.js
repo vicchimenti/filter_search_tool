@@ -27,18 +27,16 @@ $(function () {
     console.log("Here");
     var $key = $('#input-27855 option');
     var $val = $('.destination');
-    $('select option:selected').change(function() {
-        console.log("change");
-        $($val).filter(function(i, e) {
-            console.log("Filter");
-            if ($(e).text() != $key) {
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
-                console.log("add");
-            } else {
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
-                console.log("remove");
-            }
-        });
+    console.log("change");
+    $($val).filter(function(i, e) {
+        console.log("Filter");
+        if ($(e).text() != $key) {
+            $(this).parent().addClass('hideByDestinationDropDownMenu');
+            console.log("add");
+        } else {
+            $(this).parent().removeClass('hideByDestinationDropDownMenu');
+            console.log("remove");
+        }
         console.log("changed");
     });
     console.log("done");
