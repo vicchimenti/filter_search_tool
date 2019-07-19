@@ -26,7 +26,7 @@ $(function () {
 
 
 $(function () {
-  $('#input-27855').change(function() {
+  $('#SelectBox-ByDestination').change(function() {
     var $dest = $(this).val();
     $('.destinations').each(function() {
       var $matches = $('.destination li').filter(function() {
