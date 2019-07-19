@@ -23,6 +23,7 @@ $(function () {
   });
 });
 
+
 $(function () {
   console.log("Here");
   $('#input-27855').change(function() {
@@ -40,7 +41,9 @@ $(function () {
       $(this).parent().removeClass('hideByDestinationDropDownMenu');
       console.log("remove");
     }
+    console.log("changed");
   });
+  console.log("done");
 });
 
 
