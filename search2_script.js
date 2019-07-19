@@ -24,24 +24,25 @@ $(function () {
 });
 
 $(function () {
-    console.log("Here");
-    $('#input-27855').change(function() {
-        var $val = $('.destination');
-        var $dest = $(this).val();
-        $($val).filter(function(i, e) {
-            console.log("Filter");
-            if ($(e).text() != $dest) {
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
-                console.log("add");
-            } else {
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
-                console.log("remove");
-            }
-            console.log("changed");
-        });
+  console.log("Here");
+  $('#input-27855').change(function() {
+    console.log("change");
+    var $val = $('.destination');
+    var $dest = $(this).val();
+    var $matches = $($val).filter(function() {
+      console.log("Filter");
+      return $(this).text() === destintion
     });
-    console.log("done");
+    if (!$matches.length) {
+      $(this).parent().addClass('hideByDestinationDropDownMenu');
+      console.log("add");
+    } else {
+      $(this).parent().removeClass('hideByDestinationDropDownMenu');
+      console.log("remove");
+    }
+  });
 });
+
 
 $(function () {
     $('#input-27855').on('change', function() {
