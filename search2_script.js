@@ -25,11 +25,10 @@ $(function () {
 
 
 $(function () {
-  $('#input-27855').change(function() {
-    var $val = $('.destination');
+  $('#SelectBox-ByDestination').change(function() {
     var $dest = $(this).val();
-    var $matches = $($val).filter(function() {
-      return $(this).text() === destintion
+    var $matches = $('.destination li').filter(function() {
+      return $(this).text() === $dest
     });
     if (!$matches.length) {
       $(this).parent().addClass('hideByDestinationDropDownMenu');
@@ -44,18 +43,20 @@ $(function () {
   console.log("Here");
   $('#input-27855').change(function() {
     console.log("change");
-    var $val = $('.destination');
     var $dest = $(this).val();
-    var $matches = $($val).filter(function() {
-      console.log("Filter");
-      return $(this).text() === destintion
-    });
-    if (!$matches.length) {
-      $(this).parent().addClass('hideByDestinationDropDownMenu');
-      console.log("add");
-    } else {
-      $(this).parent().removeClass('hideByDestinationDropDownMenu');
-      console.log("remove");
+    $('.destinations').each(function() {
+      var $matches = $('.destination li').filter(function() {
+        console.log("Filter");
+        return $(this).text() === destintion
+      });
+      if (!$matches.length) {
+        $(this).parent().addClass('hideByDestinationDropDownMenu');
+        console.log("add");
+      } else {
+        $(this).parent().removeClass('hideByDestinationDropDownMenu');
+        console.log("remove");
+      }
+      console.log($matches);
     }
     console.log("changed");
   });
