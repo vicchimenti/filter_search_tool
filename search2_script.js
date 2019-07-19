@@ -24,17 +24,20 @@ $(function () {
 });
 
 
+
 $(function () {
   $('#SelectBox-ByDestination').change(function() {
     var $dest = $(this).val();
-    var $matches = $('.destination li').filter(function() {
-      return $(this).text() === $dest
+    $('.destinations').each(function() {
+      var $matches = $('.destination li').filter(function() {
+        return $(this).text() === $dest
+      });
+      if (!$matches.length) {
+        $(this).parent().addClass('hideByDestinationDropDownMenu');
+      } else {
+        $(this).parent().removeClass('hideByDestinationDropDownMenu');
+      }
     });
-    if (!$matches.length) {
-      $(this).parent().addClass('hideByDestinationDropDownMenu');
-    } else {
-      $(this).parent().removeClass('hideByDestinationDropDownMenu');
-    }
   });
 });
 
@@ -57,7 +60,7 @@ $(function () {
         console.log("remove");
       }
       console.log($matches);
-    }
+    });
     console.log("changed");
   });
   console.log("done");
