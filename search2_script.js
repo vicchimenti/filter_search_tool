@@ -26,7 +26,7 @@ $(function () {
 
 $(function () {
   console.log("Here");
-  $('#input-27855').change(function() {
+  $('#input-27855').on('change', function() {
     console.log("change");
     var $val = $('.destination');
     var $dest = $(this).val();
