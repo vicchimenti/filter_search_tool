@@ -104,14 +104,14 @@ try {
 
   /* -- Write all the things -- */
   // <i class="fas fa-minus"></i>
-  document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   // var el = document.getElementsByClassName('educationAbroadItemWrapper')[0];
-  var idx = this.id;
-  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#abc' + idx + '" aria-expanded="false">');
+  // var idx = this.id;
+  document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
+  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="id<t4 type="meta" meta="content_id" />" aria-expanded="false">');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
   document.write('<i class="fas fa-plus"></i></button>')
-  document.write('<div class="detailWrapper" id="abc' + idx + '">')
+  document.write('<div class="detailWrapper" id="id<t4 type="meta" meta="content_id" />">')
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
