@@ -106,7 +106,8 @@ try {
   // <i class="fas fa-minus"></i>
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   var index = this.id;
-  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#' + index + '">');
+  window.alert(index);
+  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="#' + index + '">');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
   document.write('<i class="fas fa-plus"></i></button>')
