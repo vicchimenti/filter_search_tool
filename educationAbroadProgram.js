@@ -105,7 +105,7 @@ try {
   /* -- Write all the things -- */
   // <i class="fas fa-minus"></i>
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  document.write('<button class="btn btn-info" type="button" data-toggle="collapse" data-target=".detailWrapper">');
+  document.write('<button class="btn btn-info" type="button" data-toggle="collapse" data-target=".detailWrapper" aria-expanded="false">');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
   document.write('<i class="fas fa-plus"></i></button>')
