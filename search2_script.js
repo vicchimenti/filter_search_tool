@@ -84,12 +84,11 @@ $(function () {
     });
 })
 
-
+    // var $key = $('#input-27855 option');
+        // var $val = $('.destination');
 $(function () {
-    var $key = $('#input-27855 option');
-    var $val = $('.destination');
-    $($val).filter(function(i, e) {
-        if ($(e).text() != $key)
+    $('.destination').filter(function(i, e) {
+        if ($(e).text() != '.destintionDropDownMenu')
             $(this).parent().addClass('hideByDestinationDropDownMenu');
         else
             $(this).parent().removeClass('hideByDestinationDropDownMenu');
