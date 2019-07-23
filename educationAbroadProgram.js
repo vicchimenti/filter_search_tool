@@ -105,7 +105,8 @@ try {
   /* -- Write all the things -- */
   // <i class="fas fa-minus"></i>
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  var index = document.getElementsByClassName('educationAbroadItemWrapper')[0].getAttribute('id');
+  var el = document.getElementsByClassName('educationAbroadItemWrapper')[0];
+  var index = el.getAttribute('id');
   document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#Id">');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
