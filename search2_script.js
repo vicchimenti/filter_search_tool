@@ -97,8 +97,9 @@ $('.width-100.form-control.destinationDropDownMenu').change(function () {
 });
 
 
-$(function(){
-    $('.width-100.form-control.destinationDropDownMenu').change(function () {
+$(function() {
+    console.log("here");
+    $('#input-27855').change(function () {
         console.log("change");
         $('.destination li').filter(function(i, e) {
             console.log("filter");
@@ -109,6 +110,29 @@ $(function(){
         });
         console.log("filtered");
     });
+    console.log("done");
+});
+
+$(function() {
+    console.log("here");
+    $('#input-27855').change(function () {
+        console.log("change");
+        $('.destination li').filter(function(i, e) {
+            console.log("filter");
+            if ($(e).text() != '.destintionDropDownMenu option')
+                $(this).parent().addClass('hideByDestinationDropDownMenu');
+            else
+                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+        });
+        console.log("filtered");
+    });
+    console.log("done");
+});
+
+[name='fieldValue']
+$(function() {
+    console.log("here");
+    $(".form-group").css('color', 'red');
     console.log("done");
 });
 
