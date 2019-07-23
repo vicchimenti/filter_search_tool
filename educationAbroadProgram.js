@@ -107,7 +107,7 @@ try {
   document.write('<button class="btn btn-info" type="button" data-toggle="collapse" data-target=".detailWrapper">');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
-  document.write('<i class="fas fa-minus"></i><i class="fas fa-plus"></i>')
+  document.write('<i class="fas fa-minus"></i><i class="fas fa-plus"></i></button>')
   document.write('<div class="detailWrapper">')
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
