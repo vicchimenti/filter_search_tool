@@ -103,9 +103,14 @@ try {
 
 
   /* -- Write all the things -- */
+  // <i class="fas fa-minus"></i>
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  document.write('<h3>' + program + '</h3>\n');
-  document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
+  for (let index = 0; index < )
+  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#Id">');
+  document.write('<span><h3>' + program + '</h3>\n');
+  document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
+  document.write('<i class="fas fa-plus"></i></button>')
+  document.write('<div class="detailWrapper" id="Id">')
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
@@ -117,6 +122,7 @@ try {
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  document.write('</div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
