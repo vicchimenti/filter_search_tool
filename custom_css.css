@@ -89,6 +89,7 @@
 #accordion .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
     color: black;
     display: inline-block;
+    font-size: 1.5rem;
     line-height: 20px;
     min-height: 60px;
     padding: 20px 20px 20px 35px;
