@@ -1,12 +1,32 @@
 
 
 
+
+/***************************
+#accordion .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
+    display: none;
+}
+
+#accordion .educationAbroadItemWrapper .educationAbroadItem button.show .fa-plus {
+    display: none;
+}
+
+// #accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
+    background-color: inherit;
+    color: #aa0000;
+    padding-left: 10px;
+    display: inline-block;
+}
+********************************/
+
+
+
   // var t4ContentId = '<t4 type=\'meta\' meta=\'content_id\' /><t4 type=\'meta\' meta=\'html_anchor\' />';
   // document.write('<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">');
   // document.write('<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">');
   // document.write('<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" data-parent="#accordion">');
 
-  
+
 
 // <i class="fas fa-minus"></i>
 // var el = document.getElementsByClassName('educationAbroadItemWrapper')[0];
