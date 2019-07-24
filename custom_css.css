@@ -57,6 +57,7 @@
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem button span {
+  display: inline-block;
   font-size: 2.0rem;
 }
 
@@ -66,8 +67,8 @@
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
   background-color: inherit;
-  color:  #aa0000;
-  padding-left:	10px;
+  color: #aa0000;
+  padding-right: 10px;
   display: inline-block;
 }
 
