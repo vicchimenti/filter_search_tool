@@ -64,10 +64,6 @@
   text-decoration: underline;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button .descriptionWrapper {
-    color: black;
-}
-
 #accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
   background-color: inherit;
   color:  #aa0000;
@@ -88,4 +84,14 @@
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
   display: none;
+}
+
+#accordion .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
+    color: black;
+    display: inline-block;
+    line-height: 20px;
+    min-height: 60px;
+    padding: 20px 20px 20px 35px;
+    text-align: left;
+    text-decoration: none;
 }
