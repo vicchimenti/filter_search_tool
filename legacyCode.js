@@ -1,6 +1,12 @@
 
 
+// <i class="fas fa-minus"></i>
+// var el = document.getElementsByClassName('educationAbroadItemWrapper')[0];
+// var idx = el.id;
+  // var idx = '<t4 type="meta" meta="content_id" />';
 
+
+  
 
 
 // <!-- Search By GPA -->
