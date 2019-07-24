@@ -124,7 +124,7 @@ try {
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
-  document.write('</div></div>');
+  document.write('</div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
