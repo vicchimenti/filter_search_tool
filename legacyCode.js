@@ -3,9 +3,7 @@
 
 
 
-/* #accordion .educationAbroadItemWrapper .educationAbroadItem button span {
-  font-size: 2.0rem;
-} */
+
 
 
 
