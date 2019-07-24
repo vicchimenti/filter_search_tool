@@ -26,7 +26,7 @@ try {
 
 
   /* -- Prepare all the things -- */
-  var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent"><div id="accordion">';
+  var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="educationAbroadItem standardContent"><div id="accordion"><t4 type=\'meta\' meta=\'html_anchor\' />';
   var endingHTML = '</div></div></div>\n';
 
   /* parse the list of destinations, add <span> tags*/
