@@ -1,12 +1,20 @@
 
 
+
+  // var t4ContentId = '<t4 type=\'meta\' meta=\'content_id\' /><t4 type=\'meta\' meta=\'html_anchor\' />';
+  // document.write('<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">');
+  // document.write('<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">');
+  // document.write('<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" data-parent="#accordion">');
+
+  
+
 // <i class="fas fa-minus"></i>
 // var el = document.getElementsByClassName('educationAbroadItemWrapper')[0];
 // var idx = el.id;
   // var idx = '<t4 type="meta" meta="content_id" />';
 
 
-  
+
 
 
 // <!-- Search By GPA -->
