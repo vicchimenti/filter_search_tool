@@ -111,9 +111,9 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="card">');
   document.write('<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">');
-  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">');
-  document.write('<h3>' + program + '</h3>\n');
-  document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
+  document.write('<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">');
+  document.write('<span><h3>' + program + '</h3>\n');
+  document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
   document.write('<i class="fas fa-plus"></i><i class="fas fa-minus"></i></button>');
   document.write('</div>');
   document.write('<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" data-parent="accordion" aria-expanded="false">');
