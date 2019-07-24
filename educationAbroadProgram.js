@@ -105,13 +105,14 @@ try {
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="card">');
+  document.write('<div class="accordion-group"');
   document.write('<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />" aria-multiselectable="true"><t4 type="meta" meta="html_anchor" />');
   document.write('<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div></span>');
   document.write('<i class="fas fa-minus"></i><i class="fas fa-plus"></i>');
   document.write('</button></div>');
-  document.write('<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" data-parent="accordion" aria-expanded="false">');
+  document.write('<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" data-parent="#accordion" aria-expanded="false">');
   document.write('<div class="card-body">');
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
@@ -124,7 +125,7 @@ try {
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
-  document.write('</div></div></div>');
+  document.write('</div></div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
