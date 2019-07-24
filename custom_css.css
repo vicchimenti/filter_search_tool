@@ -45,3 +45,16 @@
     padding: 30px;
     margin: 15px;
 }
+
+#accordion .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
+    display: none;
+}
+
+/* #accordion .educationAbroadItemWrapper .educationAbroadItem button .fa-minus {
+} */
+
+#accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
+    background-color: inherit;
+    color: #aa0000;
+    padding-left: 10px;
+    display: inline-block;
