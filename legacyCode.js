@@ -2,6 +2,13 @@
 
 
 
+
+/* #accordion .educationAbroadItemWrapper .educationAbroadItem button span {
+  font-size: 2.0rem;
+} */
+
+
+
 /***************************
 #accordion .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
     display: none;
