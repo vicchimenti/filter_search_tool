@@ -26,8 +26,8 @@ try {
 
 
   /* -- Prepare all the things -- */
-  var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent">';
-  var endingHTML = '</div></div>\n';
+  var beginningHTML = '<div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><t4 type=\'meta\' meta=\'html_anchor\' /><div class="educationAbroadItem standardContent"><div id="accordion">';
+  var endingHTML = '</div></div></div>\n';
 
   /* parse the list of destinations, add <span> tags*/
   if (destination != "") {
@@ -109,11 +109,13 @@ try {
     // var idx = '<t4 type="meta" meta="content_id" />';
 
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  document.write('<button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#id<t4 type=\'meta\' meta=\'content_id\' />">');
+  document.write('<div class="card">');
+  document.write('<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">');
+  document.write('<button class="btn btn-info" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />"> aria-expanded="false" aria-controls="#collapse<t4 type=\'meta\' meta=\'content_id\' />"');
   document.write('<span><h3>' + program + '</h3>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
   document.write('<i class="fas fa-plus"></i><i class="fas fa-minus"></i></button></span>');
-  document.write('<div class="detailWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />">');
+  document.write('<div class="detailWrapper" id="collapse<t4 type=\'meta\' meta=\'content_id\' />">');
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
@@ -125,7 +127,7 @@ try {
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
-  document.write('</div>');
+  document.write('</div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
