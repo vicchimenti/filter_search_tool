@@ -7,6 +7,22 @@ button.btn.btn-primary.pull-right.js-submit {
     display: none;
 }
 
+/* .form-group {
+    background-color: red;
+} */
+
+#input-27855 {
+    background-color: green;
+    color: orange;
+    text-decoration: line-through;
+}
+
+#input-27989 {
+    background-color: orange;
+    color: green;
+    text-decoration: underline;
+}
+
 #filterFieldWrapper{
   border-bottom:1px solid #ccc;
   margin: 0 10px 10px 10px;

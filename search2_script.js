@@ -1,5 +1,7 @@
 <script>
 
+
+
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -22,79 +24,6 @@ $(function () {
     }
   });
 });
-
-
-
-// $(function () {
-//   $('#SelectBox-ByDestination').change(function() {
-//     var $dest = $(this).val();
-//     $('.destinations').each(function() {
-//       var $matches = $('.destination li').filter(function() {
-//         return $(this).text() === $dest
-//       });
-//       if (!$matches.length) {
-//         $(this).parent().addClass('hideByDestinationDropDownMenu');
-//       } else {
-//         $(this).parent().removeClass('hideByDestinationDropDownMenu');
-//       }
-//     });
-//   });
-// });
-//
-//
-// $(function () {
-//   console.log("Here");
-//   $('#input-27855').change(function() {
-//     console.log("change");
-//     var $dest = $(this).val();
-//     $('.destinations').each(function() {
-//       var $matches = $('.destination li').filter(function() {
-//         console.log("Filter");
-//         return $(this).text() === destintion
-//       });
-//       if (!$matches.length) {
-//         $(this).parent().addClass('hideByDestinationDropDownMenu');
-//         console.log("add");
-//       } else {
-//         $(this).parent().removeClass('hideByDestinationDropDownMenu');
-//         console.log("remove");
-//       }
-//       console.log($matches);
-//     });
-//     console.log("changed");
-//   });
-//   console.log("done");
-// });
-//
-//
-// $(function () {
-//     $('#input-27855').on('change', function() {
-//       var dest = $(this).val();
-//       $('.destinations').each(function() {
-//         var $matches = $('.destintion li').filter(function() {
-//           return $(this).text() === dest
-//         });
-//         if(!$matches.length){
-//            // hide this destination div
-//         }else{
-//            // show it
-//         }
-//
-//       });
-//     });
-// })
-//
-//     // var $key = $('#input-27855 option');
-//         // var $val = $('.destination');
-//           $('#SelectBox-ByDestination').change(function() {
-// $('.destinationDropDownMenu').change(function () {
-//     $('.destination li').filter(function(i, e) {
-//         if ($(e).text() != '.destintionDropDownMenu option')
-//             $(this).parent().addClass('hideByDestinationDropDownMenu');
-//         else
-//             $(this).parent().removeClass('hideByDestinationDropDownMenu');
-//     });
-// });
 
 
 $(function() {
@@ -128,15 +57,6 @@ $(function() {
     });
     console.log("done");
 });
-
-// [name='fieldValue']
-// $(function() {
-//     console.log("here");
-//     $("div.form-group").css('color', 'red');
-//     console.log("done");
-// });
-
-
 
 
 $(function () {
@@ -355,6 +275,12 @@ $(function () {
   });
 });
 
+
+$(function() {
+    console.log("here");
+    $(".form-group").css('background-color', 'yellow');
+    console.log("done");
+});
 
 var visibleItems = $(".educationAbroadItemWrapper");
 
