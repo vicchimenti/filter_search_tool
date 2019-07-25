@@ -1,5 +1,12 @@
 <script>
 
+$(function() {
+    console.log("here");
+    $(".form-group").css('color', 'yellow');
+    $(".control-label").css('text-decoration', 'underline');
+    console.log("done");
+});
+
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -26,8 +33,17 @@ $(function () {
 
 $(function() {
     console.log("here");
-    $(".form-group").css('color', 'yellow');
-    $(".control-label").css('text-decoration', 'underline');
+    $('select#input-27989').change(function () {
+        console.log("change");
+        $('.housing li').filter(function(i, e) {
+            console.log("filter");
+            if ($(e).text() != '.destintionDropDownMenu option')
+                $(this).parent().addClass('hideByDestinationDropDownMenu');
+            else
+                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+        });
+        console.log("filtered");
+    });
     console.log("done");
 });
 
@@ -45,49 +61,6 @@ $(function() {
         console.log("filtered");
     });
     console.log("done");
-});
-
-$(function() {
-    console.log("here");
-    $('#input-27989').change(function () {
-        console.log("change");
-        $('.housing li').filter(function(i, e) {
-            console.log("filter");
-            if ($(e).text() != '.destintionDropDownMenu option')
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
-            else
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
-        });
-        console.log("filtered");
-    });
-    console.log("done");
-});
-
-
-$(function () {
-  $('select#input-27855').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.destination > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByDestinationDropDownMenu');
-    },
-    'hide': function() {
-      $(this).addClass('hideByDestinationDropDownMenu');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
 });
 
 
@@ -147,7 +120,7 @@ $(function () {
 
 
 $(function () {
-  $('#input-27856').quicksearch('.educationAbroadItemWrapper', {
+  document.querySelector("#input-27856").quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.fieldOfStudy > ul',
     'stripeRows': ['even', 'odd'],
