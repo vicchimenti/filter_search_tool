@@ -1,4 +1,31 @@
 
+// // TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
+// $(function () {
+//   $('#input-27864').quicksearch('.educationAbroadItemWrapper', {
+//     'delay': 100,
+//     'selector': '.programFee > ul',
+//     'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//     'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByProgramFeeDropDown');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByProgramFeeDropDown');
+//     },
+//     'onAfter': function () {
+//       anythingThere();
+//     }
+//   });
+// });
+
 
 
 
