@@ -10,6 +10,7 @@ try {
   var listOfProgramFees = "";
   // TODO: ***************    update program image t4 parameters *******************************************
   var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Education Abroad Program Image' output='normal' formatter='path/*' />");
+  var altImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Alt Image' output='normal' modifiers='striptags,htmlentities' />");
   var externalWebsiteLink = content.get("External Website Link");
   var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
   var listOfStudyAreas = "";
@@ -120,7 +121,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
   document.write('<div class="card-body">');
   document.write('<div class="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
-  document.write('<div class="programImage"><img src="'+ programImageMedia +'" /></div>');
+  document.write('<div class="programImage"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
   document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
