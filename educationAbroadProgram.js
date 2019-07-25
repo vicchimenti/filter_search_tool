@@ -9,7 +9,7 @@ try {
   var programFee = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Fee' output='normal' display_field='value' />");
   var listOfProgramFees = "";
   // TODO: ***************    update program image t4 parameters *******************************************
-  var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Image' output='image' />");
+  var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Media' output='imageurl' />");
   var externalWebsiteLink = content.get("External Website Link");
   var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
   var listOfStudyAreas = "";
@@ -122,7 +122,7 @@ try {
   document.write('<div class="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
-  document.write('<div class="programImage"><img src="<t4 type=\'content\' name=\'Program Media\' output=\'imageurl\' />" /></div>'); // ********* test and update image link if necessary ************
+  document.write('<div class="programImage"><img src="'+ programImageMedia +'" /></div>'); // ********* test and update image link if necessary ************
   document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Website<span class="fas fa-external-link-alt"></span></a></div>');
   document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
