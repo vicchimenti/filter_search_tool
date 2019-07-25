@@ -1,7 +1,5 @@
 <script>
 
-
-
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -25,6 +23,13 @@ $(function () {
   });
 });
 
+
+$(function() {
+    console.log("here");
+    $(".form-group").css('color', 'yellow');
+    $(".control-label").css('text-decoration', 'underline');
+    console.log("done");
+});
 
 $(function() {
     console.log("here");
@@ -87,7 +92,7 @@ $(function () {
 
 
 $(function () {
-  $('#input-27863').quicksearch('.educationAbroadItemWrapper', {
+  $('select#input-27863').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.term > ul',
     'stripeRows': ['even', 'odd'],
@@ -275,12 +280,6 @@ $(function () {
   });
 });
 
-
-$(function() {
-    console.log("here");
-    $(".form-group").css('background-color', 'yellow');
-    console.log("done");
-});
 
 var visibleItems = $(".educationAbroadItemWrapper");
 
