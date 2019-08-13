@@ -128,7 +128,9 @@ try {
 
   /* -- Write Program Image and Link--*/
   document.write('<div class="row no-gutters" id="image-link">');
-  document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
+  if (programImageMedia.onload) {
+      document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
+  }
   if (externalWebsiteLink != "") {
       document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h5>Visit ' + program + ' Website</h5></div>');
   }
