@@ -11,7 +11,7 @@ try {
   // TODO: ***************    update program image t4 parameters *******************************************
   var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Education Abroad Program Image' output='normal' formatter='path/*' />");
   var altImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Alt Image' output='normal' modifiers='striptags,htmlentities' />");
-  var externalWebsiteLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Website Link' output='selective' display_field='value' />");
+  var externalWebsiteLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Website Link' output='normal' display_field='value' />");
   var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
   var listOfStudyAreas = "";
   var features = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Features' output='normal' display_field='value' />");
@@ -130,14 +130,14 @@ try {
   if (programImageMedia != null) {
       document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   }
-  if (externalWebsiteLink != null) {
+  if (externalWebsiteLink != "") {
       document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h5>Visit ' + program + ' Website</h5></div>');
   }
   document.write('</div>');
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row no-gutters" id="row1">');
-  document.write('<div class="col-md-4" id="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
+  document.write('<div class="col-md-4" id="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="col-md-4" id="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
   document.write('<div class="col-md-4" id="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
   document.write('</div>');
