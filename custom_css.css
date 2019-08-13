@@ -105,6 +105,7 @@
     font-size: 1.5rem;
     line-height: 20px;
     min-height: 60px;
+    padding: 0 20px 0 35px;
     text-align: left;
     text-decoration: none;
 }
@@ -119,10 +120,6 @@
     text-align: left;
     text-decoration: none;
 }
-
-/* #accordion .educationAbroadItemWrapper .educationAbroadItem .card-group {
-    display: flex;
-} */
 
 .educationAbroadItemWrapper .educationAbroadItem #image-link {
     padding-bottom: 30px;
