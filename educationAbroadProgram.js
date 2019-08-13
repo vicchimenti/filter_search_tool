@@ -121,8 +121,10 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
 
   /* -- Write Program Image and Link--*/
+  document.write('<div class="image-link">');
   document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit' + program + ' Website<span class="fas fa-external-link-alt"></span></a></div>');
+  document.write('</div>');
   /* -- Write Program Cards--*/
   document.write('<div class="card-body" id="programBody">');
   document.write('<div class="card-group">');
