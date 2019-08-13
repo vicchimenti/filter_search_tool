@@ -67,7 +67,7 @@
     font-size: 2.0rem;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button:hover .programTitle {
+#accordion .educationAbroadItemWrapper .educationAbroadItem button:hover span.programTitle {
     text-decoration: underline;
 }
 
