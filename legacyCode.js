@@ -1,4 +1,30 @@
 
+
+
+// document.write('<div class="card-group">');
+// /* -- Write Program Level 1 Summary Stats --*/
+// document.write('<div class="card" id="card1">');
+// document.write('<div class="card-body" id="level1">');
+// document.write('<div class="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
+// document.write('<div class="programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
+// document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
+// document.write('</div></div>');
+// /* -- Write Program Level 2 Summary Stats --*/
+// document.write('<div class="card" id="card2">');
+// document.write('<div class="card-body" id="level2">');
+// document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
+// document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
+// document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
+// document.write('</div></div>');
+// /* -- Write Program Level 3 Details --*/
+// document.write('<div class="card" id="card3">');
+// document.write('<div class="card-body" id="level3">');
+// document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+// document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
+// document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
+// document.write('</div></div>');
+
+
 // // TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
 // $(function () {
 //   $('#input-27864').quicksearch('.educationAbroadItemWrapper', {
