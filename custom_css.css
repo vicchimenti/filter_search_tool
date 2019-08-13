@@ -62,7 +62,7 @@
     text-decoration: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button span {
+#accordion .educationAbroadItemWrapper .educationAbroadItem button span.programTitleBox {
     display: inline-block;
     font-size: 2.0rem;
 }
