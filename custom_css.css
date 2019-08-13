@@ -71,8 +71,9 @@
     text-decoration: underline;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button:hover .fas {
+#accordion .educationAbroadItemWrapper .educationAbroadItem button:hover span i {
     text-decoration: none;
+    display: inline-block;
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
