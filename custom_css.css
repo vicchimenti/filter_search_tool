@@ -115,3 +115,7 @@
     text-align: left;
     text-decoration: none;
 }
+
+#accordion .educationAbroadItemWrapper .educationAbroadItem .card-group {
+    display: flex;
+}

@@ -110,7 +110,7 @@ try {
 
   /* -- Write all the collapsible header -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  document.write('<div class="card">');
+  document.write('<div class="card" id="programFull">');
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
@@ -119,25 +119,37 @@ try {
 
   /* -- Write all the collapsible body -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
-  document.write('<div class="card-body" id="programBody"><div class="card-group">');
+
   /* -- Write Program Image --*/
   document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
+  document.write('<div class="card-body" id="programBody">');
+  document.write('<div class="card-group">');
   /* -- Write Program Level 1 Summary Stats --*/
-  document.write('<div class="card-body" id="level1">');
+  document.write('<div class="card" id="card1"');
+  document.write('<div class="card-text" id="level1">');
   document.write('<div class="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
-  document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
-  document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
-  document.write('</div>');
-  /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
-  document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
-  document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
-  /* -- Write Program Level 3 Details --*/
   document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
+  document.write('</div></div>');
+  /* -- Write Program Level 2 Summary Stats --*/
+  document.write('<div class="card" id="card2"');
+  document.write('<div class="card-text" id="level2">');
+  document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
+  document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
+  document.write('</div></div>');
+  /* -- Write Program Level 3 Details --*/
+  document.write('<div class="card" id="card3"');
+  document.write('<div class="card-text" id="level3">');
+  document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
+  document.write('</div></div>');
   /* -- Write Program Link --*/
+  document.write('<div class="card" id="card4"');
+  document.write('<div class="card-text" id="level4">');
   document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit' + program + ' Website<span class="fas fa-external-link-alt"></span></a></div>');
+  document.write('</div></div>');
 
   /* -- Write Closing Tags -- */
   document.write('</div></div></div></div>');
