@@ -120,16 +120,21 @@ try {
   /* -- Write all the collapsible body -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
   document.write('<div class="card-body">');
-  document.write('<div class="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
+  /* -- Write Program Image --*/
   document.write('<div class="programImage"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
-  document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
+  /* -- Write Program Level 1 Summary Stats --*/
+  document.write('<div class="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
-  document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
-  document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
+  document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
-  document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  /* -- Write Program Level 3 Details --*/
+  document.write('<div class="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
+  document.write('<div class="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
+  document.write('<div class="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
+  /* -- Write Program Link --*/
   document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit' + program + ' Website<span class="fas fa-external-link-alt"></span></a></div>');
 
   /* -- Write Closing Tags -- */
