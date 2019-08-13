@@ -109,7 +109,7 @@ try {
 
   /* -- Write all the collapsible header -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
-  document.write('<div class="card" id="programFull">');
+  document.write('<div class="card">');
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
@@ -122,7 +122,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
 
   /* -- Write Program Cards--*/
-  document.write('<div class="card-body" id="programBody">');
+  document.write('<div class="card-body">');
   document.write('<div class="container-fluid">');
 
   /* -- Write Program Image and Link--*/
@@ -140,13 +140,13 @@ try {
   document.write('<div class="col-md-4" id="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
-  document.write('<div class="row no-gutters" id="row1">');
+  document.write('<div class="row no-gutters" id="row2">');
   document.write('<div class="col-md-4" id="programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
   document.write('<div class="col-md-4" id="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="col-md-4" id="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 3 Details --*/
-  document.write('<div class="row no-gutters" id="row1">');
+  document.write('<div class="row no-gutters" id="row3">');
   document.write('<div class="col-md-4" id="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
   document.write('<div class="col-md-4" id="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
   document.write('<div class="col-md-4" id="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
