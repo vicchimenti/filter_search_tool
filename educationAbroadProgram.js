@@ -114,7 +114,9 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
-  document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
+  if (generalDescription) {
+      document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
+  }
   document.write('</div>');
 
   /* -- Write all the collapsible body -- */
@@ -127,7 +129,7 @@ try {
   /* -- Write Program Image and Link--*/
   document.write('<div class="row no-gutters" id="image-link">');
   document.write('<div class="col-md-12" id="image-link">');
-  if (programImageMedia != null) {
+  if (programImageMedia) {
       document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   }
   if (externalWebsiteLink != "") {
