@@ -55,7 +55,7 @@ try {
 
   /* parse the list of study areas, add <span> tags*/
   if (fieldOfStudy != "") {
-    var arrayOfStudyAreas = fieldOfStudy.split(', ');
+    var arrayOfStudyAreas = fieldOfStudy.split(',');
     for (i=0; i < arrayOfStudyAreas.length; i++) {
       listOfStudyAreas += '<li>' + arrayOfStudyAreas[i] + '</li>';
     }
@@ -131,7 +131,7 @@ try {
       document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   }
   if (externalWebsiteLink != "") {
-      document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h5>Visit ' + program + ' Website</h5></div>');
+      document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h5>Visit ' + program + ' Website</h5></a></div>');
   }
   document.write('</div>');
 
@@ -155,7 +155,7 @@ try {
   document.write('</div>');
 
   /* -- Write Closing Tags -- */
-  document.write('</div></div></div></div>');
+  document.write('</div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
