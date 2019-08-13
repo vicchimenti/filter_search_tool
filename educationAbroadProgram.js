@@ -115,7 +115,10 @@ try {
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
   if (generalDescription != "") {
       document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
+  } else {
+      document.write('<div class="noDescription"></div>');
   }
+
   document.write('</div>');
 
   /* -- Write all the collapsible body -- */
