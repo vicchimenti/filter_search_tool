@@ -113,7 +113,7 @@ try {
   document.write('<div class="card">');
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
-  document.write('<i class="fas fa-minus"></i><i class="fas fa-plus"></i><span>' + program + '</span></button>\n');
+  document.write('<span><i class="fas fa-minus"></i><i class="fas fa-plus"></i>' + program + '</span></button>\n');
   document.write('<div class="descriptionWrapper">' + generalDescription + '</div>');
   document.write('</div>');
 

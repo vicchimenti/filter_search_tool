@@ -71,6 +71,10 @@
     text-decoration: underline;
 }
 
+#accordion .educationAbroadItemWrapper .educationAbroadItem button:hover .fas {
+    text-decoration: none;
+}
+
 #accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
     background-color: inherit;
     color: #aa0000;
