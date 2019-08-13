@@ -46,7 +46,7 @@
     margin: 15px;
 }
 
-.educationAbroadItemWrapper .educationAbroadItem .programImage {
+.educationAbroadItemWrapper .educationAbroadItem .card-img-top {
     height: auto;
     max-width: 600px;
     width: 100%;

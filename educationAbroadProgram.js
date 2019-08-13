@@ -119,13 +119,15 @@ try {
 
   /* -- Write all the collapsible body -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
-  document.write('<div class="card-body">');
+  document.write('<div class="card-body" id="programBody"><div class="card-group">');
   /* -- Write Program Image --*/
-  document.write('<div class="programImage"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
+  document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   /* -- Write Program Level 1 Summary Stats --*/
+  document.write('<div class="card-body" id="level1">');
   document.write('<div class="destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
   document.write('<div class="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
   document.write('<div class="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
   document.write('<div class="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
@@ -138,7 +140,7 @@ try {
   document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit' + program + ' Website<span class="fas fa-external-link-alt"></span></a></div>');
 
   /* -- Write Closing Tags -- */
-  document.write('</div></div></div>');
+  document.write('</div></div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
