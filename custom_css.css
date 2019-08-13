@@ -119,3 +119,7 @@
 #accordion .educationAbroadItemWrapper .educationAbroadItem .card-group {
     display: flex;
 }
+
+.educationAbroadItemWrapper .educationAbroadItem #image-link {
+    padding-bottom: 20px;
+}
