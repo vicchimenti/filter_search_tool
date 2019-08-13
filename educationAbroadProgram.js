@@ -11,7 +11,7 @@ try {
   // TODO: ***************    update program image t4 parameters *******************************************
   var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Education Abroad Program Image' output='normal' formatter='path/*' />");
   var altImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Alt Image' output='normal' modifiers='striptags,htmlentities' />");
-  var externalWebsiteLink = content.get("External Website Link");
+  var externalWebsiteLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='External Website Link' output='normal' display_field='value' />");
   var fieldOfStudy = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Field of Study' output='normal' display_field='value' />");
   var listOfStudyAreas = "";
   var features = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Features' output='normal' display_field='value' />");
@@ -128,7 +128,7 @@ try {
   document.write('<div class="row no-gutters" id="image-link">');
   document.write('<div class="col-md-12" id="image-link">');
   document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
-  document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h5>Visit ' + program + ' Website</h5><span class="fas fa-external-link-alt"></span></a></div>');
+  document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h5>Visit ' + program + ' Website</h5></div>');
   document.write('</div>');
 
   /* -- Write Program Level 1 Summary Stats --*/
