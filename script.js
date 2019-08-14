@@ -231,7 +231,7 @@ var visibleItems = $(".educationAbroadItemWrapper");
 function anythingThere() {
   visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByHousingDropDown');
 
-  if( visibleItems.length == 0) {
+  if(visibleItems.length == 0) {
     $( ".noResultsToShow" ).show();
   } else {
     $( ".noResultsToShow" ).hide();
