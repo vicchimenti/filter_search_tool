@@ -129,13 +129,29 @@
     width: 100%;
 }
 
+.educationAbroadItemWrapper .educationAbroadItem #image-link {
+    padding-bottom: 30px;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .externalLink {
     padding-left: 20px;
 }
 
-.educationAbroadItemWrapper .educationAbroadItem #image-link {
-    padding-bottom: 30px;
+.educationAbroadItemWrapper .educationAbroadItem .externalLink a:link {
+    color: #0000EE;
 }
+
+.educationAbroadItemWrapper .educationAbroadItem .externalLink a:visited {
+    color: #551A8B;
+}
+
+.educationAbroadItemWrapper .educationAbroadItem .externalLink a:hover {
+}
+
+.educationAbroadItemWrapper .educationAbroadItem .externalLink a:active {
+    color: #FF0000;
+}
+
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
     padding-left: 20px;
