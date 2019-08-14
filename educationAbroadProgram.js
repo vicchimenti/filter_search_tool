@@ -142,7 +142,7 @@ try {
   /* -- Write Program Image and Link- IF they are not null --*/
   document.write('<div class="row no-gutters" id="image-link">');
   if (city != "") {
-      document.write('<div class="programCity"><h4>' + city + '</h4></div>');
+      document.write('<div class="programCity"><h5>' + city + '</h5></div>');
   }
   if (programImageMedia != "") {
       document.write('<div class="card-img-top"><img src="' + programImageMedia + '" alt="' + altImage + '"/></div>');
