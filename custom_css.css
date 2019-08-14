@@ -50,6 +50,14 @@
     padding: 0 0 20px 15px;
 }
 
+#accordion .educationAbroadItemWrapper .educationAbroadItem .card {
+    padding: 0 20px 30px 35px;
+}
+
+#accordion .educationAbroadItemWrapper .educationAbroadItem .card-Header {
+    padding: 5px 20px 0 35px;
+}
+
 #accordion .educationAbroadItemWrapper .educationAbroadItem button {
     color: #aa0000;
     display: inline-block;
@@ -89,10 +97,6 @@
     display: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card-Header {
-    padding: 5px 20px 0 35px;
-}
-
 #accordion .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
     color: black;
     display: block;
@@ -113,10 +117,6 @@
     padding: 0 20px 20px 35px;
     text-align: left;
     text-decoration: none;
-}
-
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card {
-    padding: 0 20px 30px 35px;
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem .card-img-top {
