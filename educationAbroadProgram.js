@@ -29,7 +29,6 @@ try {
   var city = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='City' output='normal' display_field='value' />");
 
 
-
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="accordion educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
   var endingHTML = '</div></div>\n';
@@ -143,10 +142,10 @@ try {
   /* -- Write Program Image and Link- IF they are not null --*/
   document.write('<div class="row no-gutters" id="image-link">');
   if (city != "") {
-      document.write('<div class="programCity"><h4>"' + city + '"</h4></div>');
+      document.write('<div class="programCity"><h4>' + city + '</h4></div>');
   }
   if (programImageMedia != "") {
-      document.write('<div class="card-img-top"><img src="' + programImageMedia + '" alt="' + altImag + '"/></div>');
+      document.write('<div class="card-img-top"><img src="' + programImageMedia + '" alt="' + altImage + '"/></div>');
   }
   if (externalWebsiteLink != "") {
       document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
