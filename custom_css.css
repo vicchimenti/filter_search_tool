@@ -49,7 +49,7 @@
 #accordion .educationAbroadItemWrapper .educationAbroadItem .card-img-top {
     height: auto;
     max-width: 600px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     width: 100%;
 }
 
@@ -95,7 +95,7 @@
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem .card-Header {
-    padding: 5px 20px 20px 35px;
+    padding: 5px 20px 0 35px;
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
@@ -104,7 +104,7 @@
     font-size: 1.5rem;
     line-height: 20px;
     min-height: 60px;
-    padding: 0 20px 0 35px;
+    padding: 0 20px 20px 35px;
     text-align: left;
     text-decoration: none;
 }
@@ -121,7 +121,7 @@
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem .card {
-    padding: 10px 20px 30px 35px;
+    padding: 0 20px 30px 35px;
 }
 
 #accordion .educationAbroadItemWrapper .educationAbroadItem #image-link {
