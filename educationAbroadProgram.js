@@ -178,7 +178,7 @@ try {
   /* -- Write Program Level 5 Details --*/
   if (prerequisites != "") {
       document.write('<div class="row no-gutters" id="row5">');
-      document.write('<div class="col-md-12 programDetails prerequisites"><h3>Prerequisites</h3><ul>' + prerequisites + '</ul></div>');
+      document.write('<div class="col-md-12 programDetails prerequisites"><h3>Additional Prerequisites</h3><ul>' + prerequisites + '</ul></div>');
       document.write('</div>');
   }
 

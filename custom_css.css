@@ -123,6 +123,10 @@
     text-decoration: none;
 }
 
+.educationAbroadItemWrapper .educationAbroadItem .programCity {
+    padding-left: 20px;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .card-img-top {
     height: auto;
     max-width: 600px;
