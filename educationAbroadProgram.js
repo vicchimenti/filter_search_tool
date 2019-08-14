@@ -148,12 +148,12 @@ try {
   document.write('<div class="row no-gutters" id="row2">');
   document.write('<div class="col-md-3 programDetails language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
   document.write('<div class="col-md-3 programDetails housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('<div class="col-md-3 programDetails features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 3 Details --*/
   document.write('<div class="row no-gutters" id="row3">');
-  document.write('<div class="col-md-12 programDetails term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
+  document.write('<div class="col-md-12 programDetails fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
   document.write('</div>');
 
   /* -- Write Closing Tags -- */
