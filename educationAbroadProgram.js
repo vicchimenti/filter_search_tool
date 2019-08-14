@@ -133,7 +133,7 @@ try {
       document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   }
   if (externalWebsiteLink != "") {
-      document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '"><h6>Visit ' + program + ' Website</h6></a></div>');
+      document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit ' + program + ' Website</a></div>');
   }
   document.write('</div>');
 
