@@ -121,6 +121,10 @@
     text-decoration: none;
 }
 
+#accordion .educationAbroadItemWrapper .educationAbroadItem .card {
+    padding-bottom: 15px;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem #image-link {
     padding-bottom: 30px;
 }
