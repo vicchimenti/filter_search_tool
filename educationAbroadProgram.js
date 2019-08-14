@@ -139,21 +139,21 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row no-gutters" id="row1">');
-  document.write('<div class="col-md-4" id="destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
-  document.write('<div class="col-md-4" id="programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
-  document.write('<div class="col-md-4" id="gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
+  document.write('<div class="col-md-4 destination"><h4>Destinations</h4><ul>' +  listOfDestinations + '</ul></div>');
+  document.write('<div class="col-md-4 programFee"><h4>Program Fees</h4><ul>' +  listOfProgramFees + '</ul></div>');
+  document.write('<div class="col-md-4 gpa"><h4>GPA Requirements</h4><ul> ' +  listOfGPA + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="row no-gutters" id="row2">');
-  document.write('<div class="col-md-4" id="programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
-  document.write('<div class="col-md-4" id="language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
-  document.write('<div class="col-md-4" id="housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
+  document.write('<div class="col-md-4 programType"><h4>Program Type</h4><ul> ' +  listOfTypes + '</ul></div>');
+  document.write('<div class="col-md-4 language"><h4>Language of Instruction</h4><ul>' +  listOfLanguages + '</ul></div>');
+  document.write('<div class="col-md-4 housing"><h4>Housing Accommodations</h4><ul> ' +  listOfHousing + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 3 Details --*/
   document.write('<div class="row no-gutters" id="row3">');
-  document.write('<div class="col-md-4" id="fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
-  document.write('<div class="col-md-4" id="features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
-  document.write('<div class="col-md-4" id="term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
+  document.write('<div class="col-md-4 fieldOfStudy"><h4>Field of Study</h4><ul>' +  listOfStudyAreas + '</ul></div>');
+  document.write('<div class="col-md-4 features"><h4>Features</h4><ul>' +  listOfFeatures + '</ul></div>');
+  document.write('<div class="col-md-4 term"><h4>Term</h4><ul>' +  listOfTerms + '</ul></div>');
   document.write('</div>');
 
   /* -- Write Closing Tags -- */
