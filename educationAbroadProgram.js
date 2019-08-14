@@ -118,7 +118,6 @@ try {
   } else {
       document.write('<div class="noDescription"></div>');
   }
-
   document.write('</div>');
 
   /* -- Write all the collapsible body -- */
