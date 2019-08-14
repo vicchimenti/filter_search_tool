@@ -23,13 +23,18 @@ try {
   var listOfGPA = "";
   var housing = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Housing Accommodations' output='normal' display_field='value' />");
   var listOfHousing = "";
+  var provider = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Provider' output='normal' display_field='value' />");
+  var listOfProviders = "";
+  var prerequisites = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Prerequisites' output='normal' display_field='value' />");
+  var city = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='City' output='normal' display_field='value' />");
+
 
 
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="accordion educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
   var endingHTML = '</div></div>\n';
 
-  /* parse the list of destinations, add <span> tags*/
+  /* parse the list of destinations, add <li> tags*/
   if (destination != "") {
     var arrayOfDestinations = destination.split(', ');
     for (i=0; i < arrayOfDestinations.length; i++) {
@@ -37,7 +42,7 @@ try {
     }
   }
 
-  /* parse the list of academic terms, add <span> tags*/
+  /* parse the list of academic terms, add <li> tags*/
   if (term != "") {
     var arrayOfTerms = term.split(',');
     for (i=0; i < arrayOfTerms.length; i++) {
@@ -45,7 +50,7 @@ try {
     }
   }
 
-  /* parse the list of institutions, add <span> tags*/
+  /* parse the list of fees, add <li> tags*/
   if (programFee != "") {
     var arrayOfProgramFees = programFee.split(',');
     for (i=0; i < arrayOfProgramFees.length; i++) {
@@ -53,7 +58,7 @@ try {
     }
   }
 
-  /* parse the list of study areas, add <span> tags*/
+  /* parse the list of study areas, add <li> tags*/
   if (fieldOfStudy != "") {
     var arrayOfStudyAreas = fieldOfStudy.split(',');
     for (i=0; i < arrayOfStudyAreas.length; i++) {
@@ -61,7 +66,7 @@ try {
     }
   }
 
-  /* parse the list of features, add <span> tags*/
+  /* parse the list of features, add <li> tags*/
   if (features != "") {
     var arrayOfFeatures = features.split(',');
     for (i=0; i < arrayOfFeatures.length; i++) {
@@ -69,7 +74,7 @@ try {
     }
   }
 
-  /* parse the list of types, add <span> tags*/
+  /* parse the list of types, add <li> tags*/
   if (programType != "") {
     var arrayOfTypes = programType.split(',');
     for (i=0; i < arrayOfTypes.length; i++) {
@@ -77,7 +82,7 @@ try {
     }
   }
 
-  /* parse the list of languages, add <span> tags*/
+  /* parse the list of languages, add <li> tags*/
   if (language != "") {
     var arrayOfLanguages = language.split(',');
     for (i=0; i < arrayOfLanguages.length; i++) {
@@ -85,7 +90,7 @@ try {
     }
   }
 
-  /* parse the list of housing, add <span> tags*/
+  /* parse the list of housing, add <li> tags*/
   if (housing != "") {
     var arrayOfHousing = housing.split(',');
     for (i=0; i < arrayOfHousing.length; i++) {
@@ -93,11 +98,19 @@ try {
     }
   }
 
-  /* parse the list of gpa ranges, add <span> tags*/
+  /* parse the list of gpa ranges, add <li> tags*/
   if (gpa != "") {
     var arrayOfGPA = gpa.split(',');
     for (i=0; i < arrayOfGPA.length; i++) {
       listOfGPA += '<li>' + arrayOfGPA[i] + '</li>';
+    }
+  }
+
+  /* parse the list of providers, add <li> tags*/
+  if (provider != "") {
+    var arrayOfProviders = provider.split(',');
+    for (i=0; i < arrayOfProviders.length; i++) {
+      listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
     }
   }
 
@@ -129,8 +142,11 @@ try {
 
   /* -- Write Program Image and Link- IF they are not null --*/
   document.write('<div class="row no-gutters" id="image-link">');
+  if (city != "") {
+      document.write('<div class="programCity"><h4>"' + city + '"</h4></div>');
+  }
   if (programImageMedia != "") {
-      document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
+      document.write('<div class="card-img-top"><img src="' + programImageMedia + '" alt="' + altImag + '"/></div>');
   }
   if (externalWebsiteLink != "") {
       document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
@@ -139,26 +155,33 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row no-gutters" id="row1">');
-  document.write('<div class="col-md-3 programDetails destination"><h3>Destinations</h3><ul>' +  listOfDestinations + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' +  listOfProgramFees + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails gpa"><h3>GPA Requirements</h3><ul> ' +  listOfGPA + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' +  listOfTypes + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails destination"><h3>Destinations</h3><ul>' + listOfDestinations + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails gpa"><h3>GPA Requirements</h3><ul> ' + listOfGPA + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' + listOfTypes + '</ul></div>');
 
   document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="row no-gutters" id="row2">');
-  document.write('<div class="col-md-4 programDetails housing"><h3>Housing Accommodations</h3><ul> ' +  listOfHousing + '</ul></div>');
-  document.write('<div class="col-md-4 programDetails language"><h3>Language of Instruction</h3><ul>' +  listOfLanguages + '</ul></div>');
-  document.write('<div class="col-md-4 programDetails term"><h3>Term</h3><ul>' +  listOfTerms + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails housing"><h3>Housing Accommodations</h3><ul> ' + listOfHousing + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails language"><h3>Language of Instruction</h3><ul>' + listOfLanguages + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails provider"><h3>Providers</h3><ul>' + listOfProviders + '</ul></div>');
+  document.write('<div class="col-md-3 programDetails term"><h3>Term</h3><ul>' + listOfTerms + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 3 Details --*/
   document.write('<div class="row no-gutters" id="row3">');
-  document.write('<div class="col-md-12 programDetails features"><h3>Features</h3><ul>' +  listOfFeatures + '</ul></div>');
+  document.write('<div class="col-md-12 programDetails features"><h3>Features</h3><ul>' + listOfFeatures + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 4 Details --*/
   document.write('<div class="row no-gutters" id="row4">');
-  document.write('<div class="col-md-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul>' +  listOfStudyAreas + '</ul></div>');
+  document.write('<div class="col-md-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul>' + listOfStudyAreas + '</ul></div>');
   document.write('</div>');
+  /* -- Write Program Level 5 Details --*/
+  if (prerequisites != "") {
+      document.write('<div class="row no-gutters" id="row5">');
+      document.write('<div class="col-md-12 programDetails prerequisites"><h3>Prerequisites</h3><ul>' + prerequisites + '</ul></div>');
+      document.write('</div>');
+  }
 
   /* -- Write Closing Tags -- */
   document.write('</div></div></div></div>');
