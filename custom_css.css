@@ -140,3 +140,16 @@
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
     padding-left: 20px;
 }
+
+.educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails ul li {
+    background: #333;
+    color: #ffffff;
+    float: left;
+    line-height: 1.2;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+}
+
+.educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails ul li:before {
+    content: '';
+}
