@@ -50,15 +50,15 @@
     padding: 0 0 20px 15px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .card {
     padding: 0 20px 30px 35px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card-Header {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .card-Header {
     padding: 5px 20px 0 35px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button {
     color: #aa0000;
     display: inline-block;
     line-height: 20px;
@@ -68,36 +68,36 @@
     text-decoration: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button span.programTitleBox {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button span.programTitleBox {
     display: inline-block;
     font-size: 2.0rem;
     padding-bottom: 15px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button:hover span.programTitle {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button:hover span.programTitle {
     text-decoration: underline;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button .fas {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button .fas {
     background-color: inherit;
     color: #aa0000;
     display: inline-block;
     padding-right: 10px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button .fa-plus {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button .fa-plus {
     display: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-plus {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-plus {
     display: initial;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
     display: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
     color: black;
     display: block;
     font-size: 1.5rem;
@@ -108,7 +108,7 @@
     text-decoration: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card-body {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .card-body {
     color: black;
     display: block;
     font-size: 1.5rem;
@@ -119,20 +119,20 @@
     text-decoration: none;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card-img-top {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .card-img-top {
     height: auto;
     max-width: 600px;
     width: 100%;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .externalLink {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .externalLink {
     padding-left: 20px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem #image-link {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem #image-link {
     padding-bottom: 30px;
 }
 
-#accordion .educationAbroadItemWrapper .educationAbroadItem .card-body .col-md-4 {
+.accordion-parent .educationAbroadItemWrapper .educationAbroadItem .card-body .col-md-4 {
     padding-left: 20px;
 }

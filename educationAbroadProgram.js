@@ -26,7 +26,7 @@ try {
 
 
   /* -- Prepare all the things -- */
-  var beginningHTML = '<div id="accordion"><div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group"><div class="educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
+  var beginningHTML = '<div id="accordion" class="accordion-parent"><div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group"><div class="educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
   var endingHTML = '</div></div></div></div>\n';
 
   /* parse the list of destinations, add <span> tags*/
