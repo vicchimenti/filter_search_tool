@@ -1,3 +1,22 @@
+// .educationAbroadItemWrapper .educationAbroadItem .externalLink a:link {
+//     color: #0000EE;
+// }
+//
+// .educationAbroadItemWrapper .educationAbroadItem .externalLink a:visited {
+//     color: #551A8B;
+// }
+//
+// .educationAbroadItemWrapper .educationAbroadItem .externalLink a:hover {
+//     color: #0052EE;
+// }
+//
+// .educationAbroadItemWrapper .educationAbroadItem .externalLink a:active {
+//     color: #FF0000;
+// }
+
+
+
+
 //<span class="fas fa-external-link-alt"></span></a>
 
 
