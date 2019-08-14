@@ -175,7 +175,7 @@ $(function () {
       return query.test(txt);
     },
     'show': function() {
-      $(this).removeClass('hideByProgramTyperDropDown');
+      $(this).removeClass('hideByProgramTypeDropDown');
     },
     'hide': function() {
       $(this).addClass('hideByProgramTypeDropDown');
