@@ -128,7 +128,7 @@ try {
   document.write('<div class="container-fluid">');
 
   /* -- Write Program Image and Link- IF they are not null --*/
-  document.write('<div class="row no-gutters" id="image-link">');
+  document.write('<div class="row" id="image-link">');
   if (programImageMedia != "") {
       document.write('<div class="card-img-top"><img src="'+ programImageMedia +'" alt="'+altImage+'"/></div>');
   }
