@@ -25,7 +25,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByDestination').quicksearch('.educationAbroadItemWrapper', {
+  $('#SelectBox-ByDestination').quicksearch('.accordion-parent .educationAbroadItemWrapper', {
     'delay': 100,
     'selector': '.destination > ul',
     'stripeRows': ['even', 'odd'],
@@ -52,7 +52,7 @@ $(function () {
 
 
 $(function () {
-  $('#SelectBox-ByTerm').quicksearch('.educationAbroadItemWrapper', {
+  $('#SelectBox-ByTerm').quicksearch('.accordion-parent', {
     'delay': 100,
     'selector': '.term > ul',
     'bind': 'change',
