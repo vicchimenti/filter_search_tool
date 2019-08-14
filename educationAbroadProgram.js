@@ -26,8 +26,8 @@ try {
 
 
   /* -- Prepare all the things -- */
-  var beginningHTML = '<div id="accordion"><div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group"><div class="educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
-  var endingHTML = '</div></div></div></div>\n';
+  var beginningHTML = '<div class="accordion educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
+  var endingHTML = '</div></div>\n';
 
   /* parse the list of destinations, add <span> tags*/
   if (destination != "") {
@@ -105,7 +105,7 @@ try {
   /*  -- Parse out Runtime Generated Content IDs -- */
   var cardHeader = '<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">';
   var buttonLink = '<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
-  var collapseDiv = '<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" data-parent="#accordion">';
+  var collapseDiv = '<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" data-parent="id<t4 type=\'meta\' meta=\'content_id\' />">';
 
   /* -- Write all the collapsible header -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
