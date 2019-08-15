@@ -59,6 +59,34 @@ $(function() {
     console.log("done");
 });
 
+$(function () {
+    console.log("old school");
+  $('#input-27855').quicksearch('.educationAbroadItemWrapper', {
+    'delay': 700,
+    'selector': '.destination > ul',
+    'stripeRows': ['even', 'odd'],
+    'loader': 'span.loading',
+    'noResults': '.noResultsToShow',
+    'bind': 'keyup click',
+    'minValLength': 2,
+    'prepareQuery': function (val) {
+      return new RegExp(val, "i");
+    },
+    'testQuery': function (query, txt, _row) {
+      return query.test(txt);
+    },
+    'show': function() {
+      $(this).removeClass('hideByDestinationDropDown');
+    },
+    'hide': function() {
+      $(this).addClass('hideByDestinationDropDown');
+    },
+    'onAfter': function () {
+      anythingThere();
+    }
+  });
+});
+
 $(function() {
     console.log("here");
     $('#input-27855').change(function () {
