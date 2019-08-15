@@ -1,5 +1,7 @@
 <script>
 
+$()
+
 $(function() {
     console.log("here");
     $(".form-group").css('color', 'yellow');
