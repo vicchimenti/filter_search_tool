@@ -8,9 +8,10 @@ button.btn.btn-primary.pull-right.js-submit {
 }
 
 .form-group {
-    col-md: 4;
-    col-xs: 12;
     background-color: red;
+    display: inline;
+    float: left;
+    width: 33%;
 }
 
 #input-27855 {
