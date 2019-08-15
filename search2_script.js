@@ -26,7 +26,7 @@ $(function () {
 
 $(function () {
     console.log("old school");
-  $('.form-group#input-27855').quicksearch('.educationAbroadItemWrapper', {
+  $('.destinationDropDownMenu').quicksearch('.educationAbroadItemWrapper', {
     'delay': 700,
     'selector': '.destination > ul',
     'stripeRows': ['even', 'odd'],
@@ -34,6 +34,7 @@ $(function () {
     'noResults': '.noResultsToShow',
     'bind': 'keyup click',
     'minValLength': 2,
+    'removeDiacritics': true,
     'prepareQuery': function (val) {
       return new RegExp(val, "i");
     },
@@ -50,6 +51,7 @@ $(function () {
       anythingThere();
     }
   });
+  console.log("new school");
 });
 
 
