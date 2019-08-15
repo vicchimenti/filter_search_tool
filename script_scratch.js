@@ -1,31 +1,37 @@
 <script>
 $(function () {
     console.log("old school");
-  $('.destinationDropDownMenu').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 700,
-    'selector': '.destination > ul',
-    'stripeRows': ['even', 'odd'],
-    'loader': 'span.loading',
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'removeDiacritics': true,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByDestinationDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByDestinationDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-  console.log("new school");
+    $('.destinationDropDownMenu').addClass('whoopie');
+    console.log("new school");
+});
+$(function () {
+    console.log("red school");
+    $('.educationAbroadItemWrapper').addClass('whoopie');
+    console.log("blue school");
+});
+$(function () {
+    console.log("one school");
+    $('.js-t4form-container').addClass('whoopie');
+    console.log("two school");
+});
+$(function () {
+    console.log("one dog");
+    $('.js-t4form-container > div').addClass('whoopie');
+    console.log("two dog");
+});
+$(function () {
+    console.log("three dog");
+    $('.js-t4form-container').children('div').addClass('whoopie');
+    console.log("four dog");
+});
+$(function () {
+    console.log("one car");
+    $('.js-main-container').addClass('whoopie');
+    console.log("two car");
+});
+$(function () {
+    console.log("three car");
+    $('.js-elements-container').addClass('whoopie');
+    console.log("four car");
 });
 </script>
