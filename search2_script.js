@@ -1,8 +1,10 @@
 <script>
 
 $(function() {
-    ('#filterField.js-t4form-container.js-main-container.js-elements-container.form-group').addClass('col-xs-12 col-md-4');
+    $('div.js-elements-container').find('div.form-group').addClass('col-xs-12 col-md-4');
 });
+
+
 
 $(function() {
     console.log("here");

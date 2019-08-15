@@ -8,6 +8,8 @@ button.btn.btn-primary.pull-right.js-submit {
 }
 
 .form-group {
+    col-md: 4;
+    col-xs: 12;
     background-color: red;
 }
 
