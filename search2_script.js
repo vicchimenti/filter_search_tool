@@ -5,7 +5,6 @@ $(function() {
 });
 
 
-
 $(function() {
     console.log("here");
     $(".form-group").css('color', 'yellow');
@@ -13,14 +12,9 @@ $(function() {
     console.log("done");
 });
 
-$(function() {
-    console.log("here");
-    $('.width-100.form-control.programFeeDropDownMenu').css('padding', '100px');
-    console.log("done");
-});
 
 $(function () {
-  $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
+  $('#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
     'selector': ['h3, p'],
     'stripeRows': ['even', 'odd'],
@@ -43,25 +37,9 @@ $(function () {
 });
 
 
-$(function() {
-    console.log("here");
-    $('select#input-27989').change(function () {
-        console.log("change");
-        $('.housing li').filter(function(i, e) {
-            console.log("filter");
-            if ($(e).text() != '.destintionDropDownMenu option')
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
-            else
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
-        });
-        console.log("filtered");
-    });
-    console.log("done");
-});
-
 $(function () {
     console.log("old school");
-  $('#input-27855').quicksearch('.educationAbroadItemWrapper', {
+  $('.form-group#input-27855').quicksearch('.educationAbroadItemWrapper', {
     'delay': 700,
     'selector': '.destination > ul',
     'stripeRows': ['even', 'odd'],
@@ -85,22 +63,6 @@ $(function () {
       anythingThere();
     }
   });
-});
-
-$(function() {
-    console.log("here");
-    $('#input-27855').change(function () {
-        console.log("change");
-        $('.destination li').filter(function(i, e) {
-            console.log("filter");
-            if ($(e).text() != '.destintionDropDownMenu option')
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
-            else
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
-        });
-        console.log("filtered");
-    });
-    console.log("done");
 });
 
 
