@@ -1,18 +1,5 @@
 <script>
 
-$(function() {
-    $('div.js-elements-container').find('div.form-group').addClass('col-xs-12 col-md-4');
-});
-
-
-$(function() {
-    console.log("here");
-    $(".form-group").css('color', 'yellow');
-    $(".control-label").css('text-decoration', 'underline');
-    console.log("done");
-});
-
-
 $(function () {
   $('#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
