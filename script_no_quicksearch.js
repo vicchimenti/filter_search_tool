@@ -78,7 +78,7 @@ $(function() {
         console.log($fee);
         var $arr = ('.programFee > ul');
         console.log($arr);
-        if (jQuery.inArray($fee, $arr) === -1)
+        if ($.inArray($fee, $arr) === -1)
             $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
         else
             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
