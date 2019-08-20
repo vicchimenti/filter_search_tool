@@ -75,11 +75,14 @@ $(function() {
     $('#SelectBox-ByProgramFee').change(function () {
         console.log("change");
         var $fee = $(this).val();
-        console.log($fee);
-        var $matches = $.each($('.programFee li'), function(i,e) {
-            return $.index($fee);
+        console.log('$fee: ' + $fee);
+        var $arr = [];
+        $.each($('.programFee li'), function(i,e) {
+            $arr.push($(this).data());
         });
-        console.log($matches);
+        console.log('$arr: ' + $arr);
+        var $matches = $.inArray($fee, $arr);
+        console.log('$matches: ' + $matches);
         if ($matches === -1)
             $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
         else
@@ -95,6 +98,11 @@ $(function() {
 // console.log("filter value: " + $fee + " against: " + $matches);
 // var $arr = ('.programFee > ul');
 // console.log($arr);
+
+// var $matches = $.filter($('.programFee li'), function(i,e) {
+//     return $($(this).index($($fee)));
+// });
+// console.log($matches);
 
 
 // Field of Study
