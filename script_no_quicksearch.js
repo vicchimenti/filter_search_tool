@@ -92,17 +92,6 @@ $(function() {
     console.log("ByProgramFee done");
 });
 
-// var $matches = $('.programFee li').filter($fee).index();
-// console.log("filter value: " + $fee + " against: " + $matches);
-
-// console.log("filter value: " + $fee + " against: " + $matches);
-// var $arr = ('.programFee > ul');
-// console.log($arr);
-
-// var $matches = $.filter($('.programFee li'), function(i,e) {
-//     return $($(this).index($($fee)));
-// });
-// console.log($matches);
 
 
 // Field of Study
