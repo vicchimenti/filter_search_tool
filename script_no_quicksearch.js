@@ -24,59 +24,35 @@ $(function () {
 });
 
 
-// $(function () {
-//   $('#SelectBox-ByDestination').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 100,
-//     'selector': '.destination > ul',
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//     'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByDestinationDropDown');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByDestinationDropDown');
-//     },
-//     'onAfter': function () {
-//       anythingThere();
-//     }
-//   });
-// });
-
+// Destination
 $(function() {
-    console.log("here");
+    console.log("ByDestination");
     $('#SelectBox-ByDestination').change(function () {
         console.log("change");
         var $dest = $(this).val();
-        console.log("val");
+        console.log("$dest " + $dest);
         $('.destination').each(function() {
             console.log("each");
-            var $matches = $('destination li').filter(function () {
+            var $matches = $('.destination li').filter(function () {
                 console.log("filter");
                 return $(this).text() === $dest
             });
             if (!$matches.length) {
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
+                $(this).parents().find('div.educationAbroadItemWrapper').addClass('hideByDestinationDropDownMenu');
             } else {
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+                $(this).parents().find('div.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
             }
             console.log("filtered");
         });
         console.log("eached");
     });
-    console.log("done");
+    console.log("ByDestination done");
 });
 
 
+// Term
 $(function() {
-    console.log("here");
+    console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
         console.log("change");
         $('.term li').filter(function(i, e) {
@@ -88,15 +64,33 @@ $(function() {
         });
         console.log("filtered");
     });
-    console.log("done");
+    console.log("ByTerm done");
 });
 
 
+// Program Fee
+$(function() {
+    console.log("ByProgramFee");
+    $('#SelectBox-ByProgramFee').change(function () {
+        console.log("change");
+        $('.programFee li').filter(function(i, e) {
+            console.log("filter");
+            if ($(e).text() != '#SelectBox-ByProgramFee option')
+                $(this).addClass('hideByProgramFeeDropDown');
+            else
+                $(this).removeClass('hideByProgramFeeDropDown');
+        });
+        console.log("filtered");
+    });
+    console.log("ByProgramFee done");
+});
 
+
+// TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
 // $(function () {
-//   $('#SelectBox-ByTerm').quicksearch('.educationAbroadItemWrapper', {
+//   $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
 //     'delay': 100,
-//     'selector': '.term > ul',
+//     'selector': '.programFee > ul',
 //     'stripeRows': ['even', 'odd'],
 //     'noResults': '.noResultsToShow',
 //     'bind': 'keyup click',
@@ -108,44 +102,16 @@ $(function() {
 //       return query.test(txt);
 //     },
 //     'show': function() {
-//       $(this).removeClass('hideByTermDropDown');
+//       $(this).removeClass('hideByProgramFeeDropDown');
 //     },
 //     'hide': function() {
-//       $(this).addClass('hideByTermDropDown');
+//       $(this).addClass('hideByProgramFeeDropDown');
 //     },
 //     'onAfter': function () {
 //       anythingThere();
 //     }
 //   });
 // });
-
-
-// TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
-$(function () {
-  $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.programFee > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByProgramFeeDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByProgramFeeDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-});
 
 
 $(function () {
