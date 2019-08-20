@@ -74,21 +74,19 @@ $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
         console.log("change");
-        var $fee = $(this).val();
-        console.log("$fee: " + $fee);
-        var $matches = $('.programFee').each(function() {
-            return $(this).index($fee);
+        var $term = $(this).val();
+        $('.programFee li').filter(function(i, e) {
+            console.log("filter value: " + $term);
+            if ($(e).text() != $term)
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+            else
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         });
-        console.log("$matches:" + $matches);
-        console.log("filter");
-        if ($matches === -1)
-            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-        else
-            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         console.log("filtered");
     });
     console.log("ByProgramFee done");
 });
+
 
 
 // Field of Study
