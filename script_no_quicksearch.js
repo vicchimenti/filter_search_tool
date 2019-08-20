@@ -55,9 +55,10 @@ $(function() {
     console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
         console.log("change");
+        var $term = $(this).val();
         $('.term li').filter(function(i, e) {
-            console.log("filter");
-            if ($(e).text() != '#SelectBox-ByTerm option')
+            console.log("filter value: " + $term);
+            if ($(e).text() != $term)
                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
             else
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
