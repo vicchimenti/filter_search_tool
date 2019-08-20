@@ -86,11 +86,36 @@ $(function() {
 });
 
 
-// TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
+// Destination
+$(function() {
+    console.log("ByFieldOfStudy");
+    $('#SelectBox-ByFieldOfStudy').change(function () {
+        console.log("change");
+        var $dest = $(this).val();
+        console.log("$dest " + $dest);
+        $('.fieldOfStudy').each(function() {
+            console.log("each");
+            var $matches = $('.fieldOfStudy li').filter(function () {
+                console.log("filter");
+                return $(this).text() === $dest
+            });
+            if (!$matches.length) {
+                $(this).parent().addClass('hideByFieldOfStudyDropDown');
+            } else {
+                $(this).parent().removeClass('hideByFieldOfStudyDropDown');
+            }
+            console.log("filtered");
+        });
+        console.log("eached");
+    });
+    console.log("ByFieldOfStudy done");
+});
+
+
 // $(function () {
-//   $('#SelectBox-ByProgramFee').quicksearch('.educationAbroadItemWrapper', {
+//   $('#SelectBox-ByFieldOfStudy').quicksearch('.educationAbroadItemWrapper', {
 //     'delay': 100,
-//     'selector': '.programFee > ul',
+//     'selector': '.fieldOfStudy > ul',
 //     'stripeRows': ['even', 'odd'],
 //     'noResults': '.noResultsToShow',
 //     'bind': 'keyup click',
@@ -102,43 +127,16 @@ $(function() {
 //       return query.test(txt);
 //     },
 //     'show': function() {
-//       $(this).removeClass('hideByProgramFeeDropDown');
+//       $(this).removeClass('hideByFieldOfStudyDropDown');
 //     },
 //     'hide': function() {
-//       $(this).addClass('hideByProgramFeeDropDown');
+//       $(this).addClass('hideByFieldOfStudyDropDown');
 //     },
 //     'onAfter': function () {
 //       anythingThere();
 //     }
 //   });
 // });
-
-
-$(function () {
-  $('#SelectBox-ByFieldOfStudy').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.fieldOfStudy > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByFieldOfStudyDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByFieldOfStudyDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-});
 
 
 $(function () {
