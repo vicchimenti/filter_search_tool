@@ -54,6 +54,25 @@ $(function() {
     console.log("here");
     $('#SelectBox-ByDestination').change(function () {
         console.log("change");
+        var dest = $(this).val();
+        console.log("val");
+        $('.destination').each(function()).filter(function(i, e) {
+            console.log("filter");
+            if ($(e).text() != '.destintionDropDownMenu option')
+                $(this).parent().addClass('hideByDestinationDropDownMenu');
+            else
+                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+        });
+        console.log("filtered");
+    });
+    console.log("done");
+});
+
+
+$(function() {
+    console.log("here");
+    $('#SelectBox-ByDestination').change(function () {
+        console.log("change");
         $('.destination li').filter(function(i, e) {
             console.log("filter");
             if ($(e).text() != '.destintionDropDownMenu option')
