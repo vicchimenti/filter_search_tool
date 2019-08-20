@@ -78,16 +78,16 @@ $(function() {
         console.log('$fee: ' + $fee);
         var $arr = [];
         $.each($('.programFee li'), function(i,e) {
-            $arr.push($(this).data());
+            $arr.push($(this).text());
+            console.log('$arr: ' + $arr);
+            var $matches = $.inArray($fee, $arr);
+            console.log('$matches: ' + $matches);
+            if ($matches == -1)
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+            else
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+            console.log("filtered");
         });
-        console.log('$arr: ' + $arr);
-        var $matches = $.inArray($fee, $arr);
-        console.log('$matches: ' + $matches);
-        if ($matches === -1)
-            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-        else
-            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-        console.log("filtered");
     });
     console.log("ByProgramFee done");
 });
