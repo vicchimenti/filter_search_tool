@@ -76,8 +76,8 @@ $(function() {
         console.log("change");
         var $fee = $(this).val();
         console.log('$fee: ' + $fee);
-        var $arr = [];
         $.each($('.programFee li'), function(i,e) {
+            var $arr = [];
             $arr.push($(this).text());
             console.log('$arr: ' + $arr);
             var $matches = $.inArray($fee, $arr);
