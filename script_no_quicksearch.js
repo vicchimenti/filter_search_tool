@@ -58,9 +58,9 @@ $(function() {
         $('.term li').filter(function(i, e) {
             console.log("filter");
             if ($(e).text() != '#SelectBox-ByTerm option')
-                $(this).parent().addClass('hideByTermDropDown');
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
             else
-                $(this).parent().removeClass('hideByTermDropDown');
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
         });
         console.log("filtered");
     });
@@ -91,13 +91,13 @@ $(function() {
     console.log("ByFieldOfStudy");
     $('#SelectBox-ByFieldOfStudy').change(function () {
         console.log("change");
-        var $dest = $(this).val();
-        console.log("$dest " + $dest);
+        var $study = $(this).val();
+        console.log("$dest " + $study);
         $('.fieldOfStudy').each(function() {
             console.log("each");
             var $matches = $('.fieldOfStudy li').filter(function () {
                 console.log("filter");
-                return $(this).text() === $dest
+                return $(this).text() === $study
             });
             if (!$matches.length) {
                 $(this).parent().addClass('hideByFieldOfStudyDropDown');
