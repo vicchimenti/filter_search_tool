@@ -128,14 +128,17 @@ $(function() {
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
         $.each($('.features li'), function(i,e) {
-            var $value = ($(this).text());
-            console.log('$value: ' + $value);
-            if ($value != $feature)
+            // var $value = ($(this).text());
+            // console.log('$value: ' + $value);
+            if (($(e).text()) != $feature) {
                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
-            else
+                console.log("addClass");
+            } else {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-            console.log("filtered");
+                console.log("removeClass");
+            }
         });
+        console.log("filtered");
     });
     console.log("ByFeature done");
 });
