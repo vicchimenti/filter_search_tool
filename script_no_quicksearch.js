@@ -74,18 +74,23 @@ $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
         console.log("change");
+        var $null = '';
         var $fee = $(this).val();
         console.log('$fee: ' + $fee);
         $.each($('.programFee li'), function(i,e) {
-            var $arr = [];
-            $arr.push($(this).text());
-            console.log('$arr: ' + $arr);
-            var $matches = $.inArray($fee, $arr);
-            console.log('$matches: ' + $matches);
-            if ($matches == -1)
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-            else
+            if ($fee != $null) {
+                var $arr = [];
+                $arr.push($(this).text());
+                console.log('$arr: ' + $arr);
+                var $matches = $.inArray($fee, $arr);
+                console.log('$matches: ' + $matches);
+                if ($matches == -1)
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                else
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+            } else {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+            }
             console.log("filtered");
         });
     });
@@ -120,22 +125,25 @@ $(function() {
 });
 
 
-// Features
+// Features TODO: Does not addClass if Features are blank null value
 $(function() {
     console.log("ByFeature");
     $('#SelectBox-ByFeature').change(function () {
         console.log("change");
         var $feature = $(this).val();
+        var $null = '';
         console.log('$feature: ' + $feature);
         $.each($('.features li'), function(i,e) {
-            // var $value = ($(this).text());
-            // console.log('$value: ' + $value);
-            if (($(e).text()) != $feature) {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
-                console.log("addClass");
+            if ($feature != $null) {
+                var $value = ($(this).text());
+                console.log("$value: " + $value);
+                if ($value != $feature) {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
+                }
             } else {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-                console.log("removeClass");
             }
         });
         console.log("filtered");
