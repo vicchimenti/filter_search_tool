@@ -74,12 +74,18 @@ $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
         console.log("change");
-        $('.programFee li').filter(function(i, e) {
+        var $fee = $(this).val();
+        console.log("$fee: " + $fee);
+        $('.programFee').each(function() {
+            var $matches = $('.programFee li').filter(function () {
+                return $(this).text() === $fee;
+            });
+            console.log("$matches:" + $matches);
             console.log("filter");
-            if ($(e).text() != '#SelectBox-ByProgramFee option')
-                $(this).addClass('hideByProgramFeeDropDown');
+            if (!$matches.length)
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
             else
-                $(this).removeClass('hideByProgramFeeDropDown');
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         });
         console.log("filtered");
     });
@@ -87,13 +93,13 @@ $(function() {
 });
 
 
-// Destination
+// Field of Study
 $(function() {
     console.log("ByFieldOfStudy");
     $('#SelectBox-ByFieldOfStudy').change(function () {
         console.log("change");
         var $study = $(this).val();
-        console.log("$dest " + $study);
+        console.log("$study " + $study);
         $('.fieldOfStudy').each(function() {
             console.log("each");
             var $matches = $('.fieldOfStudy li').filter(function () {
