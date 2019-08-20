@@ -24,31 +24,48 @@ $(function () {
 });
 
 
-$(function () {
-  $('#SelectBox-ByDestination').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.destination > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByDestinationDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByDestinationDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
+// $(function () {
+//   $('#SelectBox-ByDestination').quicksearch('.educationAbroadItemWrapper', {
+//     'delay': 100,
+//     'selector': '.destination > ul',
+//     'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//     'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByDestinationDropDown');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByDestinationDropDown');
+//     },
+//     'onAfter': function () {
+//       anythingThere();
+//     }
+//   });
+// });
+
+$(function() {
+    console.log("here");
+    $('#SelectBox-ByDestination').change(function () {
+        console.log("change");
+        $('.destination li').filter(function(i, e) {
+            console.log("filter");
+            if ($(e).text() != '.destintionDropDownMenu option')
+                $(this).parent().addClass('hideByDestinationDropDownMenu');
+            else
+                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+        });
+        console.log("filtered");
+    });
+    console.log("done");
 });
+
 
 
 $(function () {
