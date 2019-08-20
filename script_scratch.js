@@ -1,37 +1,42 @@
 <script>
 $(function () {
-    console.log("old school");
-    $('.destinationDropDownMenu').addClass('whoopie');
-    console.log("new school");
+    console.log("one");
+    $('select.destinationDropDownMenu').addClass('whoopie');
+    console.log("one destinationDropDownMenu");
 });
 $(function () {
-    console.log("red school");
+    console.log("one");
+    $('label.control-label').addClass('whoopie');
+    console.log("one destinationDropDownMenu");
+});
+$(function () {
+    console.log("two");
     $('.educationAbroadItemWrapper').addClass('whoopie');
-    console.log("blue school");
+    console.log("two educationAbroadItemWrapper");
 });
 $(function () {
-    console.log("one school");
+    console.log("three");
     $('.js-t4form-container').addClass('whoopie');
-    console.log("two school");
+    console.log("three js-t4form-container");
 });
 $(function () {
-    console.log("one dog");
+    console.log("four");
     $('.js-t4form-container > div').addClass('whoopie');
-    console.log("two dog");
+    console.log("four js-t4form-container > div");
 });
 $(function () {
-    console.log("three dog");
+    console.log("five");
     $('.js-t4form-container').children('div').addClass('whoopie');
-    console.log("four dog");
+    console.log("five js-t4form-container children");
 });
 $(function () {
-    console.log("one car");
-    $('.js-main-container').addClass('whoopie');
-    console.log("two car");
+    console.log("six");
+    $('form.js-main-container').addClass('whoopie');
+    console.log("six form.js-main-container");
 });
 $(function () {
-    console.log("three car");
-    $('.js-elements-container').addClass('whoopie');
-    console.log("four car");
+    console.log("seven");
+    $('form.js-main-container .js-elements-container').addClass('whoopie');
+    console.log("seven form.js-main-container .js-elements-container");
 });
 </script>
