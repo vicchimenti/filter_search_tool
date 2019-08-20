@@ -76,9 +76,11 @@ $(function() {
         console.log("change");
         var $fee = $(this).val();
         console.log($fee);
-        var $arr = ('.programFee > ul');
-        console.log($arr);
-        if ($.inArray($fee, $arr) === -1)
+        var $matches = $.each($('.programFee li'), function(i,e) {
+            return $.index($fee);
+        });
+        console.log($matches);
+        if ($matches === -1)
             $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
         else
             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
@@ -90,6 +92,9 @@ $(function() {
 // var $matches = $('.programFee li').filter($fee).index();
 // console.log("filter value: " + $fee + " against: " + $matches);
 
+// console.log("filter value: " + $fee + " against: " + $matches);
+// var $arr = ('.programFee > ul');
+// console.log($arr);
 
 
 // Field of Study
