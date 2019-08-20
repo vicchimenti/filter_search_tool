@@ -74,18 +74,21 @@ $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
         console.log("change");
-        var $term = $(this).val();
-        $('.programFee li').filter(function(i, e) {
-            console.log("filter value: " + $term);
-            if ($(e).text() != $term)
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-            else
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-        });
+        var $fee = $(this).val();
+        console.log($fee);
+        var $arr = ('.programFee > ul');
+        console.log($arr);
+        if (jQuery.inArray($fee, $arr) === -1)
+            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+        else
+            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         console.log("filtered");
     });
     console.log("ByProgramFee done");
 });
+
+// var $matches = $('.programFee li').filter($fee).index();
+// console.log("filter value: " + $fee + " against: " + $matches);
 
 
 
