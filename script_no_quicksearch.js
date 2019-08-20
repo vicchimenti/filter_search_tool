@@ -54,16 +54,22 @@ $(function() {
     console.log("here");
     $('#SelectBox-ByDestination').change(function () {
         console.log("change");
-        var dest = $(this).val();
+        var $dest = $(this).val();
         console.log("val");
-        $('.destination').each(function()).filter(function(i, e) {
-            console.log("filter");
-            if ($(e).text() != '.destintionDropDownMenu option')
+        $('.destination').each(function() {
+            console.log("each");
+            var $matches = $('destination li').filter(function () {
+                console.log("filter");
+                return $(this).text() === $dest
+            });
+            if (!$matches.length) {
                 $(this).parent().addClass('hideByDestinationDropDownMenu');
-            else
+            } else {
                 $(this).parent().removeClass('hideByDestinationDropDownMenu');
+            }
+            console.log("filtered");
         });
-        console.log("filtered");
+        console.log("eached");
     });
     console.log("done");
 });
@@ -71,14 +77,14 @@ $(function() {
 
 $(function() {
     console.log("here");
-    $('#SelectBox-ByDestination').change(function () {
+    $('#SelectBox-ByTerm').change(function () {
         console.log("change");
-        $('.destination li').filter(function(i, e) {
+        $('.term li').filter(function(i, e) {
             console.log("filter");
-            if ($(e).text() != '.destintionDropDownMenu option')
-                $(this).parent().addClass('hideByDestinationDropDownMenu');
+            if ($(e).text() != '#SelectBox-ByTerm option')
+                $(this).parent().addClass('hideByTermDropDown');
             else
-                $(this).parent().removeClass('hideByDestinationDropDownMenu');
+                $(this).parent().removeClass('hideByTermDropDown');
         });
         console.log("filtered");
     });
@@ -87,31 +93,31 @@ $(function() {
 
 
 
-$(function () {
-  $('#SelectBox-ByTerm').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.term > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByTermDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByTermDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-});
+// $(function () {
+//   $('#SelectBox-ByTerm').quicksearch('.educationAbroadItemWrapper', {
+//     'delay': 100,
+//     'selector': '.term > ul',
+//     'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//     'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByTermDropDown');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByTermDropDown');
+//     },
+//     'onAfter': function () {
+//       anythingThere();
+//     }
+//   });
+// });
 
 
 // TODO: Selects all options when the value is contained within, such as 2000 selects both 2000 and 12000
