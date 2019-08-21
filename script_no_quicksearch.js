@@ -133,24 +133,24 @@ $(function() {
         var $null = '';
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
-        $.each($('.features'), function(i,e) {
-            var $arr = [];
-            $.each($('.features li'), function(j,v) {
-                $arr.push($(this).text());
-            })
-            console.log('$arr: ' + $arr);
-            var $matches = $.inArray($feature, $arr);
-            console.log('$matches: ' + $matches);
-            if ($feature != $null) {
+        if ($feature != $null) {
+            $.each($('.features'), function(i,e) {
+                var $arr = [];
+                $.each($('.features li'), function(j,v) {
+                    $arr.push($(this).text());
+                });
+                console.log('$arr: ' + $arr);
+                var $matches = $.inArray($feature, $arr);
+                console.log('$matches: ' + $matches);
                 if ($matches == -1) {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
                 }
-            } else {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-            }
-        });
+            });
+        } else {
+            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
+        }
         console.log("filtered");
     });
     console.log("ByFeature done");
