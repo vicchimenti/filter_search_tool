@@ -50,7 +50,7 @@ $(function() {
 });
 
 
-// Term TODO: Needs Multi-Select functionality
+// Term TODO: Needs Multi-Select functionality and reset on whitespace
 $(function() {
     console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
@@ -110,7 +110,7 @@ $(function() {
             console.log("each");
             var $matches = $('.fieldOfStudy li').filter(function () {
                 console.log("filter");
-                return $(this).text() === $study
+                return $(this).text() === $study;
             });
             if (!$matches.length) {
                 $(this).parent().addClass('hideByFieldOfStudyDropDown');
@@ -134,11 +134,9 @@ $(function() {
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
         if ($feature != $null) {
-            $.each($('.features'), function(i,e) {
-                var $arr = [];
-                $.each($('.features li'), function(j,v) {
-                    $arr.push($(this).text());
-                });
+            var $arr = [];
+            $('.features li').each(function(j,v) {
+                $arr.push($(this).text());
                 console.log('$arr: ' + $arr);
                 var $matches = $.inArray($feature, $arr);
                 console.log('$matches: ' + $matches);
@@ -147,6 +145,7 @@ $(function() {
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
                 }
+                $arr = [];
             });
         } else {
             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
