@@ -125,18 +125,16 @@ $(function() {
 });
 
 
-// Features TODO: Does not addClass if Features are blank null value
+// Features - Resets and handles multi-select options well
 $(function() {
     console.log("ByFeature");
     $('#SelectBox-ByFeature').change(function () {
         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
         console.log("change");
-        // var $null = '';
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
-        // if ($feature != $null) {
         $('.features').filter(function(j,v) {
-            var $text = $(v).text();
+            var $text = $(this).text();
             console.log('$text: ' + $text);
             if (!$text.match($feature)) {
                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
@@ -144,52 +142,10 @@ $(function() {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
             }
         });
-        // } else {
-        //     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-        // }
         console.log("filtered");
     });
     console.log("ByFeature done");
 });
-
-
-// var $itemArray = [];
-// if ($text.match($feature)) {
-//     $arr.push($feature);
-// }
-// console.log('$arr: ' + $arr);
-// // $itemArray = $.grep($arr, function(a) {
-// //     return a == $feature;
-// // });
-// // console.log('$itemArray: ' + $itemArray);
-// var $matches = $.inArray($feature, $arr);
-// console.log('$matches: ' + $matches);
-
-// $(function () {
-//   $('#SelectBox-ByFeature').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 100,
-//     'selector': '.features > ul',
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//     'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByFeatureDropDown');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByFeatureDropDown');
-//     },
-//     'onAfter': function () {
-//       anythingThere();
-//     }
-//   });
-// });
 
 
 $(function () {
