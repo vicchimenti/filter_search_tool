@@ -137,7 +137,7 @@ $(function() {
             var $arr = [];
             $('.features').filter(function(j,v) {
                 // var $itemArray = [];
-                if (($(this).text()) == $feature) {
+                if (($(v).text()) == $feature) {
                     $arr.push($(this).text());
                 }
                 console.log('$arr: ' + $arr);
