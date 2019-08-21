@@ -26,7 +26,7 @@ $(function () {
 
 
 
-//   ***   ByDestination Filter   ***   //
+//   ***   Destination Filter   ***   //
 $(function() {
     console.log("ByDestination");
     $('#SelectBox-ByDestination').change(function () {
@@ -46,30 +46,6 @@ $(function() {
     });
     console.log("ByDestination done");
 });
-
-// // Destination - not done
-// $(function() {
-//     console.log("ByDestination");
-//     $('#SelectBox-ByDestination').change(function () {
-//         console.log("change");
-//         var $dest = $(this).val();
-//         console.log("$dest " + $dest);
-//         $('.destination').each(function() {
-//             var $matches = $('.destination li').filter(function () {
-//                 console.log("filter");
-//                 return $(this).text() === $dest
-//             });
-//             if (!$matches.length) {
-//                 $(this).parents().find('div.educationAbroadItemWrapper').addClass('hideByDestinationDropDownMenu');
-//             } else {
-//                 $(this).parents().find('div.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
-//             }
-//             console.log("filtered");
-//         });
-//         console.log("eached");
-//     });
-//     console.log("ByDestination done");
-// });
 
 
 //   ***   Term Filter   ***   //
