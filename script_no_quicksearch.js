@@ -69,6 +69,29 @@ $(function() {
 });
 
 
+
+//   ***   ByProgramFee   ***   //
+$(function() {
+    console.log("ByProgramFee");
+    $('#SelectBox-ByProgramFee').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+        console.log("change");
+        var $fee = $(this).val();
+        console.log("$fee: " + $fee);
+        $('.programFee').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log("$text: " + $text);
+            if ($text.match($fee)) {
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+            }
+        });
+    });
+    console.log("ByProgramFee done");
+});
+
+
 // Program Fee - Works for single-option
 $(function() {
     console.log("ByProgramFee");
@@ -99,7 +122,7 @@ $(function() {
 
 
 
-//   ***   ByFieldOfStudy   ***   //
+//   ***   Field Of Study Filter   ***   //
 $(function() {
     console.log("ByFieldOfStudy");
     $('#SelectBox-ByFieldOfStudy').change(function () {
@@ -117,32 +140,6 @@ $(function() {
             }
         });
         console.log("filtered");
-    });
-    console.log("ByFieldOfStudy done");
-});
-
-
-// Field of Study - TODO: Needs Multiselect and logic update
-$(function() {
-    console.log("ByFieldOfStudy");
-    $('#SelectBox-ByFieldOfStudy').change(function () {
-        console.log("change");
-        var $study = $(this).val();
-        console.log("$study " + $study);
-        $('.fieldOfStudy').each(function() {
-            console.log("each");
-            var $matches = $('.fieldOfStudy li').filter(function () {
-                console.log("filter");
-                return $(this).text() === $study;
-            });
-            if (!$matches.length) {
-                $(this).parent().addClass('hideByFieldOfStudyDropDown');
-            } else {
-                $(this).parent().removeClass('hideByFieldOfStudyDropDown');
-            }
-            console.log("filtered");
-        });
-        console.log("eached");
     });
     console.log("ByFieldOfStudy done");
 });
