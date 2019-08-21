@@ -50,23 +50,44 @@ $(function() {
 });
 
 
-// Term TODO: Needs Multi-Select functionality ? and reset on whitespace
+//   ***   ByTerm Filter   ***   //
 $(function() {
     console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
         console.log("change");
         var $term = $(this).val();
-        $('.term li').filter(function(i, e) {
-            console.log("filter value: " + $term);
-            if ($(e).text() != $term)
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
-            else
+        console.log("$term: " + $term);
+        $('.term').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log("$text: " + $text);
+            if ($text.match($term)) {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
+            }
         });
-        console.log("filtered");
     });
     console.log("ByTerm done");
 });
+
+// // Term TODO: Needs Multi-Select functionality ? and reset on whitespace
+// $(function() {
+//     console.log("ByTerm");
+//     $('#SelectBox-ByTerm').change(function () {
+//         console.log("change");
+//         var $term = $(this).val();
+//         $('.term li').filter(function(i, e) {
+//             console.log("filter value: " + $term);
+//             if ($(e).text() != $term)
+//                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
+//             else
+//                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
+//         });
+//         console.log("filtered");
+//     });
+//     console.log("ByTerm done");
+// });
 
 
 //   ***   Program Fee Filter   ***   //
