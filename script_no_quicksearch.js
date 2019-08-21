@@ -148,6 +148,26 @@ $(function() {
 });
 
 
+// Program Type
+$(function() {
+    console.log("ByProgramType");
+    $('#SelectBox-ByProgramType').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
+        console.log("change");
+        var $type = $(this).val();
+        console.log('$type: ' + $type);
+        $('.programType').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log('$text: ' + $text);
+            if (!$text.match($type))
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
+        });
+        console.log("filtered");
+    });
+    console.log("ByProgramType done");
+});
+
+
 $(function () {
   $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
     'delay': 100,
