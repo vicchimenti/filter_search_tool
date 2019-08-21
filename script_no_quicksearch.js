@@ -32,7 +32,6 @@ $(function() {
         var $dest = $(this).val();
         console.log("$dest " + $dest);
         $('.destination').each(function() {
-            console.log("each");
             var $matches = $('.destination li').filter(function () {
                 console.log("filter");
                 return $(this).text() === $dest
@@ -130,14 +129,19 @@ $(function() {
     console.log("ByFeature");
     $('#SelectBox-ByFeature').change(function () {
         console.log("change");
-        var $feature = $(this).val();
         var $null = '';
+        var $feature = $(this).val();
         console.log('$feature: ' + $feature);
-        $.each($('.features li'), function(i,e) {
+        $.each($('.features'), function(i,e) {
+            var $arr = [];
+            $.each($('.features li'), function(j,v) {
+                $arr.push($(this).text());
+            })
+            console.log('$arr: ' + $arr);
+            var $matches = $.inArray($feature, $arr);
+            console.log('$matches: ' + $matches);
             if ($feature != $null) {
-                var $value = ($(this).text());
-                console.log("$value: " + $value);
-                if ($value != $feature) {
+                if ($matches == -1) {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
