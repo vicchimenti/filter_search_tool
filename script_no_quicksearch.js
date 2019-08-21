@@ -138,7 +138,7 @@ $(function() {
             $('.features').filter(function(j,v) {
                 var $text = $(v).text();
                 console.log('$text: ' + $text);
-                if ($text.match($feature)) {
+                if (!$text.test($feature)) {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
