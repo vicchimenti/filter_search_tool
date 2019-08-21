@@ -197,31 +197,53 @@ $(function() {
 // });
 
 
-$(function () {
-  $('#SelectBox-ByLanguage').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.language > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByLanguageDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByLanguageDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
+// Language
+$(function() {
+    console.log("ByLanguage");
+    $('#SelectBox-ByLanguage').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
+        console.log("change");
+        var $language = $(this).val();
+        console.log("$language: " + $language);
+        $('.language').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log("$text: " + $text);
+            if ($text.match($language)) {
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguageDropDown');
+            }
+        });
+    });
+    console.log("ByLanguage done");
 });
+
+
+// $(function () {
+//   $('#SelectBox-ByLanguage').quicksearch('.educationAbroadItemWrapper', {
+//     'delay': 100,
+//     'selector': '.language > ul',
+//     'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//     'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByLanguageDropDown');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByLanguageDropDown');
+//     },
+//     'onAfter': function () {
+//       anythingThere();
+//     }
+//   });
+// });
 
 
 $(function () {
