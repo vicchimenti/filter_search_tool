@@ -1,6 +1,7 @@
 <script>
 
-// Keyword - switch to HideSeek
+//   ***   Keyword Search   ***   //
+//TODO:  - switch to HideSeek
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -23,7 +24,6 @@ $(function () {
     }
   });
 });
-
 
 
 //   ***   Destination Filter   ***   //
