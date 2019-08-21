@@ -138,7 +138,10 @@ $(function() {
             $('.features').filter(function(j,v) {
                 $arr.push($(this).text());
                 console.log('$arr: ' + $arr);
-                var $matches = $.inArray($feature, $arr);
+                var $itemArray = $.grep($arr, function(element,index) {
+                    return element == $feature;
+                })
+                var $matches = $.inArray($feature, $itemArray);
                 console.log('$matches: ' + $matches);
                 if ($matches == -1) {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
