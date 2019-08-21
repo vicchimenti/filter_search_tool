@@ -99,6 +99,29 @@ $(function() {
 
 
 
+//   ***   ByFieldOfStudy   ***   //
+$(function() {
+    console.log("ByFieldOfStudy");
+    $('#SelectBox-ByFieldOfStudy').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFieldOfStudyDropDown');
+        console.log("change");
+        var $study = $(this).val();
+        console.log('$study: ' + $study);
+        $('.fieldOfStudy').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log('$text: ' + $text);
+            if ($text.match($study)) {
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFieldOfStudyDropDown');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFieldOfStudyDropDown');
+            }
+        });
+        console.log("filtered");
+    });
+    console.log("ByFieldOfStudy done");
+});
+
+
 // Field of Study - TODO: Needs Multiselect and logic update
 $(function() {
     console.log("ByFieldOfStudy");
