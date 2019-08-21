@@ -95,34 +95,66 @@ $(function() {
 //   ***   Program Fee Filter   ***   //
 // *********** Works for single-option exact match only ************  //
 // TODO: Add logic for range of values based on selection
+//
+// $(function() {
+//     console.log("ByProgramFee");
+//     $('#SelectBox-ByProgramFee').change(function () {
+//         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+//
+//         console.log("change");
+//         var $null = "";
+//         var $fee = $(this).val();
+//         console.log('$fee: ' + $fee);
+//         if (!$fee) {
+//             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+//
+//         } else {
+//             $('.programFee li').each(function(i,e) {
+//                 var $arr = [];
+//                 $arr.push($(this).text());
+//                 console.log('$arr: ' + $arr);
+//                 var $matches = $.inArray($fee, $arr);
+//                 console.log('$matches: ' + $matches);
+//                 if ($matches == -1) {
+//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+//                 } else {
+//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+//                 }
+//             });
+//         }
+//         console.log("filtered");
+//     });
+//     console.log("ByProgramFee done");
+// });
 
+// Program Fee
 $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
         console.log("change");
-        var $null = "";
+        var $null = '';
         var $fee = $(this).val();
         console.log('$fee: ' + $fee);
-        if ($fee == $null) {
-            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-        } else {
-            $('.programFee li').each(function(i,e) {
+        $.each($('.programFee li'), function(i,e) {
+            if ($fee != $null) {
                 var $arr = [];
                 $arr.push($(this).text());
                 console.log('$arr: ' + $arr);
                 var $matches = $.inArray($fee, $arr);
                 console.log('$matches: ' + $matches);
-                if ($matches == -1) {
+                if ($matches == -1)
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-                } else {
+                else
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-                }
-            });
-        }
-        console.log("filtered");
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+            }
+            console.log("filtered");
+        });
     });
     console.log("ByProgramFee done");
 });
+
 
 
 
