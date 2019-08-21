@@ -25,6 +25,28 @@ $(function () {
 });
 
 
+
+//   ***   ByDestination Filter   ***   //
+$(function() {
+    console.log("ByDestination");
+    $('#SelectBox-ByDestination').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
+        console.log("change");
+        var $destination = $(this).val();
+        console.log("$destination: " + $destination);
+        $('.destination').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log("$text: " + $text);
+            if ($text.match($destination)) {
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDownMenu');
+            }
+        });
+    });
+    console.log("ByDestination done");
+});
+
 // Destination - not done
 $(function() {
     console.log("ByDestination");
