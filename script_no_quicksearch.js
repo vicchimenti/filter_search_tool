@@ -133,15 +133,19 @@ $(function() {
         var $null = '';
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
-        if ($feature != $null) {
+        if ($feature.length >= 1) {
             var $arr = [];
             $('.features').filter(function(j,v) {
-                $arr.push($(this).text());
+                // var $itemArray = [];
+                if ($(this).text() == $feature) {
+                    $arr.push($(this).text());
+                }
                 console.log('$arr: ' + $arr);
-                var $itemArray = $.grep($arr, function(element,index) {
-                    return element == $feature;
-                })
-                var $matches = $.inArray($feature, $itemArray);
+                // $itemArray = $.grep($arr, function(a) {
+                //     return a == $feature;
+                // });
+                console.log('$itemArray: ' + $itemArray);
+                var $matches = $.inArray($feature, $arr);
                 console.log('$matches: ' + $matches);
                 if ($matches == -1) {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
