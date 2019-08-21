@@ -50,7 +50,7 @@ $(function() {
 });
 
 
-// Term TODO: Needs Multi-Select functionality and reset on whitespace
+// Term TODO: Needs Multi-Select functionality ? and reset on whitespace
 $(function() {
     console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
@@ -135,7 +135,7 @@ $(function() {
         console.log('$feature: ' + $feature);
         if ($feature != $null) {
             var $arr = [];
-            $('.features li').each(function(j,v) {
+            $('.features').filter(function(j,v) {
                 $arr.push($(this).text());
                 console.log('$arr: ' + $arr);
                 var $matches = $.inArray($feature, $arr);
