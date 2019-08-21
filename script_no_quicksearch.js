@@ -144,7 +144,7 @@ $(function() {
                 // $itemArray = $.grep($arr, function(a) {
                 //     return a == $feature;
                 // });
-                console.log('$itemArray: ' + $itemArray);
+                // console.log('$itemArray: ' + $itemArray);
                 var $matches = $.inArray($feature, $arr);
                 console.log('$matches: ' + $matches);
                 if ($matches == -1) {
