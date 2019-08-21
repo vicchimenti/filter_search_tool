@@ -148,51 +148,45 @@ $(function() {
 });
 
 
-// Program Type
+// Program Type - This single-select item works great
 $(function() {
     console.log("ByProgramType");
     $('#SelectBox-ByProgramType').change(function () {
         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
-        console.log("change");
-        var $type = $(this).val();
-        console.log('$type: ' + $type);
         $('.programType').filter(function(i,e) {
             var $text = $(this).text();
-            console.log('$text: ' + $text);
-            if (!$text.match($type))
+            if (!$($text))
                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
         });
-        console.log("filtered");
     });
-    console.log("ByProgramType done");
 });
 
 
-$(function () {
-  $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
-    'delay': 100,
-    'selector': '.programType > ul',
-    'stripeRows': ['even', 'odd'],
-    'noResults': '.noResultsToShow',
-    'bind': 'keyup click',
-    'minValLength': 2,
-    'prepareQuery': function (val) {
-      return new RegExp(val, "i");
-    },
-    'testQuery': function (query, txt, _row) {
-      return query.test(txt);
-    },
-    'show': function() {
-      $(this).removeClass('hideByProgramTypeDropDown');
-    },
-    'hide': function() {
-      $(this).addClass('hideByProgramTypeDropDown');
-    },
-    'onAfter': function () {
-      anythingThere();
-    }
-  });
-});
+// $(function () {
+//   $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
+//     'delay': 100,
+//     'selector': '.programType > ul',
+//     'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//     'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByProgramTypeDropDown');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByProgramTypeDropDown');
+//     },
+//     'onAfter': function () {
+//       anythingThere();
+//     }
+//   });
+// });
 
 
 $(function () {
