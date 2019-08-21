@@ -125,7 +125,7 @@ $(function() {
 });
 
 
-// Features - Resets and handles multi-select options well
+//   ***   Features Filter   ***   //
 $(function() {
     console.log("ByFeature");
     $('#SelectBox-ByFeature').change(function () {
@@ -133,13 +133,13 @@ $(function() {
         console.log("change");
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
-        $('.features').filter(function(j,v) {
+        $('.features').filter(function(i,e) {
             var $text = $(this).text();
             console.log('$text: ' + $text);
-            if (!$text.match($feature)) {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
-            } else {
+            if ($text.match($feature)) {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
             }
         });
         console.log("filtered");
@@ -148,7 +148,7 @@ $(function() {
 });
 
 
-// Program Type - This single-select item works great
+//   ***   Program Type Filter   ***   //
 $(function() {
     console.log("ByProgramType");
     $('#SelectBox-ByProgramType').change(function () {
@@ -170,34 +170,7 @@ $(function() {
 });
 
 
-// $(function () {
-//   $('#SelectBox-ByProgramType').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 100,
-//     'selector': '.programType > ul',
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//     'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByProgramTypeDropDown');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByProgramTypeDropDown');
-//     },
-//     'onAfter': function () {
-//       anythingThere();
-//     }
-//   });
-// });
-
-
-// Language works for Multiselect
+//   ***   Language Filter   ***   //
 $(function() {
     console.log("ByLanguage");
     $('#SelectBox-ByLanguage').change(function () {
@@ -219,7 +192,8 @@ $(function() {
 });
 
 
-// ByHousing
+//   ***   Housing Filter   ***   //
+//TODO: the Apartment Housing option overflows into the Housing Accomodation Header  *** MUST FIX ***
 $(function() {
     console.log("ByHousing");
     $('#SelectBox-ByHousing').change(function () {
@@ -241,33 +215,7 @@ $(function() {
 });
 
 
-// $(function () {
-//   $('#SelectBox-ByHousing').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 100,
-//     'selector': '.housing > ul',
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//     'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByHousingDropDown');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByHousingDropDown');
-//     },
-//     'onAfter': function () {
-//       anythingThere();
-//     }
-//   });
-// });
-
-
+//  ***   Hide Marked Items   ***  //
 var visibleItems = $(".educationAbroadItemWrapper");
 
 function anythingThere() {
