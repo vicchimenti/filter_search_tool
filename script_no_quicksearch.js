@@ -50,7 +50,7 @@ $(function() {
 });
 
 
-//   ***   ByTerm Filter   ***   //
+//   ***   Term Filter   ***   //
 $(function() {
     console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
@@ -70,24 +70,6 @@ $(function() {
     });
     console.log("ByTerm done");
 });
-
-// // Term TODO: Needs Multi-Select functionality ? and reset on whitespace
-// $(function() {
-//     console.log("ByTerm");
-//     $('#SelectBox-ByTerm').change(function () {
-//         console.log("change");
-//         var $term = $(this).val();
-//         $('.term li').filter(function(i, e) {
-//             console.log("filter value: " + $term);
-//             if ($(e).text() != $term)
-//                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
-//             else
-//                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
-//         });
-//         console.log("filtered");
-//     });
-//     console.log("ByTerm done");
-// });
 
 
 //   ***   Program Fee Filter   ***   //
