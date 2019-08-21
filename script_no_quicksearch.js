@@ -197,7 +197,7 @@ $(function() {
 // });
 
 
-// Language
+// Language works for Multiselect
 $(function() {
     console.log("ByLanguage");
     $('#SelectBox-ByLanguage').change(function () {
@@ -219,31 +219,26 @@ $(function() {
 });
 
 
-// $(function () {
-//   $('#SelectBox-ByLanguage').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 100,
-//     'selector': '.language > ul',
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//     'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByLanguageDropDown');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByLanguageDropDown');
-//     },
-//     'onAfter': function () {
-//       anythingThere();
-//     }
-//   });
-// });
+// ByHousing
+$(function() {
+    console.log("ByHousing");
+    $('#SelectBox-ByHousing').change(function () {
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+        console.log("change");
+        var $housing = $(this).val();
+        console.log("$housing: " + $housing);
+        $('.housing').filter(function(i,e) {
+            var $text = $(this).text();
+            console.log("$text: " + $text);
+            if ($text.match($housing)) {
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+            } else {
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
+            }
+        });
+    });
+    console.log("ByHousing done");
+});
 
 
 $(function () {
