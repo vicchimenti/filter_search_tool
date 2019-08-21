@@ -30,7 +30,7 @@ $(function () {
 $(function() {
     console.log("ByDestination");
     $('#SelectBox-ByDestination').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
+        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
         console.log("change");
         var $destination = $(this).val();
         console.log("$destination: " + $destination);
@@ -38,38 +38,38 @@ $(function() {
             var $text = $(this).text();
             console.log("$text: " + $text);
             if ($text.match($destination)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
             } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDownMenu');
+                $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
             }
         });
     });
     console.log("ByDestination done");
 });
 
-// Destination - not done
-$(function() {
-    console.log("ByDestination");
-    $('#SelectBox-ByDestination').change(function () {
-        console.log("change");
-        var $dest = $(this).val();
-        console.log("$dest " + $dest);
-        $('.destination').each(function() {
-            var $matches = $('.destination li').filter(function () {
-                console.log("filter");
-                return $(this).text() === $dest
-            });
-            if (!$matches.length) {
-                $(this).parents().find('div.educationAbroadItemWrapper').addClass('hideByDestinationDropDownMenu');
-            } else {
-                $(this).parents().find('div.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
-            }
-            console.log("filtered");
-        });
-        console.log("eached");
-    });
-    console.log("ByDestination done");
-});
+// // Destination - not done
+// $(function() {
+//     console.log("ByDestination");
+//     $('#SelectBox-ByDestination').change(function () {
+//         console.log("change");
+//         var $dest = $(this).val();
+//         console.log("$dest " + $dest);
+//         $('.destination').each(function() {
+//             var $matches = $('.destination li').filter(function () {
+//                 console.log("filter");
+//                 return $(this).text() === $dest
+//             });
+//             if (!$matches.length) {
+//                 $(this).parents().find('div.educationAbroadItemWrapper').addClass('hideByDestinationDropDownMenu');
+//             } else {
+//                 $(this).parents().find('div.educationAbroadItemWrapper').removeClass('hideByDestinationDropDownMenu');
+//             }
+//             console.log("filtered");
+//         });
+//         console.log("eached");
+//     });
+//     console.log("ByDestination done");
+// });
 
 
 //   ***   Term Filter   ***   //
