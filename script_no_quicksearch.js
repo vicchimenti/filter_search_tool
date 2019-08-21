@@ -152,13 +152,18 @@ $(function() {
 $(function() {
     console.log("ByProgramType");
     $('#SelectBox-ByProgramType').change(function () {
+        console.log("change");
         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
+        var $type = $(this).val();
+        console.log("$type: " + $type);
         $('.programType').filter(function(i,e) {
             var $text = $(this).text();
-            if (!$($text))
+            console.log("$text: " + $text);
+            if (!$text.is($type))
                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
         });
     });
+    console.log("ByProgramType done");
 });
 
 
