@@ -1,5 +1,6 @@
 <script>
 
+// Keyword - switch to HideSeek
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -24,7 +25,7 @@ $(function () {
 });
 
 
-// Destination
+// Destination - not done
 $(function() {
     console.log("ByDestination");
     $('#SelectBox-ByDestination').change(function () {
@@ -49,7 +50,7 @@ $(function() {
 });
 
 
-// Term
+// Term TODO: Needs Multi-Select functionality
 $(function() {
     console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
@@ -68,7 +69,7 @@ $(function() {
 });
 
 
-// Program Fee
+// Program Fee - Works for single-option
 $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
@@ -98,7 +99,7 @@ $(function() {
 
 
 
-// Field of Study
+// Field of Study - TODO: Needs Multiselect and logic update
 $(function() {
     console.log("ByFieldOfStudy");
     $('#SelectBox-ByFieldOfStudy').change(function () {
