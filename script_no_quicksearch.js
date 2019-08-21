@@ -159,7 +159,7 @@ $(function() {
         $('.programType').filter(function(i,e) {
             var $text = $(this).text();
             console.log("$text: " + $text);
-            if ($text.exec($type)) {
+            if ($text.match($type)) {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
             } else {
                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
