@@ -133,28 +133,17 @@ $(function() {
         var $null = '';
         var $feature = $(this).val();
         console.log('$feature: ' + $feature);
-        if ($feature.length >= 1) {
-            var $arr = [];
+        if ($feature != $null) {
+            // var $arr = [];
             $('.features').filter(function(j,v) {
                 var $text = $(v).text();
                 console.log('$text: ' + $text);
-                // var $itemArray = [];
                 if ($text.match($feature)) {
-                    $arr.push($feature);
-                }
-                console.log('$arr: ' + $arr);
-                // $itemArray = $.grep($arr, function(a) {
-                //     return a == $feature;
-                // });
-                // console.log('$itemArray: ' + $itemArray);
-                var $matches = $.inArray($feature, $arr);
-                console.log('$matches: ' + $matches);
-                if ($matches == -1) {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
                 }
-                $arr = [];
+                // $arr = [];
             });
         } else {
             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
@@ -163,6 +152,19 @@ $(function() {
     });
     console.log("ByFeature done");
 });
+
+
+// var $itemArray = [];
+// if ($text.match($feature)) {
+//     $arr.push($feature);
+// }
+// console.log('$arr: ' + $arr);
+// // $itemArray = $.grep($arr, function(a) {
+// //     return a == $feature;
+// // });
+// // console.log('$itemArray: ' + $itemArray);
+// var $matches = $.inArray($feature, $arr);
+// console.log('$matches: ' + $matches);
 
 // $(function () {
 //   $('#SelectBox-ByFeature').quicksearch('.educationAbroadItemWrapper', {
