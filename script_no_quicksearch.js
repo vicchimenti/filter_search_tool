@@ -136,9 +136,11 @@ $(function() {
         if ($feature.length >= 1) {
             var $arr = [];
             $('.features').filter(function(j,v) {
+                var $text = $(v).text();
+                console.log('$text: ' + $text);
                 // var $itemArray = [];
-                if (($(v).text()) == $feature) {
-                    $arr.push($(this).text());
+                if ($text.match($feature)) {
+                    $arr.push($feature);
                 }
                 console.log('$arr: ' + $arr);
                 // $itemArray = $.grep($arr, function(a) {
