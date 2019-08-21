@@ -2,8 +2,33 @@
 
 //   ***   Keyword Search   ***   //
 //TODO:  - switch to HideSeek
+// $(function () {
+  // $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
+  //   'delay': 400,
+  //   'selector': ['h3, p'],
+  //   'stripeRows': ['even', 'odd'],
+//     'noResults': '.noResultsToShow',
+//     'bind': 'keyup click',
+//     'minValLength': 2,
+//     'prepareQuery': function (val) {
+//       return new RegExp(val, "i");
+//     },
+//     'testQuery': function (query, txt, _row) {
+//       return query.test(txt);
+//     },
+//     'show': function() {
+//       $(this).removeClass('hideByTextbox');
+//     },
+//     'hide': function() {
+//       $(this).addClass('hideByTextbox');
+//     }
+//   });
+// });
+
+
+//   ***   Keyword Search   ***   //
 $(function () {
-  $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
+  $('input#id_search').hideseek('.educationAbroadItemWrapper', {
     'delay': 400,
     'selector': ['h3, p'],
     'stripeRows': ['even', 'odd'],
