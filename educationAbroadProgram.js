@@ -163,12 +163,12 @@ try {
   document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails provider"><h3>Providers</h3><ul>' + listOfProviders + '</ul></div>');
   document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails term"><h3>Term</h3><ul>' + listOfTerms + '</ul></div>');
   /* -- Write Program Level 3 Details --*/
-  document.write('<div class="col-md-12 programDetails features"><h3>Features</h3><ul>' + listOfFeatures + '</ul></div>');
+  document.write('<div class="col-xs-12 programDetails features"><h3>Features</h3><ul>' + listOfFeatures + '</ul></div>');
   /* -- Write Program Level 4 Details --*/
-  document.write('<div class="col-md-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul>' + listOfStudyAreas + '</ul></div>');
+  document.write('<div class="col-xs-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul>' + listOfStudyAreas + '</ul></div>');
   /* -- Write Program Level 5 Details --*/
   if (prerequisites != "") {
-      document.write('<div class="col-md-12 programDetails prerequisites"><h3>Additional Prerequisites</h3>' + prerequisites + '</div>');
+      document.write('<div class="col-xs-12 programDetails prerequisites"><h3>Additional Prerequisites</h3>' + prerequisites + '</div>');
   }
 
   /* -- Write Closing Tags -- */
