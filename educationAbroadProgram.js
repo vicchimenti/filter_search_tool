@@ -154,17 +154,17 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row">');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails destination"><h3>Destinations</h3><ul>' + listOfDestinations + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails gpa"><h3>GPA Requirements</h3><ul> ' + listOfGPA + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' + listOfTypes + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails destination"><h3>Destinations</h3><ul>' + listOfDestinations + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails gpa"><h3>GPA</h3><ul> ' + listOfGPA + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' + listOfTypes + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="row">');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails housing"><h3>Housing</h3><ul> ' + listOfHousing + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails language"><h3>Language</h3><ul>' + listOfLanguages + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails provider"><h3>Providers</h3><ul>' + listOfProviders + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails term"><h3>Term</h3><ul>' + listOfTerms + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails housing"><h3>Housing</h3><ul> ' + listOfHousing + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails language"><h3>Language</h3><ul>' + listOfLanguages + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails provider"><h3>Providers</h3><ul>' + listOfProviders + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails term"><h3>Term</h3><ul>' + listOfTerms + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 3 Details --*/
   document.write('<div class="row">');
