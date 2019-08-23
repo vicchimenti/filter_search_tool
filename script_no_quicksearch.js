@@ -86,8 +86,8 @@ $(function() {
                 console.log("$fee is a number");
                 if (!isNaN($key)) {
                     console.log("$key is a number");
-                    var $feeInt = number($fee);
-                    var $keyInt = number($key);
+                    var $feeInt = Number($fee);
+                    var $keyInt = Number($key);
                     if ($feeInt >= $keyInt) {
                         console.log("$feeInt >=");
                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
