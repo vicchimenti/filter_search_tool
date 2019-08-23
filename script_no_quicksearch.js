@@ -152,8 +152,6 @@ $(function() {
                         default:
                             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                             break;
-
-                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                 }
             } else {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
