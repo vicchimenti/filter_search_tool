@@ -80,12 +80,32 @@ $(function() {
         var $fee = $(this).val();
         console.log('$fee: ' + $fee);
         $('.programFee li').filter(function(i,e) {
-            var $text = $(this).text();
-            console.log('$text: ' + $text);
-            if ($text.match($fee)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+            var $key = $(this).text();
+            console.log('$key: ' + $key);
+            if (!isNaN($fee)) {
+                console.log("$fee is a number");
+                if (!isNaN($key) {
+                    console.log("$key is a number");
+                    var $feeInt = number($fee);
+                    var $keyInt = number($fee);
+                    if ($feeInt >= $keyInt) {
+                        console.log("$feeInt >=");
+                        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                    } else {
+                        console.log("$feeInt <");
+                        $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                    }
+                } else {
+                    console.log("$key isNaN");
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                }
             } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                console.log("$fee isNaN");
+                if ($key.match($fee)) {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                }
             }
         });
         console.log("filtered");
@@ -131,6 +151,7 @@ $(function() {
 
 
 // //   ***   Program Fee Filter   ***   //
+//   ********       Do Not Delete        ********   //
 // // *********** Works for single-option exact match only ************  //
 // // TODO: Add logic for range of values based on selection
 // $(function() {
