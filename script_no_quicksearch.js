@@ -101,8 +101,6 @@ $(function() {
 });
 
 
-
-
 //   ***   Field Of Study Filter   ***   //
 $(function() {
     console.log("ByFieldOfStudy");
@@ -193,32 +191,61 @@ $(function() {
 });
 
 
+
 //   ***   Housing Filter   ***   //
-//TODO: the Apartment Housing option overflows into the Housing Accomodation Header  *** MUST FIX ***
 $(function() {
     console.log("ByHousing");
     $('#SelectBox-ByHousing').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
         console.log("change");
+        var $null = '';
         var $housing = $(this).val();
-        console.log("$housing: " + $housing);
-        $('.housing').filter(function(i,e) {
-            var $text = $(this).text();
-            console.log("$text: " + $text);
-            if ($text.match($housing)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+        console.log('$housing: ' + $housing);
+        $.each($('.housing li'), function(i,e) {
+            if ($housing != $null) {
+                var $arr = [];
+                $arr.push($(this).text());
+                console.log('$arr: ' + $arr);
+                var $matches = $.inArray($housing, $arr);
+                console.log('$matches: ' + $matches);
+                if ($matches == -1)
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
+                else
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
             } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
+                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
             }
+            console.log("filtered");
         });
     });
     console.log("ByHousing done");
 });
 
 
+// //   ***   Housing Filter   ***   //
+// //TODO: the Apartment Housing option overflows into the Housing Accomodation Header  *** MUST FIX ***
+// $(function() {
+//     console.log("ByHousing");
+//     $('#SelectBox-ByHousing').change(function () {
+//         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+//         console.log("change");
+//         var $housing = $(this).val();
+//         console.log("$housing: " + $housing);
+//         $('.housing').filter(function(i,e) {
+//             var $text = $(this).text();
+//             console.log("$text: " + $text);
+//             if ($text.match($housing)) {
+//                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+//             } else {
+//                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
+//             }
+//         });
+//     });
+//     console.log("ByHousing done");
+// });
+
+
 //  ***   Hide Marked Items   ***  //
 var visibleItems = $(".educationAbroadItemWrapper");
-
 function anythingThere() {
   visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByHousingDropDown');
 
