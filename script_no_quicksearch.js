@@ -118,38 +118,6 @@ $(function() {
 });
 
 
-// //   ***   Program Fee Filter   ***   //
-//   ********       Do Not Delete        ********   //
-// // *********** Works for single-option exact match only ************  //
-// // TODO: Add logic for range of values based on selection
-// $(function() {
-//     console.log("ByProgramFee");
-//     $('#SelectBox-ByProgramFee').change(function () {
-//         console.log("change");
-//         var $null = '';
-//         var $fee = $(this).val();
-//         console.log('$fee: ' + $fee);
-//         $.each($('.programFee li'), function(i,e) {
-//             if ($fee != $null) {
-//                 var $arr = [];
-//                 $arr.push($(this).text());
-//                 console.log('$arr: ' + $arr);
-//                 var $matches = $.inArray($fee, $arr);
-//                 console.log('$matches: ' + $matches);
-//                 if ($matches == -1)
-//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-//                 else
-//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-//             } else {
-//                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-//             }
-//             console.log("filtered");
-//         });
-//     });
-//     console.log("ByProgramFee done");
-// });
-
-
 //   ***   Field Of Study Filter   ***   //
 $(function() {
     console.log("ByFieldOfStudy");
