@@ -48,23 +48,21 @@ $(function() {
 
 //   ***   Term Filter   ***   //
 $(function() {
-    console.log("ByTerm");
     $('#SelectBox-ByTerm').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
-        console.log("change");
         var $term = $(this).val();
-        console.log("$term: " + $term);
-        $('.term').filter(function(i,e) {
-            var $text = $(this).text();
-            console.log("$text: " + $text);
-            if ($text.match($term)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
-            } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
-            }
-        });
+        if ($term) {
+            $('.term').filter(function(i,e) {
+                var $text = $(this).text();
+                if ($text.match($term)) {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
+                }
+            });
+        } else {
+            $('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
+        }
     });
-    console.log("ByTerm done");
 });
 
 
