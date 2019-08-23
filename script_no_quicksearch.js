@@ -1,7 +1,6 @@
 <script>
 
 //   ***   Keyword Search   ***   //
-//TODO:  - switch ? HideSeek: under review
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
     'delay': 400,
@@ -30,19 +29,20 @@ $(function () {
 $(function() {
     console.log("ByDestination");
     $('#SelectBox-ByDestination').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
-        console.log("change");
+        var $null = '';
         var $destination = $(this).val();
-        console.log("$destination: " + $destination);
-        $('.destination').filter(function(i,e) {
-            var $text = $(this).text();
-            console.log("$text: " + $text);
-            if ($text.match($destination)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
-            } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
-            }
-        });
+        if ($destination != $null) {
+            $('.destination').filter(function(i,e) {
+                var $text = $(this).text();
+                if ($text.match($destination)) {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
+                }
+            });
+        } else {
+            $('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
+        }
     });
     console.log("ByDestination done");
 });
