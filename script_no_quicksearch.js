@@ -67,37 +67,31 @@ $(function() {
 
 
 //   ***   Program Fee Filter   ***   //
-//with logic
 $(function() {
-    console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
-        console.log("change");
-        var $null = '';
         var $fee = $(this).val();
-        console.log('$fee: ' + $fee);
-        if ($fee != $null) {
+        if ($fee) {
             $('.programFee li').filter(function(i,e) {
                 var $key = $(this).text();
-                console.log('$key: ' + $key);
+                // When the Selected Value is Numeric Compare with Content Items
                 if (!isNaN($fee)) {
-                    console.log("$fee is a number");
+                    // When the Content Item is Numeric Parse for higher/lower values
                     if (!isNaN($key)) {
-                        console.log("$key is a number");
                         var $feeInt = Number($fee);
                         var $keyInt = Number($key);
+                        // When the Content Value is Lower then Show the Item
                         if ($feeInt >= $keyInt) {
-                            console.log("$feeInt >=");
                             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                        // When the Content Value is Higher then Hide the Item
                         } else {
-                            console.log("$feeInt <");
                             $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
                         }
+                    // Selected Value is Numeric and the Content Value is Not then Hide it
                     } else {
-                        console.log("$key isNaN");
                         $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
                     }
+                // When the Selected Value is Not Numeric compare both for a match
                 } else {
-                    console.log("$fee isNaN");
                     if ($key.match($fee)) {
                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                     } else {
@@ -105,12 +99,11 @@ $(function() {
                     }
                 }
             });
+        // When the Selected Value is NULL or Whitespace, reset the group and show all items
         } else {
             $('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         }
-        console.log("filtered");
     });
-    console.log("ByProgramFee done");
 });
 
 
