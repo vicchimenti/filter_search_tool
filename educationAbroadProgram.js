@@ -140,7 +140,7 @@ try {
   document.write('<div class="container-fluid">');
 
   /* -- Write Program Image and Link- IF they are not null --*/
-  document.write('<div class="row no-gutters" id="image-link">');
+  document.write('<div class="row" id="image-link">');
   if (city != "") {
       document.write('<div class="programCity"><h5>' + city + '</h5></div>');
   }
@@ -153,33 +153,22 @@ try {
   document.write('</div>');
 
   /* -- Write Program Level 1 Summary Stats --*/
-  document.write('<div class="row no-gutters" id="row1">');
-  document.write('<div class="col-md-3 programDetails destination"><h3>Destinations</h3><ul>' + listOfDestinations + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails gpa"><h3>GPA Requirements</h3><ul> ' + listOfGPA + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' + listOfTypes + '</ul></div>');
-
-  document.write('</div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails destination"><h3>Destinations</h3><ul>' + listOfDestinations + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails gpa"><h3>GPA Requirements</h3><ul> ' + listOfGPA + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' + listOfTypes + '</ul></div>');
   /* -- Write Program Level 2 Summary Stats --*/
-  document.write('<div class="row no-gutters" id="row2">');
-  document.write('<div class="col-md-3 programDetails housing"><h3>Housing Accommodations</h3><ul> ' + listOfHousing + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails language"><h3>Language of Instruction</h3><ul>' + listOfLanguages + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails provider"><h3>Providers</h3><ul>' + listOfProviders + '</ul></div>');
-  document.write('<div class="col-md-3 programDetails term"><h3>Term</h3><ul>' + listOfTerms + '</ul></div>');
-  document.write('</div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails housing"><h3>Housing Accommodations</h3><ul> ' + listOfHousing + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails language"><h3>Language of Instruction</h3><ul>' + listOfLanguages + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails provider"><h3>Providers</h3><ul>' + listOfProviders + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-4 col-md-3 programDetails term"><h3>Term</h3><ul>' + listOfTerms + '</ul></div>');
   /* -- Write Program Level 3 Details --*/
-  document.write('<div class="row no-gutters" id="row3">');
   document.write('<div class="col-md-12 programDetails features"><h3>Features</h3><ul>' + listOfFeatures + '</ul></div>');
-  document.write('</div>');
   /* -- Write Program Level 4 Details --*/
-  document.write('<div class="row no-gutters" id="row4">');
   document.write('<div class="col-md-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul>' + listOfStudyAreas + '</ul></div>');
-  document.write('</div>');
   /* -- Write Program Level 5 Details --*/
   if (prerequisites != "") {
-      document.write('<div class="row no-gutters" id="row5">');
       document.write('<div class="col-md-12 programDetails prerequisites"><h3>Additional Prerequisites</h3>' + prerequisites + '</div>');
-      document.write('</div>');
   }
 
   /* -- Write Closing Tags -- */
