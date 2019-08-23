@@ -75,7 +75,6 @@ $(function() {
 $(function() {
     console.log("ByProgramFee");
     $('#SelectBox-ByProgramFee').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         console.log("change");
         var $null = '';
         var $fee = $(this).val();
@@ -110,6 +109,8 @@ $(function() {
                     }
                 }
             });
+        } else {
+            $('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         }
         console.log("filtered");
     });
