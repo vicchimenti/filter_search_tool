@@ -77,37 +77,40 @@ $(function() {
     $('#SelectBox-ByProgramFee').change(function () {
         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
         console.log("change");
+        var $null = '';
         var $fee = $(this).val();
         console.log('$fee: ' + $fee);
-        $('.programFee li').filter(function(i,e) {
-            var $key = $(this).text();
-            console.log('$key: ' + $key);
-            if (!isNaN($fee)) {
-                console.log("$fee is a number");
-                if (!isNaN($key)) {
-                    console.log("$key is a number");
-                    var $feeInt = Number($fee);
-                    var $keyInt = Number($key);
-                    if ($feeInt >= $keyInt) {
-                        console.log("$feeInt >=");
-                        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+        if ($fee != $null) {
+            $('.programFee li').filter(function(i,e) {
+                var $key = $(this).text();
+                console.log('$key: ' + $key);
+                if (!isNaN($fee)) {
+                    console.log("$fee is a number");
+                    if (!isNaN($key)) {
+                        console.log("$key is a number");
+                        var $feeInt = Number($fee);
+                        var $keyInt = Number($key);
+                        if ($feeInt >= $keyInt) {
+                            console.log("$feeInt >=");
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                        } else {
+                            console.log("$feeInt <");
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                        }
                     } else {
-                        console.log("$feeInt <");
+                        console.log("$key isNaN");
                         $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
                     }
                 } else {
-                    console.log("$key isNaN");
-                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                    console.log("$fee isNaN");
+                    if ($key.match($fee)) {
+                        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                    } else {
+                        $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                    }
                 }
-            } else {
-                console.log("$fee isNaN");
-                if ($key.match($fee)) {
-                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
-                } else {
-                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-                }
-            }
-        });
+            });
+        }
         console.log("filtered");
     });
     console.log("ByProgramFee done");
