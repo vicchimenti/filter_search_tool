@@ -129,68 +129,61 @@ $(function() {
 
 //   ***   Features Filter   ***   //
 $(function() {
-    console.log("ByFeature");
     $('#SelectBox-ByFeature').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-        console.log("change");
         var $feature = $(this).val();
-        console.log('$feature: ' + $feature);
-        $('.features').filter(function(i,e) {
-            var $key = $(this).text();
-            console.log('$key: ' + $key);
-            if ($key.match($feature)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-            } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
-            }
-        });
-        console.log("filtered");
+        if ($feature) {
+            $('.features').filter(function(i,e) {
+                var $key = $(this).text();
+                if ($key.match($feature)) {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
+                }
+            });
+        } else {
+            $('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
+        }
     });
-    console.log("ByFeature done");
 });
 
 
 //   ***   Program Type Filter   ***   //
 $(function() {
-    console.log("ByProgramType");
     $('#SelectBox-ByProgramType').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
-        console.log("change");
         var $type = $(this).val();
-        console.log("$type: " + $type);
-        $('.programType').filter(function(i,e) {
-            var $key = $(this).text();
-            console.log("$key: " + $key);
-            if ($key.match($type)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
-            } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
-            }
-        });
+        if ($type) {
+            $('.programType').filter(function(i,e) {
+                var $key = $(this).text();
+                if ($key.match($type)) {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
+                }
+            });
+        } else {
+            $('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
+        }
     });
-    console.log("ByProgramType done");
 });
 
 
 //   ***   Language Filter   ***   //
 $(function() {
-    console.log("ByLanguage");
     $('#SelectBox-ByLanguage').change(function () {
-        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
-        console.log("change");
         var $language = $(this).val();
-        console.log("$language: " + $language);
-        $('.language').filter(function(i,e) {
-            var $key = $(this).text();
-            console.log("$key: " + $key);
-            if ($key.match($language)) {
-                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
-            } else {
-                $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguageDropDown');
-            }
-        });
+        if ($language) {
+            $('.language').filter(function(i,e) {
+                var $key = $(this).text();
+                if ($key.match($language)) {
+                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
+                } else {
+                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguageDropDown');
+                }
+            });
+        } else {
+            $('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
+        }
     });
-    console.log("ByLanguage done");
 });
 
 
