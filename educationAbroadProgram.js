@@ -154,10 +154,10 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row">');
-  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails destination"><h3>Destinations</h3><ul>' + listOfDestinations + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails programFee"><h3>Program Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails destination"><h3>Destination</h3><ul>' + listOfDestinations + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails programFee"><h3>Fees</h3><ul>' + listOfProgramFees + '</ul></div>');
   document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails gpa"><h3>GPA</h3><ul> ' + listOfGPA + '</ul></div>');
-  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails programType"><h3>Program Type</h3><ul> ' + listOfTypes + '</ul></div>');
+  document.write('<div class="col-xs-6 col-sm-3 col-md-3 programDetails programType"><h3>Type</h3><ul> ' + listOfTypes + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="row">');
