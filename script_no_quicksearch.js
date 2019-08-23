@@ -87,10 +87,74 @@ $(function() {
                 console.log('$arr: ' + $arr);
                 var $matches = $.inArray($fee, $arr);
                 console.log('$matches: ' + $matches);
-                if ($matches == -1)
-                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
-                else
+                if ($matches == -1) {
+                    switch($fee) {
+                        case '0':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case '2000':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case '4000':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case '6000':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case '8000':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case '10000':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case '12000':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case 'Varies':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        case 'N/A':
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                        default:
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
+                            break;
+                    }
+                } else {
+                    switch($fee) {
+                        case '0':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case '2000':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case '4000':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case '6000':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case '8000':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case '10000':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case '12000':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case 'Varies':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        case 'N/A':
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+                        default:
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                            break;
+
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
+                }
             } else {
                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
             }
