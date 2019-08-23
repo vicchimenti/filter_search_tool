@@ -1,5 +1,6 @@
 <script>
 
+
 //   ***   Keyword Search   ***   //
 $(function () {
   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
@@ -27,11 +28,9 @@ $(function () {
 
 //   ***   Destination Filter   ***   //
 $(function() {
-    console.log("ByDestination");
     $('#SelectBox-ByDestination').change(function () {
-        var $null = '';
         var $destination = $(this).val();
-        if ($destination != $null) {
+        if ($destination) {
             $('.destination').filter(function(i,e) {
                 var $text = $(this).text();
                 if ($text.match($destination)) {
@@ -44,7 +43,6 @@ $(function() {
             $('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
         }
     });
-    console.log("ByDestination done");
 });
 
 
