@@ -11,27 +11,17 @@ $(function () {
 });
 $(function () {
     console.log("three");
-    $('.js-main-container').addClass('whoopie3');
-    console.log("three js-main-container");
+    $('.js-main-container iframe').contents().addClass('whoopie3');
+    console.log("three js-main-container contents");
 });
 $(function () {
     console.log("four");
-    $('.js-t4form-container iframe').addClass('whoopie4');
-    console.log("four js-t4form-container iframe");
+    $('.js-t4form-container iframe').contents().addClass('whoopie4');
+    console.log("four js-t4form-container iframe contents");
 });
 $(function () {
     console.log("five");
-    $('.js-elements-container iframe').addClass('whoopie5');
-    console.log("five .js-elements-container iframe");
-});
-$(function () {
-    console.log("six");
-    $('.js-elements-container').addClass('whoopie6');
-    console.log("six .js-elements-container");
-});
-$(function () {
-    console.log("seven");
-    $('js-main-container iframe').addClass('whoopie7');
-    console.log("seven js-main-container iframe");
+    $('.js-elements-container iframe').contents().addClass('whoopie5');
+    console.log("five .js-elements-container iframe contents");
 });
 </script>
