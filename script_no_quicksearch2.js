@@ -129,20 +129,22 @@ $(function() {
 
 //   ***   Housing Filter   ***   //
 $(function() {
-    $('#SelectBox-ByHousing').change(function () {
-        var $housing = $(this).val();
-        if ($housing) {
-            $('.housing').filter(function(i,e) {
-                var $key = $(this).text();
-                if ($key.match($housing)) {
-                    $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
-                } else {
-                    $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
-                }
-            });
-        } else {
-            $('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
-        }
+    $('.js-form-container iframe').contents(function () {
+        $('#SelectBox-ByHousing').change(function () {
+            var $housing = $(this).val();
+            if ($housing) {
+                $('.housing').filter(function(i,e) {
+                    var $key = $(this).text();
+                    if ($key.match($housing)) {
+                        $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+                    } else {
+                        $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
+                    }
+                });
+            } else {
+                $('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+            }
+        });
     });
 });
 
