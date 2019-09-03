@@ -27,8 +27,8 @@ $(function () {
 $(function () {
     console.log("six");
     setInterval(function () {
-        parent.postMessage("Hello", "https://us.formbank.us");
+        parent.postMessage("Hello", "https://us.formbank.us/rest");
     }, 1000);
-    console.log("six postMessage https://us.formbank.us");
+    console.log("six postMessage https://us.formbank.us/rest");
 });
 </script>
