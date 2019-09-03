@@ -11,17 +11,17 @@ $(function () {
 });
 $(function () {
     console.log("three");
-    $('.js-main-container iframe').contents().addClass('whoopie3');
+    $('.js-main-container').contents().addClass('whoopie3');
     console.log("three js-main-container contents");
 });
 $(function () {
     console.log("four");
-    $('.js-t4form-container iframe').contents().addClass('whoopie4');
-    console.log("four js-t4form-container iframe contents");
+    $('.js-t4form-container').contents().addClass('whoopie4');
+    console.log("four js-t4form-container contents");
 });
 $(function () {
     console.log("five");
-    $('.js-elements-container iframe').contents().addClass('whoopie5');
-    console.log("five .js-elements-container iframe contents");
+    $('.js-elements-container').contents().addClass('whoopie5');
+    console.log("five .js-elements-container contents");
 });
 </script>
