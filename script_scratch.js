@@ -27,8 +27,8 @@ $(function () {
 $(function () {
     console.log("six");
     setInterval(function () {
-        parent.postMessage("Hello", "https://us.formbank.us/rest");
+        parent.postMessage("Hello", "https://www.seattleu.edu/testing123/victesting/easearch2/");
     }, 1000);
-    console.log("six postMessage https://us.formbank.us/rest");
+    console.log("six postMessage https://www.seattleu.edu/testing123/victesting/easearch2/");
 });
 </script>
