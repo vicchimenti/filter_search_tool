@@ -6,14 +6,14 @@
 button.btn.btn-primary.pull-right.js-submit {
     display: none;
 }
-
+/*
 .form-group {
     background-color: red;
     display: inline;
     float: left;
     width: 33%;
-}
-
+} */
+/* 
 #input-27855 {
     background-color: green;
     color: orange;
@@ -24,7 +24,7 @@ button.btn.btn-primary.pull-right.js-submit {
     background-color: orange;
     color: green;
     text-decoration: underline;
-}
+} */
 
 #filterFieldWrapper {
     border-bottom:1px solid #ccc;
