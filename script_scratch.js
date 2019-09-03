@@ -36,7 +36,7 @@ $(function () {
     var $eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
     var $eventer = window[$eventMethod];
     var $messageEvent = $eventMethod == "attachEvent" ? "onmessage" : "message";
-    $eventer($messageEvent,fuction(e) {
+    $eventer($messageEvent,fuction(e){
         console.log('parent received message!: ',e.data);
     },false);
     console.log("seven $eventer");
