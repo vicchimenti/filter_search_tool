@@ -11,8 +11,8 @@ $(function () {
 });
 $(function () {
     console.log("three");
-    $('.js-main-container').contents().addClass('whoopie3');
-    console.log("three js-main-container contents");
+    $('.js-main-container').contents().find('.div').addClass('whoopie3');
+    console.log("three js-main-container contents find");
 });
 $(function () {
     console.log("four");
