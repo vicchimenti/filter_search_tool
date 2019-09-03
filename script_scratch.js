@@ -28,7 +28,7 @@ $(function () {
     console.log("five five");
     $('iframe').load(function() {
         $(this).contents().find('.form-group').addClass('whoopie55');
-    }
+    });
     console.log("five five form")
 });
 $(function () {
