@@ -6,8 +6,8 @@ $(function () {
 });
 $(function () {
     console.log("two");
-    $('.js-t4form-container').contents().find('.js-elements-container').addClass('whoopie2');
-    console.log("two js-t4form-container contents find js-elements-container");
+    $('.form-group').addClass('whoopie2');
+    console.log("two form-group");
 });
 $(function () {
     console.log("three");
