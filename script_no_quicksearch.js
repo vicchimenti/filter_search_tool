@@ -107,66 +107,6 @@ $(function() {
 });
 
 
-// //   ***   Field Of Study Filter   ***   //
-// $(function() {
-//     $('#SelectBox-ByFieldOfStudy').change(function () {
-//         var $study = $(this).val();
-//         if ($study) {
-//             $('.fieldOfStudy').filter(function(i,e) {
-//                 var $key = $(this).text();
-//                 if ($key.match($study)) {
-//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFieldOfStudyDropDown');
-//                 } else {
-//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFieldOfStudyDropDown');
-//                 }
-//             });
-//         } else {
-//             $('.educationAbroadItemWrapper').removeClass('hideByFieldOfStudyDropDown');
-//         }
-//     });
-// });
-//
-//
-// //   ***   Features Filter   ***   //
-// $(function() {
-//     $('#SelectBox-ByFeature').change(function () {
-//         var $feature = $(this).val();
-//         if ($feature) {
-//             $('.features').filter(function(i,e) {
-//                 var $key = $(this).text();
-//                 if ($key.match($feature)) {
-//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-//                 } else {
-//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeatureDropDown');
-//                 }
-//             });
-//         } else {
-//             $('.educationAbroadItemWrapper').removeClass('hideByFeatureDropDown');
-//         }
-//     });
-// });
-//
-//
-// //   ***   Program Type Filter   ***   //
-// $(function() {
-//     $('#SelectBox-ByProgramType').change(function () {
-//         var $type = $(this).val();
-//         if ($type) {
-//             $('.programType').filter(function(i,e) {
-//                 var $key = $(this).text();
-//                 if ($key.match($type)) {
-//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
-//                 } else {
-//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramTypeDropDown');
-//                 }
-//             });
-//         } else {
-//             $('.educationAbroadItemWrapper').removeClass('hideByProgramTypeDropDown');
-//         }
-//     });
-// });
-
-
 //   ***   Language Filter   ***   //
 $(function() {
     $('#SelectBox-ByLanguage').change(function () {
