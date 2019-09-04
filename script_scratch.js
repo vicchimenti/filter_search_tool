@@ -46,10 +46,10 @@ $(function () {
     console.log("seven");
     $(window).load(function () {
         setTimeout(function (){
-            $('.js-elements-container').addClass('onload2');
+            $('.destinationDropDownMenu').addClass('onload3');
         }, 2000);
     });
-    console.log("seven js-elements-container window onload2 setTimeout 2000");
+    console.log("seven destinationDropDownMenu window onload3 setTimeout 2000");
 });
 
 
