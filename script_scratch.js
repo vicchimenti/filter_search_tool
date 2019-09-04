@@ -6,61 +6,17 @@ $(function () {
 });
 $(function () {
     console.log("two");
-    $('.form-group').addClass('whoopie2');
-    console.log("two form-group");
+    $('.form-group').delay(2000).addClass('whoopie2');
+    console.log("two form-group 2000");
 });
 $(function () {
     console.log("three");
-    $('.js-t4form-container iframe').contents().find('.js-main-container').addClass('whoopie3');
-    console.log("three js-t4form-container iframe contents find js-main-container");
+    $('.js-main-container').delay(3000).addClass('whoopie3');
+    console.log("three js-main-container 3000");
 });
 $(function () {
     console.log("four");
-    $('.js-main-container iframe').contents().find('.div').addClass('whoopie4');
-    console.log("four js-main-container iframe contents find");
+    $('.js-elements-container').delay(4000).addClass('whoopie4');
+    console.log("four js-elements-container 4000");
 });
-$(function () {
-    console.log("five");
-    $('.js-elements-container iframe').contents().find('.div').addClass('whoopie5');
-    console.log("five .js-elements-container iframe contents find");
-});
-$(function () {
-    console.log("five five");
-    $('iframe').load(function() {
-        $(this).contents().find('.form-group').addClass('whoopie55');
-    });
-    console.log("five five form")
-});
-$(function () {
-    console.log("six");
-    setInterval(function () {
-        parent.postMessage("Hello", "https://cms.seattleu.edu/terminalfour/preview/21/en/185661");
-    }, 1000);
-    console.log("six postMessage https://www.seattleu.edu/testing123/victesting/easearch2/");
-});
-$(function () {
-    console.log("seven");
-    $targetWindow = window.opener;
-    $targetWindow.postMessage("Hello", "https://cms.seattleu.edu/terminalfour/preview/21/en/185661");
-    console.log("seven window.opener");
-});
-$(function () {
-    console.log("eight");
-    var x = document.getElementsByTagName('iframe')[0].contentWindow;
-    x.document.getElementsByTagName('.js-elements-container')[0].style.backgroundColor = 'blue';
-    console.log("eight getElementsByTagName");
-});
-// $(function () {
-//     console.log("seven");
-//     var $eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-//     var $eventer = window[$eventMethod];
-//     var $messageEvent = $eventMethod == "attachEvent" ? "onmessage" : "message";
-//     $eventer($messageEvent,fuction(e){
-//         console.log('parent received message!: ',e.data);
-//     },false);
-//     console.log("seven $eventer");
-// });
-
-
-
 </script>
