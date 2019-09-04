@@ -8,8 +8,8 @@ $(function () {
     console.log("two");
     setTimeout(function () {
         $('.js-main-container').addClass('whoopie2');
-    }, 3000);
-    console.log("two js-main-container 3000");
+    }, 4000);
+    console.log("two js-main-container 4000");
 });
 $(function () {
     console.log("three");
@@ -28,15 +28,15 @@ $(function () {
 $(function () {
     console.log("five");
     $(window).load(function () {
-        $('.js-main-container').delay(3000).addClass('onload1');
+        $('.js-main-container').delay(4000).addClass('onload1');
     });
-    console.log("five js-main-container window load delay 3000");
+    console.log("five js-main-container window load delay 4000");
 });
 $(function () {
     console.log("six");
     $(window).load(function () {
         setTimeout(function (){
-            ('.js-elements-container').addClass('onload1');
+            $('.js-elements-container').addClass('onload2');
         }, 2000);
     });
     console.log("six js-elements-container window load setTimeout 2000");
