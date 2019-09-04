@@ -34,20 +34,32 @@ $(function () {
 $(function () {
     console.log("six");
     setInterval(function () {
-        parent.postMessage("Hello", "https://www.seattleu.edu/testing123/victesting/easearch2/");
+        parent.postMessage("Hello", "https://cms.seattleu.edu/terminalfour/preview/21/en/185661");
     }, 1000);
     console.log("six postMessage https://www.seattleu.edu/testing123/victesting/easearch2/");
 });
 $(function () {
     console.log("seven");
-    var $eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-    var $eventer = window[$eventMethod];
-    var $messageEvent = $eventMethod == "attachEvent" ? "onmessage" : "message";
-    $eventer($messageEvent,fuction(e){
-        console.log('parent received message!: ',e.data);
-    },false);
-    console.log("seven $eventer");
+    $targetWindow = window.opener;
+    $targetWindow.postMessage("Hello", "https://cms.seattleu.edu/terminalfour/preview/21/en/185661");
+    console.log("seven window.opener");
 });
+$(function () {
+    console.log("eight");
+    var x = document.getElementsByTagName('iframe')[0].contentWindow;
+    x.document.getElementsByTagName('.js-elements-container')[0].style.backgroundColor = 'blue';
+    console.log("eight getElementsByTagName");
+});
+// $(function () {
+//     console.log("seven");
+//     var $eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+//     var $eventer = window[$eventMethod];
+//     var $messageEvent = $eventMethod == "attachEvent" ? "onmessage" : "message";
+//     $eventer($messageEvent,fuction(e){
+//         console.log('parent received message!: ',e.data);
+//     },false);
+//     console.log("seven $eventer");
+// });
 
 
 
