@@ -21,25 +21,25 @@ $(function () {
 $(function () {
     console.log("four");
     setTimeout(function() {
-        $('.form-group').addClass('whoopie4');
+        $('.fieldOfStudyDropDownMenu').addClass('whoopie4');
     }, 5000);
-    console.log("four form-group 5000");
+    console.log("four fieldOfStudyDropDownMenu 5000");
 });
 $(function () {
     console.log("five");
     $(window).load(function () {
-        $('.js-main-container').delay(4000).addClass('onload1');
+        $('.js-main-container').delay(5000).addClass('onload1');
     });
-    console.log("five js-main-container window load delay 4000");
+    console.log("five js-main-container window load delay 5000");
 });
 $(function () {
     console.log("six");
     $(window).load(function () {
         setTimeout(function (){
             $('.js-elements-container').addClass('onload2');
-        }, 2000);
+        }, 1500);
     });
-    console.log("six js-elements-container window load setTimeout 2000");
+    console.log("six js-elements-container window load setTimeout 1500");
 });
 
 </script>
