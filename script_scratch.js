@@ -38,16 +38,16 @@ $(function () {
     }, 1000);
     console.log("six postMessage https://www.seattleu.edu/testing123/victesting/easearch2/");
 });
-// $(function () {
-//     console.log("seven");
-//     var $eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-//     var $eventer = window[$eventMethod];
-//     var $messageEvent = $eventMethod == "attachEvent" ? "onmessage" : "message";
-//     $eventer($messageEvent,fuction(e){
-//         console.log('parent received message!: ',e.data);
-//     },false);
-//     console.log("seven $eventer");
-// });
+$(function () {
+    console.log("seven");
+    var $eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+    var $eventer = window[$eventMethod];
+    var $messageEvent = $eventMethod == "attachEvent" ? "onmessage" : "message";
+    $eventer($messageEvent,fuction(e){
+        console.log('parent received message!: ',e.data);
+    },false);
+    console.log("seven $eventer");
+});
 
 
 
