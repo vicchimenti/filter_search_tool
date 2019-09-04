@@ -42,5 +42,15 @@ $(function () {
     });
     console.log("six js-elements-container window onload2 setTimeout 2000");
 });
+$(function () {
+    console.log("seven");
+    $(window).load(function () {
+        setTimeout(function (){
+            $('.js-elements-container').addClass('onload2');
+        }, 2000);
+    });
+    console.log("seven js-elements-container window onload2 setTimeout 2000");
+});
+
 
 </script>
