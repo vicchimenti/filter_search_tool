@@ -62,10 +62,10 @@ $(function () {
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
-                $('#SelectBox-ByProgramFee').change(function () {
+                $('#input-28834').change(function () {
                     var $fee = $(this).val();
                     if ($fee) {
-                        $('#input-28834 li').filter(function(i,e) {
+                        $('.programFee li').filter(function(i,e) {
                             var $key = $(this).text();
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($fee)) {
