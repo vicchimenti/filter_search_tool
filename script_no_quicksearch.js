@@ -58,14 +58,14 @@ $(function () {
 
 //   ***   Program Fee Filter   ***   //
 $(function () {
-    console.log("seven");
+    console.log("two");
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
                 $('#SelectBox-ByProgramFee').change(function () {
                     var $fee = $(this).val();
                     if ($fee) {
-                        $('.programFee li').filter(function(i,e) {
+                        $('#input-28834 li').filter(function(i,e) {
                             var $key = $(this).text();
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($fee)) {
@@ -101,7 +101,7 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("seven destinationDropDownMenu window onload3 setTimeout 2000");
+    console.log("two input-28834 window setTimeout 2000");
 });
 
 
@@ -154,7 +154,7 @@ $(function () {
                 $('#SelectBox-ByDestination').change(function () {
                     var $destination = $(this).val();
                     if ($destination) {
-                        $('.destination').filter(function(i,e) {
+                        $('#input-28832').filter(function(i,e) {
                             var $key = $(this).text();
                             if ($key.match($destination)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
@@ -169,7 +169,7 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("three destinationDropDownMenu window setTimeout 2000");
+    console.log("three input-28832 window setTimeout 2000");
 });
 
 
