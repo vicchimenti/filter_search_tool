@@ -152,11 +152,11 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28832').change(function () {
-                    var $destination = $(this).val();
-                    console.log("$destination: " + $destination);
-                    var $parse = $destination.split('-');
-                    console.log("$parse: " + $parse);
-                    var $key = $parse[0];
+                    var $rawFormValue = $(this).val();
+                    console.log("$rawFormValue: " + $rawFormValue);
+                    var $parsedValue = $rawFormValue.split('-');
+                    console.log("$parsedValue: " + $parsedValue);
+                    var $key = $parsedValue[0];
                     console.log("$key: " + $key);
                     if ($key) {
                         $('.destination').filter(function(i,e) {
