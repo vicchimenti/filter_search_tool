@@ -152,7 +152,11 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28832').change(function () {
-                    var $key = $(this).val();
+                    var $destination = $(this).val();
+                    console.log("$destination: " + $destination);
+                    var $parse = $destination.split('-');
+                    console.log("$parse: " + $parse);
+                    var $key = $parse[0];
                     console.log("$key: " + $key);
                     if ($key) {
                         $('.destination').filter(function(i,e) {
