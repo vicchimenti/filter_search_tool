@@ -69,17 +69,17 @@ $(function () {
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[0];
                     console.log("$key: " + $key);
-                    if ($fee) {
+                    if ($key !== 'Select a Fee...') {
                         $('.programFee li').filter(function(i,e) {
-                            var $key = $(this).text();
+                            var $value = $(this).text();
                             // When the Selected Value is Numeric Compare with Content Items
-                            if (!isNaN($fee)) {
+                            if (!isNaN($key)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
-                                if (!isNaN($key)) {
-                                    var $feeInt = Number($fee);
+                                if (!isNaN($value)) {
                                     var $keyInt = Number($key);
+                                    var $valueInt = Number($value);
                                     // When the Content Value is Lower then Show the Item
-                                    if ($feeInt >= $keyInt) {
+                                    if ($keyInt >= $valueInt) {
                                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                                     // When the Content Value is Higher then Hide the Item
                                     } else {
@@ -91,7 +91,7 @@ $(function () {
                                 }
                             // When the Selected Value is Not Numeric compare both for a match
                             } else {
-                                if ($key.match($fee)) {
+                                if ($value.match($key)) {
                                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                                 } else {
                                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
