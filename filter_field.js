@@ -7,7 +7,7 @@ try {
 
 
   if (fieldZone == 'ZoneA') {
-      
+
       if (fieldNoResultsMessage.isNull()) {
         message = '<p>Sorry, there are no results for that query.</p>';
       }else{
@@ -21,19 +21,7 @@ try {
     document.write('</div>');
 
   }
-  // if (fieldZone == 'ZoneB'){
-	// if (fieldNoResultsMessage.isNull()) {
-  //     message = '<p>Sorry, there are no results for that query.</p>';
-  //   }else{
-  //     message = fieldNoResultsMessage;
-  //   }
-  //
-	// document.write('<div id="filterFieldWrapper" class="contentItem vspace hspace" data-posistion-default="ZoneB" data-position-selected="ZoneB" role="group" aria-label="search and filter">\n<div id="filterField">');
-  //   document.write('<div class="filterFieldInstructions">' + fieldInstructions + '</div>\n');
-  //   document.write('<div>\n ' +fieldFieldCode + ' </div>\n');
-  //   document.write('<div class="noResultsToShow">' + message + '</div>\n');
-  //   document.write('</div>');
-  // }
+
 
 } catch(err) {
 	document.write(err.message);
