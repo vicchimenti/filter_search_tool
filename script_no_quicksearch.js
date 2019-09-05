@@ -63,7 +63,12 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28834').change(function () {
-                    var $fee = $(this).val();
+                    var $rawFormValue = $(this).val();
+                    console.log("$rawFormValue: " + $rawFormValue);
+                    var $parsedValue = $rawFormValue.split('-');
+                    console.log("$parsedValue: " + $parsedValue);
+                    var $key = $parsedValue[0];
+                    console.log("$key: " + $key);
                     if ($fee) {
                         $('.programFee li').filter(function(i,e) {
                             var $key = $(this).text();
