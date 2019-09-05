@@ -1,5 +1,24 @@
 
-// 
+
+
+
+/*
+<section class="filterFieldWrapper contentItem" id="id<t4 type='meta' meta='content_id' />">
+  <div class="filterfield">
+    <div class="filterFieldInstructions">
+      <t4 type="content" name="Instructions" output="normal" modifiers="medialibrary,nav_sections" />
+    </div>
+    <fieldset>
+      <t4 type="content" name="Field code" output="normal" modifiers="striptags,htmlentities" />
+    </fieldset>
+  </div>
+  <div class="noResultsToShow"></div>
+</section>
+*/
+
+
+
+//
 // $(function() {
 //     console.log("here");
 //     $('#input-27855').change(function () {
