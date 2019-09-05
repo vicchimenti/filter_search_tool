@@ -46,7 +46,7 @@ $(function () {
     console.log("seven");
     $(window).load(function () {
         setTimeout(function (){
-            $('.destinationDropDownMenu').addClass('onload3');
+            $('#input-28832').addClass('onload3');
         }, 2000);
     });
     console.log("seven destinationDropDownMenu window onload3 setTimeout 2000");
