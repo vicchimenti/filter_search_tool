@@ -152,12 +152,12 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28832').change(function () {
-                    var $key = $(this).text();
+                    var $key = $(this).val();
                     console.log("$key: " + $key);
-                    if ($destination) {
+                    if ($key) {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
-                            console.log("$value: " $value);
+                            console.log("$value: " + $value);
                             if ($value.match($key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
                             } else {
