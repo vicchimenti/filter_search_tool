@@ -156,7 +156,7 @@ $(function () {
                     if ($destination) {
                         $('.destination').filter(function(i,e) {
                             var $key = $(this).text();
-                            if ($destination.contains($key)) {
+                            if ($key.match($destination)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
