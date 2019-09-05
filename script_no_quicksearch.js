@@ -67,9 +67,9 @@ $(function () {
                     console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
                     console.log("$parsedValue: " + $parsedValue);
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     console.log("$key: " + $key);
-                    if ($key !== 'Select a Fee...') {
+                    if ($key) {
                         $('.programFee li').filter(function(i,e) {
                             var $value = $(this).text();
                             // When the Selected Value is Numeric Compare with Content Items
@@ -161,9 +161,9 @@ $(function () {
                     console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
                     console.log("$parsedValue: " + $parsedValue);
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     console.log("$key: " + $key);
-                    if ($key !== 'Select a Destination...') {
+                    if ($key) {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
                             console.log("$value: " + $value);
