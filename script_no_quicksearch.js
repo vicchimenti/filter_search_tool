@@ -152,11 +152,13 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28832').change(function () {
-                    var $destination = $(this).val();
+                    var $key = $(this).text();
+                    console.log("$key: " + $key);
                     if ($destination) {
                         $('.destination').filter(function(i,e) {
-                            var $key = $(this).text();
-                            if ($key.match($destination)) {
+                            var $value = $(this).text();
+                            console.log("$value: " $value);
+                            if ($value.match($key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
