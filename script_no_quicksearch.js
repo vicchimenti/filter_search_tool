@@ -158,7 +158,7 @@ $(function () {
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[0];
                     console.log("$key: " + $key);
-                    if ($key) {
+                    if ($key !== 'Select a Destination...') {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
                             console.log("$value: " + $value);
