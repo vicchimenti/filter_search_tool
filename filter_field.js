@@ -5,14 +5,13 @@ try {
   var message = "";
   var fieldZone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Zone' output='normal' display_field='value' />");
 
+  if (fieldNoResultsMessage.isNull()) {
+    message = '<p>Sorry, there are no results for that query.</p>';
+  } else {
+    message = fieldNoResultsMessage;
+  }
 
   if (fieldZone == 'ZoneA') {
-
-      if (fieldNoResultsMessage.isNull()) {
-        message = '<p>Sorry, there are no results for that query.</p>';
-      }else{
-        message = fieldNoResultsMessage;
-      }
 
     document.write('<div id="filterFieldWrapper" class="contentItem" data-posistion-default="ZoneA" data-position-selected="ZoneA" >\n  <div id="filterField" class="standardContent">');
     document.write('<div class="filterFieldInstructions">' + fieldInstructions + '</div>\n');
