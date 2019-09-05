@@ -154,7 +154,7 @@ $(function () {
                 $('#input-28832').change(function () {
                     var $destination = $(this).val();
                     if ($destination) {
-                        $('#input-28832').filter(function(i,e) {
+                        $('.destination').filter(function(i,e) {
                             var $key = $(this).text();
                             if ($key.match($destination)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
