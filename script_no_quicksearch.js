@@ -57,6 +57,7 @@
 // });
 
 //   ***   Program Fee Filter   ***   //
+// need a parse function that works for value without a comma 12000 12,000
 $(function () {
     console.log("two");
     $(window).load(function () {
