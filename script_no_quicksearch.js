@@ -69,7 +69,7 @@ $(function () {
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[0];
                     console.log("$key: " + $key);
-                    var $resetMenu = $parsedValue[2];
+                    var $resetMenu = $parsedValue[3];
                     console.log("$resetMenu: " + $resetMenu);
                     if ($resetMenu) {
                         $('.programFee li').filter(function(i,e) {
@@ -165,7 +165,7 @@ $(function () {
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[0];
                     console.log("$key: " + $key);
-                    var $resetMenu = $parsedValue[2];
+                    var $resetMenu = $parsedValue[3];
                     console.log("$resetMenu: " + $resetMenu);
                     if ($resetMenu) {
                         $('.destination').filter(function(i,e) {
