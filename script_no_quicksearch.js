@@ -63,18 +63,23 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28834').change(function () {
-                    var $fee = $(this).val();
-                    if ($fee) {
+                    var $rawFormValue = $(this).val();
+                    console.log("$rawFormValue: " + $rawFormValue);
+                    var $parsedValue = $rawFormValue.split('-');
+                    console.log("$parsedValue: " + $parsedValue);
+                    var $value = $parsedValue[0];
+                    console.log("$value: " + $value);
+                    if ($value !== 'Select a Fee...') {
                         $('.programFee li').filter(function(i,e) {
-                            var $key = $(this).text();
+                            var $value = $(this).text();
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($fee)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
-                                if (!isNaN($key)) {
+                                if (!isNaN($value)) {
                                     var $feeInt = Number($fee);
-                                    var $keyInt = Number($key);
+                                    var $valueInt = Number($value);
                                     // When the Content Value is Lower then Show the Item
-                                    if ($feeInt >= $keyInt) {
+                                    if ($feeInt >= $valueInt) {
                                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                                     // When the Content Value is Higher then Hide the Item
                                     } else {
@@ -86,7 +91,7 @@ $(function () {
                                 }
                             // When the Selected Value is Not Numeric compare both for a match
                             } else {
-                                if ($key.match($fee)) {
+                                if ($value.match($fee)) {
                                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
                                 } else {
                                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
@@ -111,15 +116,15 @@ $(function () {
 //         var $fee = $(this).val();
 //         if ($fee) {
 //             $('.programFee li').filter(function(i,e) {
-//                 var $key = $(this).text();
+//                 var $value = $(this).text();
 //                 // When the Selected Value is Numeric Compare with Content Items
 //                 if (!isNaN($fee)) {
 //                     // When the Content Item is Numeric Parse for higher/lower values
-//                     if (!isNaN($key)) {
+//                     if (!isNaN($value)) {
 //                         var $feeInt = Number($fee);
-//                         var $keyInt = Number($key);
+//                         var $valueInt = Number($value);
 //                         // When the Content Value is Lower then Show the Item
-//                         if ($feeInt >= $keyInt) {
+//                         if ($feeInt >= $valueInt) {
 //                             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
 //                         // When the Content Value is Higher then Hide the Item
 //                         } else {
@@ -131,7 +136,7 @@ $(function () {
 //                     }
 //                 // When the Selected Value is Not Numeric compare both for a match
 //                 } else {
-//                     if ($key.match($fee)) {
+//                     if ($value.match($fee)) {
 //                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
 //                     } else {
 //                         $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFeeDropDown');
@@ -156,13 +161,13 @@ $(function () {
                     console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
                     console.log("$parsedValue: " + $parsedValue);
-                    var $key = $parsedValue[0];
-                    console.log("$key: " + $key);
-                    if ($key !== 'Select a Destination...') {
+                    var $value = $parsedValue[0];
+                    console.log("$value: " + $value);
+                    if ($value !== 'Select a Destination...') {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
                             console.log("$value: " + $value);
-                            if ($value.match($key)) {
+                            if ($value.match($value)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
@@ -186,8 +191,8 @@ $(function () {
 //         var $destination = $(this).val();
 //         if ($destination) {
 //             $('.destination').filter(function(i,e) {
-//                 var $key = $(this).text();
-//                 if ($key.match($destination)) {
+//                 var $value = $(this).text();
+//                 if ($value.match($destination)) {
 //                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
 //                 } else {
 //                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestinationDropDown');
@@ -206,8 +211,8 @@ $(function() {
         var $term = $(this).val();
         if ($term) {
             $('.term').filter(function(i,e) {
-                var $key = $(this).text();
-                if ($key.match($term)) {
+                var $value = $(this).text();
+                if ($value.match($term)) {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
@@ -226,8 +231,8 @@ $(function() {
         var $language = $(this).val();
         if ($language) {
             $('.language').filter(function(i,e) {
-                var $key = $(this).text();
-                if ($key.match($language)) {
+                var $value = $(this).text();
+                if ($value.match($language)) {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguageDropDown');
@@ -246,8 +251,8 @@ $(function() {
         var $housing = $(this).val();
         if ($housing) {
             $('.housing').filter(function(i,e) {
-                var $key = $(this).text();
-                if ($key.match($housing)) {
+                var $value = $(this).text();
+                if ($value.match($housing)) {
                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
                 } else {
                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
