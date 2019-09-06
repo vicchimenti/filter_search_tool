@@ -127,8 +127,6 @@ $(function () {
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
                     console.log("$key: " + $key);
-                    // var $resetMenu = $parsedValue[3];
-                    // console.log("$resetMenu: " + $resetMenu);
                     if ($key) {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
@@ -157,7 +155,12 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28833').change(function () {
-                    var $key = $(this).val();
+                    var $rawFormValue = $(this).val();
+                    console.log("$rawFormValue: " + $rawFormValue);
+                    var $parsedValue = $rawFormValue.split('-');
+                    console.log("$parsedValue: " + $parsedValue);
+                    var $key = $parsedValue[3];
+                    console.log("$key: " + $key);
                     if ($key) {
                         $('.term').filter(function(i,e) {
                             var $value = $(this).text();
@@ -174,7 +177,7 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("seven destinationDropDownMenu window onload3 setTimeout 2000");
+    console.log("seven term window setTimeout 2000");
 });
 
 //   ***   Term Filter   ***   //
