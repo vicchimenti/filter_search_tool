@@ -71,13 +71,13 @@ $(function () {
                     var $key = $parsedValue[3];
                     console.log("$key: " + $key);
                     if ($key) {
-                        $('.programFee li').filter(function(i,e) {
+                        $('.programFee').filter(function(i,e) {
                             var $value = $(this).text();
                             console.log("$value: " + $value);
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($key)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
-                                if (!isNaN($value)) {
+                                if ((!isNaN($value)) && ($value)) {
                                     var $keyInt = Number($key);
                                     var $valueInt = Number($value);
                                     // When the Content Value is Lower then Show the Item
