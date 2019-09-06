@@ -191,7 +191,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
-                $('#SelectBox-ByLanguage').change(function () {
+                $('#input-28835').change(function () {
                     var $rawFormValue = $(this).val();
                     console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
