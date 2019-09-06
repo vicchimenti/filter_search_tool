@@ -187,12 +187,16 @@ $(function () {
 
 //   ***   Language Filter   ***   //
 $(function () {
-    console.log("seven");
+    console.log("six");
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
                 $('#SelectBox-ByLanguage').change(function () {
-                    var $key = $(this).val();
+                    var $rawFormValue = $(this).val();
+                    console.log("$rawFormValue: " + $rawFormValue);
+                    var $parsedValue = $rawFormValue.split('-');
+                    console.log("$parsedValue: " + $parsedValue);
+                    var $key = $parsedValue[3];
                     if ($key) {
                         $('.language').filter(function(i,e) {
                             var $value = $(this).text();
@@ -209,7 +213,7 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("seven destinationDropDownMenu window onload3 setTimeout 2000");
+    console.log("six language window setTimeout 2000");
 });
 
 
