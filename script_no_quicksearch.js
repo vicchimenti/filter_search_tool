@@ -156,7 +156,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
-                $('#SelectBox-ByTerm').change(function () {
+                $('#input-28833').change(function () {
                     var $key = $(this).val();
                     if ($key) {
                         $('.term').filter(function(i,e) {
