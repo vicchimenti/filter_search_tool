@@ -79,7 +79,9 @@ $(function () {
                                 // When the Content Item is Numeric Parse for higher/lower values
                                 if ((!isNaN($value)) && ($value)) {
                                     var $keyInt = Number($key);
+                                    console.log("$keyInt: " + $keyInt);
                                     var $valueInt = Number($value);
+                                    console.log("$valueInt: " + $valueInt);
                                     // When the Content Value is Lower then Show the Item
                                     if ($keyInt >= $valueInt) {
                                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFeeDropDown');
@@ -168,7 +170,7 @@ $(function () {
                     // var $resetMenu = $parsedValue[3];
                     // console.log("$resetMenu: " + $resetMenu);
                     if ($key) {
-                        $('.destination').filter(function(i,e) {
+                        $('.destination li').filter(function(i,e) {
                             var $value = $(e).text();
                             console.log("$value: " + $value);
                             if ($value.match($key)) {
