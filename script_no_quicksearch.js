@@ -227,7 +227,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
-                $('#SelectBox-ByHousing').change(function () {
+                $('#input-28836').change(function () {
                     var $rawFormValue = $(this).val();
                     console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
