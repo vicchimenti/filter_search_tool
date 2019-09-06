@@ -55,7 +55,7 @@ button.btn.btn-primary.pull-right.js-submit {
     width: 100%;
 }
 
-.hideByTextbox, .hideByDestinationDropDown, .hideByTermDropDown, .hideByProgramFeeDropDown, .hideByFieldOfStudyDropDown, .hideByFeatureDropDown, .hideByProgramTypeDropDown, .hideByLanguageDropDown, .hideByHousingDropDown {
+.hideByTextbox, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing {
     display: none;
 }
 
