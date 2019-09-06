@@ -73,6 +73,7 @@ $(function () {
                     if ($key) {
                         $('.programFee li').filter(function(i,e) {
                             var $value = $(this).text();
+                            console.log("$value: " + $value);
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($key)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
