@@ -70,8 +70,6 @@ $(function () {
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
                     console.log("$key: " + $key);
-                    // var $resetMenu = $parsedValue[3];
-                    // console.log("$resetMenu: " + $resetMenu);
                     if ($key) {
                         $('.programFee li').filter(function(i,e) {
                             var $value = $(this).text();
