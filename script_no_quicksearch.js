@@ -192,11 +192,11 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#SelectBox-ByLanguage').change(function () {
-                    var $language = $(this).val();
-                    if ($language) {
+                    var $key = $(this).val();
+                    if ($key) {
                         $('.language').filter(function(i,e) {
-                            var $key = $(this).text();
-                            if ($key.match($language)) {
+                            var $value = $(this).text();
+                            if ($value.match($key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguageDropDown');
