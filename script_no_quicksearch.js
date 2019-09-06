@@ -155,12 +155,13 @@ $(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28833').change(function () {
+                    // T4 List Values Must Parse Out Extra Characters
                     var $rawFormValue = $(this).val();
-                    console.log("$rawFormValue: " + $rawFormValue);
+                    // The Hyphen is the Best Delimiter to Use
                     var $parsedValue = $rawFormValue.split('-');
-                    console.log("$parsedValue: " + $parsedValue);
+                    // There are Three Hyphens, our Value is After the Third Hyphen
                     var $key = $parsedValue[3];
-                    console.log("$key: " + $key);
+                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if ($key) {
                         $('.term').filter(function(i,e) {
                             var $value = $(this).text();
@@ -170,6 +171,7 @@ $(function () {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByTermDropDown');
                             }
                         });
+                    // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
                         $('.educationAbroadItemWrapper').removeClass('hideByTermDropDown');
                     }
