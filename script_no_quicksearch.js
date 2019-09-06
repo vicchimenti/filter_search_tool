@@ -71,8 +71,8 @@ $(function () {
                     var $key = $parsedValue[3];
                     console.log("$key: " + $key);
                     if ($key) {
-                        $('.programFee').filter(function(i,e) {
-                            var $value = $(this).text();
+                        $('.programFee li').filter(function(i,e) {
+                            var $value = $(e).text();
                             console.log("$value: " + $value);
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($key)) {
@@ -169,7 +169,7 @@ $(function () {
                     // console.log("$resetMenu: " + $resetMenu);
                     if ($key) {
                         $('.destination').filter(function(i,e) {
-                            var $value = $(this).text();
+                            var $value = $(e).text();
                             console.log("$value: " + $value);
                             if ($value.match($key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestinationDropDown');
