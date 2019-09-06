@@ -221,24 +221,32 @@ $(function () {
 });
 
 
-// //   ***   Language Filter   ***   //
-// $(function() {
-//     $('#SelectBox-ByLanguage').change(function () {
-//         var $language = $(this).val();
-//         if ($language) {
-//             $('.language').filter(function(i,e) {
-//                 var $key = $(this).text();
-//                 if ($key.match($language)) {
-//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
-//                 } else {
-//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguageDropDown');
-//                 }
-//             });
-//         } else {
-//             $('.educationAbroadItemWrapper').removeClass('hideByLanguageDropDown');
-//         }
-//     });
-// });
+//   ***   Housing Filter   ***   //
+$(function () {
+    console.log("five");
+    $(window).load(function () {
+        setTimeout(function (){
+            $(function() {
+                $('#SelectBox-ByHousing').change(function () {
+                    var $housing = $(this).val();
+                    if ($housing) {
+                        $('.housing').filter(function(i,e) {
+                            var $key = $(this).text();
+                            if ($key.match($housing)) {
+                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+                            } else {
+                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
+                            }
+                        });
+                    } else {
+                        $('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
+                    }
+                });
+            });
+        }, 2000);
+    });
+    console.log("five housing window setTimeout 2000");
+});
 
 
 //   ***   Housing Filter   ***   //
