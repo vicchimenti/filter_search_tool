@@ -255,35 +255,15 @@ $(function () {
 });
 
 
-//   ***   Housing Filter   ***   //
-// $(function() {
-//     $('#SelectBox-ByHousing').change(function () {
-//         var $housing = $(this).val();
-//         if ($housing) {
-//             $('.housing').filter(function(i,e) {
-//                 var $key = $(this).text();
-//                 if ($key.match($housing)) {
-//                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
-//                 } else {
-//                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousingDropDown');
-//                 }
-//             });
-//         } else {
-//             $('.educationAbroadItemWrapper').removeClass('hideByHousingDropDown');
-//         }
-//     });
-// });
-
-
 //  ***   Hide Marked Items   ***  //
-var visibleItems = $(".educationAbroadItemWrapper");
+var visibleItems = $('.educationAbroadItemWrapper');
 function anythingThere() {
   visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
 
   if(visibleItems.length == 0) {
-    $( ".noResultsToShow" ).show();
+    $( '.noResultsToShow' ).show();
   } else {
-    $( ".noResultsToShow" ).hide();
+    $( '.noResultsToShow' ).hide();
   }
 }
 
