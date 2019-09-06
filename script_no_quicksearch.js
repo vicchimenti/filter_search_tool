@@ -151,9 +151,12 @@ $(function () {
 //   ***   Term Filter   ***   //
 $(function () {
     console.log("seven");
+    // After the DOM is ready, Wait until the window loads
     $(window).load(function () {
+        // Once window loads set a timeout delay
         setTimeout(function (){
             $(function() {
+                // When the Dropdown Menu Selector Academic Terms Changes - Execute change function
                 $('#input-28833').change(function () {
                     // T4 List Values Must Parse Out Extra Characters
                     var $rawFormValue = $(this).val();
@@ -178,7 +181,7 @@ $(function () {
                     }
                 });
             });
-        // Delay the Change Function for 2 Seconds
+        // Delay the change function for 2 Seconds
         }, 2000);
     });
     console.log("seven term window setTimeout 2000");
