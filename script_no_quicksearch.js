@@ -197,6 +197,7 @@ $(function () {
                     var $parsedValue = $rawFormValue.split('-');
                     console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
+                    console.log("$key: " + $key);
                     if ($key) {
                         $('.language').filter(function(i,e) {
                             var $value = $(this).text();
