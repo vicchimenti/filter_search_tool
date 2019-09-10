@@ -228,10 +228,10 @@ var visibleItems = $('.educationAbroadItemWrapper');
 function anythingThere() {
   visibleItems = $('.educationAbroadItemWrapper').not('.hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
 
-  if(visibleItems.length == 0) {
-    $( '.noResultsToShow' ).show();
+  if(visibleItems.length >= 1) {
+      $( '.noResultsToShow' ).hide();
   } else {
-    $( '.noResultsToShow' ).hide();
+      $( '.noResultsToShow' ).show();
   }
 }
 
