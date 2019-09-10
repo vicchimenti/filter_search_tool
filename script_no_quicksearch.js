@@ -14,13 +14,7 @@ $(function () {
                     console.log("$key: " + $key);
                     // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
-                        var $value = $(this).text().toLowerCase();
-                        console.log("$value: " + $value);
-                        if ('$value:contains("' + $key + '")') {
-                            $(this).removeClass('hideByText');
-                        } else {
-                            $(this).addClass('hideByText');
-                        }
+                        $(this).toggle($(this).text().toLowerCase().indexOf($key) > -1);
                     });
                 });
             });
