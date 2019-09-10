@@ -226,32 +226,33 @@ $(function () {
 
 
 //  ***   Hide Marked Items   ***  //
-// $(function () {
+$(function () {
+    $('.noResultsToShow').hide();
+    $(window).load(function () {
+        setTimeout(function () {
+            $(function () {
+                var visibleItems = $('.educationAbroadItemWrapper');
+                visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                $('.noResultsToShow').toggle(!visibleItems);
+                // if(!visibleItems) {
+                //     $( '.noResultsToShow' ).show();
+                // } else {
+                //     $( '.noResultsToShow' ).hide();
+                // }
+            });
+        }, 2000);
+    });
+});
+
+// var visibleItems = $('.educationAbroadItemWrapper');
+// function anythingThere() {
+//   visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+//
+//   if(visibleItems.length == 0) {
+//     $( '.noResultsToShow' ).show();
+//   } else {
 //     $( '.noResultsToShow' ).hide();
-//     $(window).load(function () {
-//         setTimeout(function () {
-//             $(function () {
-//                 var visibleItems = $('.educationAbroadItemWrapper');
-//                 visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-//                 if(!visibleItems) {
-//                     $( '.noResultsToShow' ).show();
-//                 } else {
-//                     $( '.noResultsToShow' ).hide();
-//                 }
-//             });
-//         }, 2000);
-//     });
-// });
-
-var visibleItems = $('.educationAbroadItemWrapper');
-function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-
-  if(visibleItems.length == 0) {
-    $( '.noResultsToShow' ).show();
-  } else {
-    $( '.noResultsToShow' ).hide();
-  }
-}
+//   }
+// }
 
 </script>
