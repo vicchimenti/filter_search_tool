@@ -11,9 +11,11 @@ $(function () {
                 // scan the keyword each character the user inputs
                 $('#id_search').on('keyup', function () {
                     var $key = $(this).val().toLowerCase();
+                    console.log("$key: " + $key);
                     // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
                         var $value = $(this).text().toLowerCase();
+                        console.log("$value: " + $value);
                         if ('$value:contains("' + $key + '")') {
                             $(this).removeClass('hideByText');
                         } else {
