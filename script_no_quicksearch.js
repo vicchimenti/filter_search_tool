@@ -226,7 +226,7 @@ $(function () {
 //  ***   Hide Marked Items   ***  //
 var visibleItems = $('.educationAbroadItemWrapper');
 function anythingThere() {
-  visibleItems = $('.educationAbroadItemWrapper').not('.hideByTextbox, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
 
   if(visibleItems.length == 0) {
     $( '.noResultsToShow' ).show();
