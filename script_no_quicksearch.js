@@ -12,7 +12,7 @@ $(function () {
                 $('#id_search').on('keyup', function () {
                     var $key = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
-                    $('.card').filter(function () {
+                    $('.educationAbroadItemWrapper').filter(function () {
                         var $value = $(this).toggle($(this).text().toLowerCase());
                         if ('$value:contains("' + $key + '")') {
                             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByText');
