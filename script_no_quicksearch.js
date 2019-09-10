@@ -13,11 +13,11 @@ $(function () {
                     var $key = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
-                        var $value = $(this).toggle($(this).text().toLowerCase());
+                        var $value = $(this).text().toLowerCase();
                         if ('$value:contains("' + $key + '")') {
-                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByText');
+                            $(this).removeClass('hideByText');
                         } else {
-                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByText');
+                            $(this).addClass('hideByText');
                         }
                     });
                 });
