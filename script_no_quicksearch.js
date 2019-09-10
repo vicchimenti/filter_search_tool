@@ -230,16 +230,11 @@ $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
     $(window).load(function () {
         setTimeout(function () {
-            $(function () {
+            $('educationAbroadItemWrapper').change(function () {
                 // var $visibleItems = $('.educationAbroadItemWrapper');
                 var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                console.log("$visibleItems: " + $visibleItems);
                 $('noResultsToShow').toggleClass('hideResultsMessage', !($visibleItems));
-
-                // if(!visibleItems) {
-                //     $( '.noResultsToShow' ).show();
-                // } else {
-                //     $( '.noResultsToShow' ).hide();
-                // }
             });
         }, 2000);
     });
