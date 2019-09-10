@@ -12,9 +12,9 @@ $(function () {
                 $('#id_search').on('keyup', function () {
                     var $key = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
-                    $('.educationAbroadItemWrapper').filter(function (i,e) {
+                    $('.card').filter(function () {
                         var $value = $(this).toggle($(this).text().toLowerCase());
-                        if ($value.match($key)) {
+                        if ('$value:contains("' + $key + '")') {
                             $(this).parents('.educationAbroadItemWrapper').removeClass('hideByText');
                         } else {
                             $(this).parents('.educationAbroadItemWrapper').addClass('hideByText');
