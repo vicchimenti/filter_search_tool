@@ -3,44 +3,26 @@
 //   ***   Keyword Search   ***   //
 $(function () {
     console.log("keyword");
+    // After the DOM is ready, Wait until the window loads
     $(window).load(function () {
+        // Once window loads set a timeout delay
         setTimeout(function () {
             $(function () {
+                // scan the keyword each character the user inputs
                 $('#id_search').on('keyup', function () {
                     var $key = $(this).val().toLowerCase();
+                    // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
                         $(this).toggle($(this).text().toLowerCase().indexOf($key) > -1)
                     });
                 });
             });
+        // Delay the .on keyup function for 2 Seconds
         }, 2000);
     });
     console.log("keyword window setTimeout 2000");
 });
 
-//   ***   Keyword Search   ***   //
-// $(function () {
-//   $('input#id_search').quicksearch('.educationAbroadItemWrapper', {
-//     'delay': 400,
-//     'selector': ['h3, p'],
-//     'stripeRows': ['even', 'odd'],
-//     'noResults': '.noResultsToShow',
-//     'bind': 'keyup click',
-//     'minValLength': 2,
-//     'prepareQuery': function (val) {
-//       return new RegExp(val, "i");
-//     },
-//     'testQuery': function (query, txt, _row) {
-//       return query.test(txt);
-//     },
-//     'show': function() {
-//       $(this).removeClass('hideByTextbox');
-//     },
-//     'hide': function() {
-//       $(this).addClass('hideByTextbox');
-//     }
-//   });
-// });
 
 //   ***   Program Fee Filter   ***   //
 // need a parse function that works for value without a comma 12000 12,000
