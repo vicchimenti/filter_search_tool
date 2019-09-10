@@ -12,8 +12,13 @@ $(function () {
                 $('#id_search').on('keyup', function () {
                     var $key = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
-                    $('.educationAbroadItemWrapper').filter(function () {
-                        $(this).toggle($(this).text().toLowerCase().indexOf($key) > -1)
+                    $('.educationAbroadItemWrapper').filter(function (i,e) {
+                        var $value = $(this).toggle($(this).text().toLowerCase());
+                        if ($value.match($key)) {
+                            $(this).parents('.educationAbroadItemWrapper').removeClass('hideByText');
+                        } else {
+                            $(this).parents('.educationAbroadItemWrapper').addClass('hideByText');
+                        }
                     });
                 });
             });
@@ -224,32 +229,32 @@ $(function () {
 
 
 //  ***   Hide Marked Items   ***  //
-$(function () {
-    $( '.noResultsToShow' ).hide();
-    $(window).load(function () {
-        setTimeout(function () {
-            $(function () {
-                var visibleItems = $('.educationAbroadItemWrapper');
-                visibleItems = $('.educationAbroadItemWrapper').not('.hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-                if(!visibleItems) {
-                    $( '.noResultsToShow' ).show();
-                } else {
-                    $( '.noResultsToShow' ).hide();
-                }
-            });
-        }, 2000);
-    });
-});
-
-// var visibleItems = $('.educationAbroadItemWrapper');
-// function anythingThere() {
-//   visibleItems = $('.educationAbroadItemWrapper').not('.hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-//
-//   if(visibleItems.length == 0) {
-//     $( '.noResultsToShow' ).show();
-//   } else {
+// $(function () {
 //     $( '.noResultsToShow' ).hide();
-//   }
-// }
+//     $(window).load(function () {
+//         setTimeout(function () {
+//             $(function () {
+//                 var visibleItems = $('.educationAbroadItemWrapper');
+//                 visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+//                 if(!visibleItems) {
+//                     $( '.noResultsToShow' ).show();
+//                 } else {
+//                     $( '.noResultsToShow' ).hide();
+//                 }
+//             });
+//         }, 2000);
+//     });
+// });
+
+var visibleItems = $('.educationAbroadItemWrapper');
+function anythingThere() {
+  visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+
+  if(visibleItems.length == 0) {
+    $( '.noResultsToShow' ).show();
+  } else {
+    $( '.noResultsToShow' ).hide();
+  }
+}
 
 </script>
