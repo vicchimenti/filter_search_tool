@@ -14,7 +14,7 @@ $(function () {
                     console.log("$key: " + $key);
                     // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
-                        $(this).toggle($(this).text().toLowerCase().indexOf($key) > -1);
+                        $(this).toggleClass(hideByText, $(this).text().toLowerCase().indexOf($key) > -1);
                     });
                 });
             });
