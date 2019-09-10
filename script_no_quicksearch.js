@@ -4,9 +4,14 @@
 $(function () {
     console.log("keyword");
     $(window).load(function () {
-        setTimeout(function (){
+        setTimeout(function () {
             $(function () {
-              });
+                $('#id_search').on('keyup', function () {
+                    var $key = $(this).val().toLowerCase();
+                    $('.educationAbroadItemWrapper').filter(function () {
+                        $(this).toggle($(this).text().toLowerCase().indexOf($key) > -1)
+                    });
+                });
             });
         }, 2000);
     });
