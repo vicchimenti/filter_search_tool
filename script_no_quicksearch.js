@@ -1,5 +1,12 @@
 <script>
 
+
+//  ***   Supress results message when page loads   ***  //
+$(function () {
+    $('.noResultsToShow').addClass('hideResultsMessage');
+});
+
+
 //   ***   Keyword Search   ***   //
 $(function () {
     console.log("keyword");
@@ -236,12 +243,6 @@ $(function () {
         }, 2000);
     });
     console.log("five housing window setTimeout 2000");
-});
-
-
-//  ***   Supress results message when page loads   ***  //
-$(function () {
-    $('.noResultsToShow').addClass('hideResultsMessage');
 });
 
 
