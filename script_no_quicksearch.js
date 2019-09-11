@@ -23,7 +23,12 @@ $(function () {
                         console.log("anythingThere");
                         var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         console.log("$visibleItems: " + $visibleItems.length);
-                        $('noResultsToShow').toggleClass('hideResultsMessage', ($visibleItems.length == 0));
+                        if($visibleItems.length == 0) {
+                        $( '.noResultsToShow' ).removeClass('hideResultsMessage');
+                        } else {
+                        $( '.noResultsToShow' ).addClass('hideResultsMessage');
+                        }
+                        // $('noResultsToShow').toggleClass('hideResultsMessage', ($visibleItems.length == 0));
                         console.log("toggleClass");
                     });
                 });
