@@ -50,29 +50,22 @@ $(function () {
 //   ***   Program Fee Filter   ***   //
 // need a parse function that works for value without a comma 12000 12,000
 $(function () {
-    console.log("two");
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28834').change(function () {
                     var $rawFormValue = $(this).val();
-                    console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
-                    console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
-                    console.log("$key: " + $key);
                     if ($key) {
                         $('.programFee').filter(function(i,e) {
                             var $value = $(this).text();
-                            console.log("$value: " + $value);
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($key)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
                                 if ((!isNaN($value)) && ($value)) {
                                     var $keyInt = Number($key);
-                                    console.log("$keyInt: " + $keyInt);
                                     var $valueInt = Number($value);
-                                    console.log("$valueInt: " + $valueInt);
                                     // When the Content Value is Lower then Show the Item
                                     if ($keyInt >= $valueInt) {
                                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFee');
@@ -101,27 +94,21 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("two input-28834 window setTimeout 2000");
 });
 
 
 //   ***   Destination Filter   ***   //
 $(function () {
-    console.log("three");
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28832').change(function () {
                     var $rawFormValue = $(this).val();
-                    console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
-                    console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
-                    console.log("$key: " + $key);
                     if ($key) {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
-                            console.log("$value: " + $value);
                             if ($value.match($key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestination');
                             } else {
@@ -135,13 +122,11 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("three input-28832 window setTimeout 2000");
 });
 
 
 //   ***   Term Filter   ***   //
 $(function () {
-    console.log("seven");
     // After the DOM is ready, Wait until the window loads
     $(window).load(function () {
         // Once window loads set a timeout delay
@@ -175,23 +160,18 @@ $(function () {
         // Delay the change function for 2 Seconds
         }, 2000);
     });
-    console.log("seven term window setTimeout 2000");
 });
 
 
 //   ***   Language Filter   ***   //
 $(function () {
-    console.log("six");
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28835').change(function () {
                     var $rawFormValue = $(this).val();
-                    console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
-                    console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
-                    console.log("$key: " + $key);
                     if ($key) {
                         $('.language').filter(function(i,e) {
                             var $value = $(this).text();
@@ -208,27 +188,21 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("six language window setTimeout 2000");
 });
 
 
 //   ***   Housing Filter   ***   //
 $(function () {
-    console.log("five");
     $(window).load(function () {
         setTimeout(function (){
             $(function() {
                 $('#input-28836').change(function () {
                     var $rawFormValue = $(this).val();
-                    console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-');
-                    console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[3];
-                    console.log("$key: " + $key);
                     if ($key) {
                         $('.housing').filter(function(i,e) {
                             var $value = $(this).text();
-                            console.log("$value: " + $value);
                             if ($value.match($key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousing');
                             } else {
@@ -242,7 +216,6 @@ $(function () {
             });
         }, 2000);
     });
-    console.log("five housing window setTimeout 2000");
 });
 
 
