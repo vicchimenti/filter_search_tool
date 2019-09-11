@@ -229,10 +229,18 @@ $(function () {
 $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
 });
+
 $(function anythingThere() {
+    console.log("anythingThere");
     $(window).load(function () {
+        console.log("anythingThere: load");
+
         setTimeout(function () {
+            console.log("anythingThere: timeout");
+
             $(function () {
+                console.log("anythingThere: visible");
+
                 // var $visibleItems = $('.educationAbroadItemWrapper');
                 var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                 console.log("$visibleItems: " + $visibleItems);
