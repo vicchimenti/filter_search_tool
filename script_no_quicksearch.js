@@ -5,15 +5,6 @@ $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
 });
 
-$(function anythingThere() {
-    console.log("anythingThere");
-    var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-    console.log("$visibleItems");
-    $('noResultsToShow').toggleClass('hideResultsMessage', !$visibleItems);
-    console.log("toggleClass");
-});
-
-
 //   ***   Keyword Search   ***   //
 $(function () {
     console.log("keyword");
@@ -30,7 +21,6 @@ $(function () {
                     $('.educationAbroadItemWrapper').filter(function () {
                         // when the search key is not present in the item then hide the item
                         $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf($key) > -1));
-                        $(this).trigger(function() {anythingThere();});
                     });
                 });
             });
@@ -285,5 +275,14 @@ $(function () {
 //   //   $( '.noResultsToShow' ).hide();
 //   // }
 // }
+
+$(function () {
+    console.log("anythingThere");
+    var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+    console.log("$visibleItems");
+    $('noResultsToShow').toggleClass('hideResultsMessage', (!$visibleItems));
+    console.log("toggleClass");
+});
+
 
 </script>
