@@ -29,7 +29,7 @@ $(function () {
                     // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
                         // when the search key is not present in the item then hide the item
-                        $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf($key) > -1)).on('change', function () {
+                        $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf($key) > -1)).triggerHandler('change', function () {
                             console.log("anythingThere");
                             var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                             console.log("$visibleItems" + visibleItems.length);
