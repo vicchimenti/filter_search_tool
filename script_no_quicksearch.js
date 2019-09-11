@@ -232,23 +232,31 @@ $(function () {
 
 $(function anythingThere() {
     console.log("anythingThere");
-    $(window).load(function () {
-        console.log("anythingThere: load");
-
-        setTimeout(function () {
-            console.log("anythingThere: timeout");
-
-            $(function () {
-                console.log("anythingThere: visible");
-
-                // var $visibleItems = $('.educationAbroadItemWrapper');
-                var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-                console.log("$visibleItems: " + $visibleItems);
-                $('noResultsToShow').toggleClass('hideResultsMessage', !($visibleItems));
-            });
-        }, 2000);
-    });
+    var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+    console.log("$visibleItems");
+    $('noResultsToShow').toggleClass('hideResultsMessage', !$visibleItems);
+    console.log("toggleClass");
 });
+
+
+// $(function anythingThere() {
+//     console.log("anythingThere");
+//     $(window).load(function () {
+//         console.log("anythingThere: load");
+//
+//         setTimeout(function () {
+//             console.log("anythingThere: timeout");
+//
+//             $(function () {
+//                 console.log("anythingThere: visible");
+//                 // var $visibleItems = $('.educationAbroadItemWrapper');
+//                 var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+//                 console.log("$visibleItems: " + $visibleItems);
+//                 $('noResultsToShow').toggleClass('hideResultsMessage', !($visibleItems));
+//             });
+//         }, 2000);
+//     });
+// });
 
 // var visibleItems = $('.educationAbroadItemWrapper');
 // function anythingThere() {
