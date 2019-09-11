@@ -15,7 +15,7 @@ $(function () {
                     // filter the education abroad items for the input key
                     $('.educationAbroadItemWrapper').filter(function () {
                         // when the search key is not present in the item then hide the item
-                        $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf($key) > -1)).trigger('anythingThere');
+                        $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf($key) > -1)).trigger('anythingThere()');
                     });
                 });
             });
@@ -228,9 +228,11 @@ $(function () {
 //  ***   Hide Marked Items   ***  //
 $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
+});
+$(function anythingThere() {
     $(window).load(function () {
         setTimeout(function () {
-            $(function anythingThere() {
+            $(function () {
                 // var $visibleItems = $('.educationAbroadItemWrapper');
                 var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                 console.log("$visibleItems: " + $visibleItems);
