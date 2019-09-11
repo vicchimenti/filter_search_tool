@@ -9,7 +9,6 @@ $(function () {
 
 //   ***   Keyword Search   ***   //
 $(function () {
-    console.log("keyword");
     // After the DOM is ready, Wait until the window loads
     $(window).load(function () {
         // Once window loads set a timeout delay
@@ -18,7 +17,6 @@ $(function () {
                 // scan the keyword each character the user inputs
                 $('#id_search').on('keyup', function () {
                     var $key = $(this).val().toLowerCase();
-                    console.log("$key: " + $key);
                     // filter the education abroad items for the input key
                     $(function () {
                         $('.educationAbroadItemWrapper').filter(function () {
@@ -43,7 +41,6 @@ $(function () {
         // Delay the .on keyup function for 2 Seconds
         }, 2000);
     });
-    console.log("keyword window setTimeout 2000");
 });
 
 
