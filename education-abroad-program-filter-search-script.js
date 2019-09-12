@@ -298,8 +298,10 @@ $(function () {
                 $('.form-group').find('.btn').prop({
                     disabled: true
                 });
-                // find the button and hide it
-                $('.form-group').find('.btn').hide();
+                // // override t4 form btn css
+                // $('.js-t4form-container .btn-primary').css(
+                //     'display', 'none'
+                // );
             });
         }, 2000);
     });

@@ -7,6 +7,10 @@ button.btn.btn-primary.pull-right.js-submit {
     display: none;
 }
 
+.js-t4form-container .btn-primary {
+    display: none;
+}
+
 .form-group {
     display: inline;
     float: left;
