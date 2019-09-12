@@ -6,7 +6,7 @@ try {
   var fieldZone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Zone' output='normal' display_field='value' />");
 
   if (fieldNoResultsMessage.isNull()) {
-    message = '<p>Sorry, there are no results for that query.</p>';
+    message = "<p>We're sorry, there are no results for the search parameters.</p>";
   } else {
     message = fieldNoResultsMessage;
   }
