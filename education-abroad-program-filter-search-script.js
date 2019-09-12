@@ -53,8 +53,58 @@ $(function () {
 });
 
 
+//   ***   Term Filter   ***   //
+$(function () {
+    // After the DOM is ready, Wait until the window loads
+    $(window).load(function () {
+        // Once window loads set a timeout delay
+        setTimeout(function () {
+            $(function() {
+                // When the Dropdown Menu Selector Academic Terms Change - Execute change function
+                $('#input-28833').change(function () {
+                    // T4 List Values Must Parse Out Extra Characters
+                    var $rawFormValue = $(this).val();
+                    // The T4 Form generates a specific Delimiter to Use
+                    var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    // Our search key is After the second item in the resulting array
+                    var $key = $parsedValue[1];
+                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
+                    if ($key) {
+                        $('.term').filter(function(i,e) {
+                            var $value = $(this).text();
+                            // Check to see if the Key and Value are a Match
+                            if ($value.match($key)) {
+                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTerm');
+                            } else {
+                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByTerm');
+                            }
+                        });
+                    // Else the Search Key is Null so Reset all Content Items to Visible
+                    } else {
+                        $('.educationAbroadItemWrapper').removeClass('hideByTerm');
+                    }
+                    // check results for null
+                    $(function resultsMessage() {
+                        // assign array of currently visible content items
+                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        // check to see if array is empty
+                        if ($visibleItems.length == 0) {
+                            // when array is empty show the results message
+                            $('.noResultsToShow').removeClass('hideResultsMessage');
+                        } else {
+                            // when array has content items suppress the results message
+                            $('.noResultsToShow').addClass('hideResultsMessage');
+                        }
+                    });
+                });
+            });
+        // Delay the change function for 2 Seconds
+        }, 2000);
+    });
+});
+
+
 //   ***   Program Fee Filter   ***   //
-// need a parse function that works for value without a comma 12000 12,000
 $(function () {
     $(window).load(function () {
         setTimeout(function () {
@@ -152,57 +202,6 @@ $(function () {
                     });
                 });
             });
-        }, 2000);
-    });
-});
-
-
-//   ***   Term Filter   ***   //
-$(function () {
-    // After the DOM is ready, Wait until the window loads
-    $(window).load(function () {
-        // Once window loads set a timeout delay
-        setTimeout(function () {
-            $(function() {
-                // When the Dropdown Menu Selector Academic Terms Changes - Execute change function
-                $('#input-28833').change(function () {
-                    // T4 List Values Must Parse Out Extra Characters
-                    var $rawFormValue = $(this).val();
-                    // The Hyphen is the Best Delimiter to Use
-                    var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    // There are Three Hyphens, our Value is After the Third Hyphen
-                    var $key = $parsedValue[1];
-                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
-                    if ($key) {
-                        $('.term').filter(function(i,e) {
-                            var $value = $(this).text();
-                            // Check to see if the Key and Value are a Match
-                            if ($value.match($key)) {
-                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTerm');
-                            } else {
-                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByTerm');
-                            }
-                        });
-                    // Else the Search Key is Null so Reset all Content Items to Visible
-                    } else {
-                        $('.educationAbroadItemWrapper').removeClass('hideByTerm');
-                    }
-                    // check results for null
-                    $(function resultsMessage() {
-                        // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
-                        // check to see if array is empty
-                        if ($visibleItems.length == 0) {
-                            // when array is empty show the results message
-                            $('.noResultsToShow').removeClass('hideResultsMessage');
-                        } else {
-                            // when array has content items suppress the results message
-                            $('.noResultsToShow').addClass('hideResultsMessage');
-                        }
-                    });
-                });
-            });
-        // Delay the change function for 2 Seconds
         }, 2000);
     });
 });
