@@ -285,6 +285,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function disableButton() {
+                // find the button in the t4-form and disable it
                 $('.form-group').find('.btn').prop({disabled: true});
             });
         }, 2000);
