@@ -298,6 +298,8 @@ $(function () {
                 $('.form-group').find('.btn').prop({
                     disabled: true
                 });
+                // find the button and hide it
+                $('.form-group').find('.btn').hide();
             });
         }, 2000);
     });
