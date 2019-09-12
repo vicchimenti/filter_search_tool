@@ -47,7 +47,7 @@ $(function () {
 // need a parse function that works for value without a comma 12000 12,000
 $(function () {
     $(window).load(function () {
-        setTimeout(function (){
+        setTimeout(function () {
             $(function() {
                 $('#input-28834').change(function () {
                     var $rawFormValue = $(this).val();
@@ -109,7 +109,7 @@ $(function () {
 //   ***   Destination Filter   ***   //
 $(function () {
     $(window).load(function () {
-        setTimeout(function (){
+        setTimeout(function () {
             $(function() {
                 $('#input-28832').change(function () {
                     var $rawFormValue = $(this).val();
@@ -152,7 +152,7 @@ $(function () {
     // After the DOM is ready, Wait until the window loads
     $(window).load(function () {
         // Once window loads set a timeout delay
-        setTimeout(function (){
+        setTimeout(function () {
             $(function() {
                 // When the Dropdown Menu Selector Academic Terms Changes - Execute change function
                 $('#input-28833').change(function () {
@@ -201,7 +201,7 @@ $(function () {
 //   ***   Language Filter   ***   //
 $(function () {
     $(window).load(function () {
-        setTimeout(function (){
+        setTimeout(function () {
             $(function() {
                 $('#input-28835').change(function () {
                     var $rawFormValue = $(this).val();
@@ -242,7 +242,7 @@ $(function () {
 //   ***   Housing Filter   ***   //
 $(function () {
     $(window).load(function () {
-        setTimeout(function (){
+        setTimeout(function () {
             $(function() {
                 $('#input-28836').change(function () {
                     var $rawFormValue = $(this).val();
@@ -283,8 +283,8 @@ $(function () {
 //   ***   Disable Default Form Button   ***   //
 $(function () {
     $(window).load(function () {
-        setTimeout(function (){
-            $(function() {
+        setTimeout(function () {
+            $(function disableButton() {
                 $('.form-group').find('.btn').prop({disabled: true});
             });
         }, 2000);
