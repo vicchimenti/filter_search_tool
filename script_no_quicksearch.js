@@ -279,4 +279,16 @@ $(function () {
     });
 });
 
+
+//   ***   Disable Default Form Button   ***   //
+$(function () {
+    $(window).load(function () {
+        setTimeout(function (){
+            $(function() {
+                $('.form-group').find('.btn').prop({disabled: true});
+            });
+        }, 2000);
+    });
+});
+
 </script>
