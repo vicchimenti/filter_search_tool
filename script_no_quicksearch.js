@@ -52,8 +52,8 @@ $(function () {
             $(function() {
                 $('#input-28834').change(function () {
                     var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-');
-                    var $key = $parsedValue[3];
+                    var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    var $key = $parsedValue[0];
                     if ($key) {
                         $('.programFee').filter(function(i,e) {
                             var $value = $(this).text();
@@ -101,8 +101,8 @@ $(function () {
             $(function() {
                 $('#input-28832').change(function () {
                     var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-');
-                    var $key = $parsedValue[3];
+                    var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    var $key = $parsedValue[0];
                     if ($key) {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
@@ -173,8 +173,8 @@ $(function () {
             $(function() {
                 $('#input-28835').change(function () {
                     var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-');
-                    var $key = $parsedValue[3];
+                    var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    var $key = $parsedValue[0];
                     if ($key) {
                         $('.language').filter(function(i,e) {
                             var $value = $(this).text();
@@ -201,8 +201,8 @@ $(function () {
             $(function() {
                 $('#input-28836').change(function () {
                     var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-');
-                    var $key = $parsedValue[3];
+                    var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    var $key = $parsedValue[0];
                     if ($key) {
                         $('.housing').filter(function(i,e) {
                             var $value = $(this).text();
