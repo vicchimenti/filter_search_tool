@@ -9,6 +9,7 @@
 *
 */
 
+
 //  ***   Supress results message when page loads   ***  //
 $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
