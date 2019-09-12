@@ -53,7 +53,7 @@ $(function () {
                 $('#input-28834').change(function () {
                     var $rawFormValue = $(this).val();
                     var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     if ($key) {
                         $('.programFee').filter(function(i,e) {
                             var $value = $(this).text();
@@ -102,7 +102,7 @@ $(function () {
                 $('#input-28832').change(function () {
                     var $rawFormValue = $(this).val();
                     var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     if ($key) {
                         $('.destination').filter(function(i,e) {
                             var $value = $(this).text();
@@ -139,7 +139,7 @@ $(function () {
                     var $parsedValue = $rawFormValue.split('-:::-:::-');
                     console.log("$parsedValue: " + $parsedValue);
                     // There are Three Hyphens, our Value is After the Third Hyphen
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     console.log("$key: " + $key);
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if ($key) {
@@ -174,7 +174,7 @@ $(function () {
                 $('#input-28835').change(function () {
                     var $rawFormValue = $(this).val();
                     var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     if ($key) {
                         $('.language').filter(function(i,e) {
                             var $value = $(this).text();
@@ -202,7 +202,7 @@ $(function () {
                 $('#input-28836').change(function () {
                     var $rawFormValue = $(this).val();
                     var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[0];
+                    var $key = $parsedValue[1];
                     if ($key) {
                         $('.housing').filter(function(i,e) {
                             var $value = $(this).text();
