@@ -91,6 +91,19 @@ $(function () {
                     } else {
                         $('.educationAbroadItemWrapper').removeClass('hideByProgramFee');
                     }
+                    // check results for null
+                    $(function resultsMessage() {
+                        // assign array of currently visible content items
+                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        // check to see if array is empty
+                        if ($visibleItems.length == 0) {
+                            // when array is empty show the results message
+                            $('.noResultsToShow').removeClass('hideResultsMessage');
+                        } else {
+                            // when array has content items suppress the results message
+                            $('.noResultsToShow').addClass('hideResultsMessage');
+                        }
+                    });
                 });
             });
         }, 2000);
@@ -119,6 +132,19 @@ $(function () {
                     } else {
                         $('.educationAbroadItemWrapper').removeClass('hideByDestination');
                     }
+                    // check results for null
+                    $(function resultsMessage() {
+                        // assign array of currently visible content items
+                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        // check to see if array is empty
+                        if ($visibleItems.length == 0) {
+                            // when array is empty show the results message
+                            $('.noResultsToShow').removeClass('hideResultsMessage');
+                        } else {
+                            // when array has content items suppress the results message
+                            $('.noResultsToShow').addClass('hideResultsMessage');
+                        }
+                    });
                 });
             });
         }, 2000);
@@ -161,6 +187,19 @@ $(function () {
                     } else {
                         $('.educationAbroadItemWrapper').removeClass('hideByTerm');
                     }
+                    // check results for null
+                    $(function resultsMessage() {
+                        // assign array of currently visible content items
+                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        // check to see if array is empty
+                        if ($visibleItems.length == 0) {
+                            // when array is empty show the results message
+                            $('.noResultsToShow').removeClass('hideResultsMessage');
+                        } else {
+                            // when array has content items suppress the results message
+                            $('.noResultsToShow').addClass('hideResultsMessage');
+                        }
+                    });
                 });
             console.log("Term: Done");
             });
@@ -191,6 +230,19 @@ $(function () {
                     } else {
                         $('.educationAbroadItemWrapper').removeClass('hideByLanguage');
                     }
+                    // check results for null
+                    $(function resultsMessage() {
+                        // assign array of currently visible content items
+                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        // check to see if array is empty
+                        if ($visibleItems.length == 0) {
+                            // when array is empty show the results message
+                            $('.noResultsToShow').removeClass('hideResultsMessage');
+                        } else {
+                            // when array has content items suppress the results message
+                            $('.noResultsToShow').addClass('hideResultsMessage');
+                        }
+                    });
                 });
             });
         }, 2000);
@@ -219,6 +271,19 @@ $(function () {
                     } else {
                         $('.educationAbroadItemWrapper').removeClass('hideByHousing');
                     }
+                    // check results for null
+                    $(function resultsMessage() {
+                        // assign array of currently visible content items
+                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        // check to see if array is empty
+                        if ($visibleItems.length == 0) {
+                            // when array is empty show the results message
+                            $('.noResultsToShow').removeClass('hideResultsMessage');
+                        } else {
+                            // when array has content items suppress the results message
+                            $('.noResultsToShow').addClass('hideResultsMessage');
+                        }
+                    });
                 });
             });
         }, 2000);
