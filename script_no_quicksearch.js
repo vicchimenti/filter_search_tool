@@ -136,10 +136,10 @@ $(function () {
                     var $rawFormValue = $(this).val();
                     console.log("$rawFormValue: " + $rawFormValue);
                     // The Hyphen is the Best Delimiter to Use
-                    var $parsedValue = $rawFormValue.split('-');
+                    var $parsedValue = $rawFormValue.split('-:::-:::-');
                     console.log("$parsedValue: " + $parsedValue);
                     // There are Three Hyphens, our Value is After the Third Hyphen
-                    var $key = $parsedValue[3];
+                    var $key = $parsedValue[0];
                     console.log("$key: " + $key);
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if ($key) {
