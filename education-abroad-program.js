@@ -117,7 +117,7 @@ try {
   /*  -- Parse out Runtime Generated Content IDs -- */
   var cardHeader = '<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">';
   var buttonLink = '<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
-  var collapseDiv = '<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse" aria-expanded="false">';
+  var collapseDiv = '<div id="collapse<t4 type=\'meta\' meta=\'content_id\' />" class="collapse">';
 
   /* -- Write all the collapsible header -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
