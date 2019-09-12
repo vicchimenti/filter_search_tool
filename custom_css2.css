@@ -29,6 +29,12 @@ button.btn.btn-primary.pull-right.js-submit {
   }
 }
 
+@media (max-width:767.999px) {
+    #zoneA.col-xs-12 .standardContent .btn {
+        display: none;
+  }
+}
+
 #filterField {
     padding: 15px 0 30px 0;
     border-top: 0;
