@@ -52,11 +52,15 @@ $(function () {
             $(function() {
                 $('#input-28834').change(function () {
                     var $rawFormValue = $(this).val();
+                    console.log("$rawFormValue: " + $rawFormValue);
                     var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    console.log("$parsedValue: " + $parsedValue);
                     var $key = $parsedValue[1];
+                    console.log("$key: " + $key);
                     if ($key) {
                         $('.programFee').filter(function(i,e) {
                             var $value = $(this).text();
+                            console.log("$value: " + $value);
                             // When the Selected Value is Numeric Compare with Content Items
                             if (!isNaN($key)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
