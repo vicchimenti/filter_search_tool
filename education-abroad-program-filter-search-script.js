@@ -298,10 +298,6 @@ $(function () {
                 $('.form-group').find('.btn').prop({
                     disabled: true
                 });
-                // // override t4 form btn css
-                // $('.js-t4form-container .btn-primary').css(
-                //     'display', 'none'
-                // );
             });
         }, 2000);
     });
