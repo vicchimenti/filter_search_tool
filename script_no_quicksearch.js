@@ -1,6 +1,5 @@
 <script>
 
-
 //  ***   Supress results message when page loads   ***  //
 $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
@@ -279,6 +278,5 @@ $(function () {
         }, 2000);
     });
 });
-
 
 </script>
