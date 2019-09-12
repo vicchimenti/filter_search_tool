@@ -1,5 +1,14 @@
 <script>
 
+/***
+*   Education Abroad Program Filter Search Script
+*   Victor Chimenti MSCS 2020
+*   Last Modified 20190912
+*   jQuery
+*
+*
+*/
+
 //  ***   Supress results message when page loads   ***  //
 $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
