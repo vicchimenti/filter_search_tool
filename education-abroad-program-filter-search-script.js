@@ -306,7 +306,7 @@ $(function () {
 // debugging bootstrap collapse
 $('#collapse848494').on('shown.bs.collapse', function () {
    console.log("Opened in");
-   if ($('collapse848494').hasClass('in')) {
+   if ($('#collapse848494').hasClass('in')) {
        console.log("in");
    } else {
        console.log("no in");
@@ -331,7 +331,7 @@ $('#collapse848494').on('shown.bs.collapse', function () {
 
 $('#collapse848494').on('hidden.bs.collapse', function () {
    console.log("Closed in");
-   if ($('collapse848494').hasClass('in')) {
+   if ($('#collapse848494').hasClass('in')) {
        console.log("in");
    } else {
        console.log("no in");
@@ -358,14 +358,25 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function forceCollapse() {
-                $(.accordion.accordion-group.card.card-header.btn.btn-link).click(function () {
+                console.log('force');
+                $(".btn").click(function () {
                     var $contentId = $(this).attr("id");
-                    if (!($contentId).hasClass('collapsed')) {
+                    console.log('$contentId: ' + $contentId);
+                    if (!($($contentId).hasClass('collapsed'))) {
                         var $baseID = $contentId.split('button');
-
-
+                        console.log('$baseID: ' + $baseID);
+                        var $collapseDivId = $baseID.concat('collapse');
+                        console.log('$collapseDivId: ' + $collapseDivId);
+                        if ($($collapseDivId).hasClass('in')) {
+                            $($contentId).addClass('collapsed');
+                            console.log('added');
+                        } else {
+                            console.log('not added');
+                        }
+                    } else {
+                        console.log('has collapsed');
                     }
-                })
+                });
             });
         }, 2000);
     });
