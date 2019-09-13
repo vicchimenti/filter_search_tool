@@ -150,6 +150,10 @@ button.btn.btn-primary.pull-right.js-submit {
     text-decoration: none;
 }
 
+.educationAbroadItemWrapper .educationAbroadItem .card-body .collapse {
+    height: auto;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .programCity {
     padding-left: 20px;
 }
