@@ -81,6 +81,7 @@ button.btn.btn-primary.pull-right.js-submit {
 }
 
 .educationAbroadItemWrapper .educationAbroadItem .card {
+    height: auto;
     padding: 0 20px 30px 35px;
 }
 
