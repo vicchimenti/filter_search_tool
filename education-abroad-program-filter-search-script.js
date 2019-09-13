@@ -303,4 +303,84 @@ $(function () {
     });
 });
 
+// debugging bootstrap collapse
+$('#collapse848494').on('shown.bs.collapse', function () {
+   console.log("Opened")
+   if ($('collapse848494').hasClass('in')) {
+       console.log("in")
+   } else {
+       console.log("no in")
+   }
+   if ($('#collapse848494').hasClass('collapsing')) {
+       console.log("collapsing")
+   } else {
+       console.log("no collapsing")
+   }
+   if ($('#collapse848494').hasClass('collapse')) {
+       console.log("collapse")
+   } else {
+       console.log("no collapse")
+   }
+});
+
+$('#collapse848494').on('hidden.bs.collapse', function () {
+   console.log("Closed")
+   if ($('collapse848494').hasClass('in')) {
+       console.log("in")
+   } else {
+       console.log("no in")
+   }
+   if ($('#collapse848494').hasClass('collapsing')) {
+       console.log("collapsing")
+   } else {
+       console.log("no collapsing")
+   }
+   if ($('#collapse848494').hasClass('collapse')) {
+       console.log("collapse")
+   } else {
+       console.log("no collapse")
+   }
+});
+
+// //Will return true if uncollapsed
+// $(function () {
+//     $(window).load(function () {
+//         setTimeout(function () {
+//             $('#collapse848494').on('click', function () {
+//                 if ($('collapse848494').hasClass('in')) {
+//                     console.log("in")
+//                 } else {
+//                     console.log("no in")
+//                 }
+//             });
+//         });
+//     });
+// });
+//
+// //Will return true if in the process of collapsing
+// $(function () {
+//     $(window).load(function () {
+//         setTimeout(function () {
+//             if ($('#collapse848494').hasClass('collapsing')) {
+//                 console.log("collapsing")
+//             } else {
+//                 console.log("no collapsing")
+//             }
+//         });
+//     });
+// });
+//
+// //Will return true if collapsed
+// $(function () {
+//     $(window).load(function () {
+//         setTimeout(function () {
+//             if ($('#collapse848494').hasClass('collapse')) {
+//                 console.log("collapse")
+//             } else {
+//                 console.log("no collapse")
+//             }
+//         });
+//     });
+// });
+
 </script>
