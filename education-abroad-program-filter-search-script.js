@@ -370,7 +370,7 @@ $(function () {
                         var $collapseDivId = '#collapse'.concat($baseId);
                         console.log('$collapseDivId: ' + $collapseDivId);
                         if ($($collapseDivId).hasClass('in')) {
-                            var $buttonId = '#'.concat($contentId);
+                            var $buttonId = '.accordion.accordion-group.card.card-header#'.concat($contentId);
                             console.log('$buttonId: ' + $buttonId);
                             $($buttonId).addClass('collapsed');
                             console.log('added');
