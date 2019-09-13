@@ -371,6 +371,7 @@ $(function () {
                         console.log('$collapseDivId: ' + $collapseDivId);
                         if ($($collapseDivId).hasClass('in')) {
                             var $buttonId = '#'.concat($contentId);
+                            console.log('$buttonId: ' + $buttonId);
                             $($buttonId).addClass('collapsed');
                             console.log('added');
                         } else {
