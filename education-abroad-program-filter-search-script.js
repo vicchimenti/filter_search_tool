@@ -305,82 +305,71 @@ $(function () {
 
 // debugging bootstrap collapse
 $('#collapse848494').on('shown.bs.collapse', function () {
-   console.log("Opened")
+   console.log("Opened in");
    if ($('collapse848494').hasClass('in')) {
-       console.log("in")
+       console.log("in");
    } else {
-       console.log("no in")
+       console.log("no in");
    }
+});
+$('#collapse848494').on('shown.bs.collapse', function () {
+    console.log("Opened collapsing");
    if ($('#collapse848494').hasClass('collapsing')) {
-       console.log("collapsing")
+       console.log("collapsing");
    } else {
-       console.log("no collapsing")
+       console.log("no collapsing");
    }
+});
+$('#collapse848494').on('shown.bs.collapse', function () {
+    console.log("Opened collapse");
    if ($('#collapse848494').hasClass('collapse')) {
-       console.log("collapse")
+       console.log("collapse");
    } else {
-       console.log("no collapse")
+       console.log("no collapse");
    }
 });
 
 $('#collapse848494').on('hidden.bs.collapse', function () {
-   console.log("Closed")
+   console.log("Closed in");
    if ($('collapse848494').hasClass('in')) {
-       console.log("in")
+       console.log("in");
    } else {
-       console.log("no in")
+       console.log("no in");
    }
+});
+$('#collapse848494').on('hidden.bs.collapse', function () {
+    console.log("Closed collapsing");
    if ($('#collapse848494').hasClass('collapsing')) {
-       console.log("collapsing")
+       console.log("collapsing");
    } else {
-       console.log("no collapsing")
+       console.log("no collapsing");
    }
+});
+$('#collapse848494').on('hidden.bs.collapse', function () {
+    console.log("Closed collapse");
    if ($('#collapse848494').hasClass('collapse')) {
-       console.log("collapse")
+       console.log("collapse");
    } else {
-       console.log("no collapse")
+       console.log("no collapse");
    }
 });
 
-// //Will return true if uncollapsed
-// $(function () {
-//     $(window).load(function () {
-//         setTimeout(function () {
-//             $('#collapse848494').on('click', function () {
-//                 if ($('collapse848494').hasClass('in')) {
-//                     console.log("in")
-//                 } else {
-//                     console.log("no in")
-//                 }
-//             });
-//         });
-//     });
-// });
-//
-// //Will return true if in the process of collapsing
-// $(function () {
-//     $(window).load(function () {
-//         setTimeout(function () {
-//             if ($('#collapse848494').hasClass('collapsing')) {
-//                 console.log("collapsing")
-//             } else {
-//                 console.log("no collapsing")
-//             }
-//         });
-//     });
-// });
-//
-// //Will return true if collapsed
-// $(function () {
-//     $(window).load(function () {
-//         setTimeout(function () {
-//             if ($('#collapse848494').hasClass('collapse')) {
-//                 console.log("collapse")
-//             } else {
-//                 console.log("no collapse")
-//             }
-//         });
-//     });
-// });
+$(function () {
+    $(window).load(function () {
+        setTimeout(function () {
+            $(function forceCollapse() {
+                $(.accordion.accordion-group.card.card-header.btn.btn-link).click(function () {
+                    var $contentId = $(this).attr("id");
+                    if (!($contentId).hasClass('collapsed')) {
+                        var $baseID = $contentId.split('button');
+
+
+                    }
+                })
+            });
+        }, 2000);
+    });
+});
+
 
 </script>
