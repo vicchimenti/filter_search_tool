@@ -366,10 +366,12 @@ $(function () {
                         var $parsedValue = $contentId.split('button');
                         console.log('$parsedValue: ' + $parsedValue);
                         var $baseId = $parsedValue[1];
-                        var $collapseDivId = 'collapse'.concat($baseID);
+                        console.log('$baseId: ' + $baseId);
+                        var $collapseDivId = '#collapse'.concat($baseId);
                         console.log('$collapseDivId: ' + $collapseDivId);
                         if ($($collapseDivId).hasClass('in')) {
-                            $($contentId).addClass('collapsed');
+                            var $buttonId = '#'.concat($contentId);
+                            $($buttonId).addClass('collapsed');
                             console.log('added');
                         } else {
                             console.log('not added');
