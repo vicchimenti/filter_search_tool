@@ -363,9 +363,10 @@ $(function () {
                     var $contentId = $(this).attr("id");
                     console.log('$contentId: ' + $contentId);
                     if (!($($contentId).hasClass('collapsed'))) {
-                        var $baseID = $contentId.split('button');
-                        console.log('$baseID: ' + $baseID);
-                        var $collapseDivId = $baseID.concat('collapse');
+                        var $parsedValue = $contentId.split('button');
+                        console.log('$parsedValue: ' + $parsedValue);
+                        var $baseId = $parsedValue[1];
+                        var $collapseDivId = 'collapse'.concat($baseID);
                         console.log('$collapseDivId: ' + $collapseDivId);
                         if ($($collapseDivId).hasClass('in')) {
                             $($contentId).addClass('collapsed');
