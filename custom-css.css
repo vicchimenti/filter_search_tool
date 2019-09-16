@@ -150,7 +150,7 @@ button.btn.btn-primary.pull-right.js-submit {
     text-decoration: none;
 }
 
-.accordion .accordion-group .card .collapse {
+.accordion .accordion-group .card {
     height: auto;
 }
 
