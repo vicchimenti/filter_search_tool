@@ -31,7 +31,7 @@ try {
 
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"><div class="panel panel-default"><div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
-  var endingHTML = '</div></div></div>\n';
+  var endingHTML = '</div></div></div></div>\n';
 
   /* parse the list of destinations, add <li> tags*/
   if (destination != "") {
@@ -182,7 +182,7 @@ try {
   }
 
   /* -- Write Closing Tags -- */
-  document.write('</div></div></div></div></div>');
+  document.write('</div></div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
