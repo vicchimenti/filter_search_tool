@@ -120,11 +120,11 @@ button.btn.btn-primary.pull-right.js-submit {
     display: none;
 }
 
-.educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-plus {
+.educationAbroadItemWrapper .educationAbroadItem button[aria-expanded="false"] .fa-plus {
     display: initial;
 }
 
-.educationAbroadItemWrapper .educationAbroadItem button.collapsed .fa-minus {
+.educationAbroadItemWrapper .educationAbroadItem button[aria-expanded="false"] .fa-minus {
     display: none;
 }
 
