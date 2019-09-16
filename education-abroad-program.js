@@ -30,8 +30,8 @@ try {
 
 
   /* -- Prepare all the things -- */
-  var beginningHTML = '<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"><div class="panel panel-default"><div class="educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
-  var endingHTML = '</div></div></div>\n';
+  var beginningHTML = '<div class="accordion educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
+  var endingHTML = '</div></div>\n';
 
   /* parse the list of destinations, add <li> tags*/
   if (destination != "") {
@@ -115,9 +115,9 @@ try {
 
 
   /*  -- Parse out Runtime Generated Content IDs -- */
-  var cardHeader = '<div class="panel-heading card-header" role"tab" id="heading<t4 type=\'meta\' meta=\'content_id\' />">';
-  var buttonLink = '<a role="button" id="button<t4 type=\'meta\' meta=\'content_id\' />" data-toggle="collapse" data-parent="#accordion" href="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
-  var collapseDiv = '<div class="panel-collapse collapse" id="collapse<t4 type=\'meta\' meta=\'content_id\' />" role="tabpanel" aria-labelledby="heading<t4 type=\'meta\' meta=\'content_id\' />">';
+  var cardHeader = '<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">';
+  var buttonLink = '<button class="btn btn-link" type="button" id="button<t4 type=\'meta\' meta=\'content_id\' />" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
+  var collapseDiv = '<div class="collapse" id="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
 
   /* -- Write all the collapsible header -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
@@ -136,7 +136,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
 
   /* -- Write Program Cards--*/
-  document.write('<div class="card-body panel-body">');
+  document.write('<div class="card-body">');
   document.write('<div class="container-fluid">');
 
   /* -- Write Program Image and Link- IF they are not null --*/
