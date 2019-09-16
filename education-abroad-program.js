@@ -182,7 +182,7 @@ try {
   }
 
   /* -- Write Closing Tags -- */
-  document.write('</div></div></div></div></div>');
+  document.write('</div></div></div></div>');
   document.write(endingHTML);
 
   /* -- Error Checking -- */
