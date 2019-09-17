@@ -73,9 +73,9 @@ $(function () {
     $(window).load(function () {
         // Once window loads set a timeout delay
         setTimeout(function () {
-            $(function() {
+            $(function() {SelectBox-ByTerm
                 // When the Dropdown Menu Selector Academic Terms Change - Execute change function
-                $('#input-28833').change(function () {
+                $('#SelectBox-ByDestination').change(function () {
                     // T4 List Values Must Parse Out Extra Characters
                     var rawFormValue = $(this).val();
                     // The T4 Form generates a specific Delimiter to Use
@@ -122,8 +122,8 @@ $(function () {
 $(function () {
     $(window).load(function () {
         setTimeout(function () {
-            $(function() {
-                $('#input-28834').change(function () {
+            $(function() {SelectBox-ByProgramFee
+                $('#SelectBox-ByTerm').change(function () {
                     var rawFormValue = $(this).val();
                     var parsedValue = rawFormValue.split('-:::-:::-');
                     var key = parsedValue[1];
@@ -185,7 +185,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#input-28832').change(function () {
+                $('#SelectBox-ByDestination').change(function () {
                     var rawFormValue = $(this).val();
                     var parsedValue = rawFormValue.split('-:::-:::-');
                     var key = parsedValue[1];
