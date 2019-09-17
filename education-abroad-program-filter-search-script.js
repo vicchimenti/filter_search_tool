@@ -123,7 +123,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#input-28834').change(function () {
+                $('#SelectBox-ByProgramFee').change(function () {
                     var rawFormValue = $(this).val();
                     var parsedValue = rawFormValue.split('-:::-:::-');
                     var key = parsedValue[1];
