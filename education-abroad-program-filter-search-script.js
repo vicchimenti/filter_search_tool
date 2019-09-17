@@ -10,9 +10,12 @@
 */
 
 
-//  ***   Supress results message when page loads   ***  //
-$(function () {
-    $('.noResultsToShow').addClass('hideResultsMessage');
+//   ***   Prevent jQuery Conflicts   ***   //
+var jq = $.noConflict();
+
+//   ***   Supress results message when page loads   ***  //
+jq(function () {
+    jq('.noResultsToShow').addClass('hideResultsMessage');
 });
 
 
@@ -25,19 +28,19 @@ $(function () {
             $(function () {
                 // scan the keyword each character the user inputs
                 $('#id_search').on('keyup', function () {
-                    var $key = $(this).val().toLowerCase();
+                    var key = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
                     $(function () {
                         $('.educationAbroadItemWrapper').filter(function () {
                             // when the search key is not present in the item then hide the item
-                            $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf($key) > -1));
+                            $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(key) > -1));
                         });
                     });
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         // check to see if array is empty
-                        if ($visibleItems.length == 0) {
+                        if (visibleItems.length == 0) {
                             // when array is empty show the results message
                             $('.noResultsToShow').removeClass('hideResultsMessage');
                         } else {
@@ -63,17 +66,17 @@ $(function () {
                 // When the Dropdown Menu Selector Academic Terms Change - Execute change function
                 $('#input-28833').change(function () {
                     // T4 List Values Must Parse Out Extra Characters
-                    var $rawFormValue = $(this).val();
+                    var rawFormValue = $(this).val();
                     // The T4 Form generates a specific Delimiter to Use
-                    var $parsedValue = $rawFormValue.split('-:::-:::-');
+                    var parsedValue = rawFormValue.split('-:::-:::-');
                     // Our search key is After the second item in the resulting array
-                    var $key = $parsedValue[1];
+                    var key = parsedValue[1];
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
-                    if ($key) {
+                    if (key) {
                         $('.term').filter(function(i,e) {
-                            var $value = $(this).text();
+                            var value = $(this).text();
                             // Check to see if the Key and Value are a Match
-                            if ($value.match($key)) {
+                            if (value.match(key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByTerm');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByTerm');
@@ -86,9 +89,9 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         // check to see if array is empty
-                        if ($visibleItems.length == 0) {
+                        if (visibleItems.length == 0) {
                             // when array is empty show the results message
                             $('.noResultsToShow').removeClass('hideResultsMessage');
                         } else {
@@ -110,20 +113,20 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#input-28834').change(function () {
-                    var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[1];
-                    if ($key) {
+                    var rawFormValue = $(this).val();
+                    var parsedValue = rawFormValue.split('-:::-:::-');
+                    var key = parsedValue[1];
+                    if (key) {
                         $('.programFee').filter(function(i,e) {
-                            var $value = $(this).text();
+                            var value = $(this).text();
                             // When the Selected Value is Numeric Compare with Content Items
-                            if (!isNaN($key)) {
+                            if (!isNaN(key)) {
                                 // When the Content Item is Numeric Parse for higher/lower values
-                                if ((!isNaN($value)) && ($value)) {
-                                    var $keyInt = Number($key);
-                                    var $valueInt = Number($value);
+                                if ((!isNaN(value)) && (value)) {
+                                    var keyInt = Number(key);
+                                    var valueInt = Number(value);
                                     // When the Content Value is Lower then Show the Item
-                                    if ($keyInt >= $valueInt) {
+                                    if (keyInt >= valueInt) {
                                         $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFee');
                                     // When the Content Value is Higher then Hide the Item
                                     } else {
@@ -135,7 +138,7 @@ $(function () {
                                 }
                             // When the Selected Value is Not Numeric compare both for a match
                             } else {
-                                if ($value.match($key)) {
+                                if (value.match(key)) {
                                     $(this).parents('.educationAbroadItemWrapper').removeClass('hideByProgramFee');
                                 } else {
                                     $(this).parents('.educationAbroadItemWrapper').addClass('hideByProgramFee');
@@ -149,9 +152,9 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         // check to see if array is empty
-                        if ($visibleItems.length == 0) {
+                        if (visibleItems.length == 0) {
                             // when array is empty show the results message
                             $('.noResultsToShow').removeClass('hideResultsMessage');
                         } else {
@@ -172,13 +175,13 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#input-28832').change(function () {
-                    var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[1];
-                    if ($key) {
+                    var rawFormValue = $(this).val();
+                    var parsedValue = rawFormValue.split('-:::-:::-');
+                    var key = parsedValue[1];
+                    if (key) {
                         $('.destination').filter(function(i,e) {
-                            var $value = $(this).text();
-                            if ($value.match($key)) {
+                            var value = $(this).text();
+                            if (value.match(key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByDestination');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByDestination');
@@ -190,9 +193,9 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         // check to see if array is empty
-                        if ($visibleItems.length == 0) {
+                        if (visibleItems.length == 0) {
                             // when array is empty show the results message
                             $('.noResultsToShow').removeClass('hideResultsMessage');
                         } else {
@@ -213,13 +216,13 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#input-28835').change(function () {
-                    var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[1];
-                    if ($key) {
+                    var rawFormValue = $(this).val();
+                    var parsedValue = rawFormValue.split('-:::-:::-');
+                    var key = parsedValue[1];
+                    if (key) {
                         $('.language').filter(function(i,e) {
-                            var $value = $(this).text();
-                            if ($value.match($key)) {
+                            var value = $(this).text();
+                            if (value.match(key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguage');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguage');
@@ -231,9 +234,9 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         // check to see if array is empty
-                        if ($visibleItems.length == 0) {
+                        if (visibleItems.length == 0) {
                             // when array is empty show the results message
                             $('.noResultsToShow').removeClass('hideResultsMessage');
                         } else {
@@ -254,13 +257,13 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#input-28836').change(function () {
-                    var $rawFormValue = $(this).val();
-                    var $parsedValue = $rawFormValue.split('-:::-:::-');
-                    var $key = $parsedValue[1];
-                    if ($key) {
+                    var rawFormValue = $(this).val();
+                    var parsedValue = rawFormValue.split('-:::-:::-');
+                    var key = parsedValue[1];
+                    if (key) {
                         $('.housing').filter(function(i,e) {
-                            var $value = $(this).text();
-                            if ($value.match($key)) {
+                            var value = $(this).text();
+                            if (value.match(key)) {
                                 $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousing');
                             } else {
                                 $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousing');
@@ -272,9 +275,9 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var $visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
                         // check to see if array is empty
-                        if ($visibleItems.length == 0) {
+                        if (visibleItems.length == 0) {
                             // when array is empty show the results message
                             $('.noResultsToShow').removeClass('hideResultsMessage');
                         } else {
