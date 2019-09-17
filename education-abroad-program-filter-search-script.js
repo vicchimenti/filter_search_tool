@@ -226,7 +226,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#input-28835').change(function () {
+                $('#SelectBox-ByLanguage').change(function () {
                     var rawFormValue = $(this).val();
                     var parsedValue = rawFormValue.split('-:::-:::-');
                     var key = parsedValue[1];
