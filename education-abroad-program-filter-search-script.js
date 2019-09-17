@@ -125,10 +125,6 @@ $(function () {
             $(function() {
                 $('#SelectBox-ByProgramFee').change(function () {
                     var key = $(this).val();
-                    // // The T4 Form generates a specific Delimiter to Use
-                    // var parsedValue = rawFormValue.split('-:::-:::-');
-                    // // Our search key is After the second item in the resulting array
-                    // var key = parsedValue[1];
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.programFee').filter(function(i,e) {
