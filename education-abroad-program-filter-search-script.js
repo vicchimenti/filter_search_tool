@@ -77,11 +77,11 @@ $(function () {
                 // When the Dropdown Menu Selector Academic Terms Change - Execute change function
                 $('#SelectBox-ByTerm').change(function () {
                     // T4 List Values Must Parse Out Extra Characters
-                    var rawFormValue = $(this).val();
-                    // The T4 Form generates a specific Delimiter to Use
-                    var parsedValue = rawFormValue.split('-:::-:::-');
-                    // Our search key is After the second item in the resulting array
-                    var key = parsedValue[1];
+                    var key = $(this).val();
+                    // // The T4 Form generates a specific Delimiter to Use
+                    // var parsedValue = rawFormValue.split('-:::-:::-');
+                    // // Our search key is After the second item in the resulting array
+                    // var key = parsedValue[1];
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.term').filter(function(i,e) {
@@ -124,9 +124,12 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByProgramFee').change(function () {
-                    var rawFormValue = $(this).val();
-                    var parsedValue = rawFormValue.split('-:::-:::-');
-                    var key = parsedValue[1];
+                    var key = $(this).val();
+                    // // The T4 Form generates a specific Delimiter to Use
+                    // var parsedValue = rawFormValue.split('-:::-:::-');
+                    // // Our search key is After the second item in the resulting array
+                    // var key = parsedValue[1];
+                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.programFee').filter(function(i,e) {
                             var value = $(this).text();
@@ -186,9 +189,12 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByDestination').change(function () {
-                    var rawFormValue = $(this).val();
-                    var parsedValue = rawFormValue.split('-:::-:::-');
-                    var key = parsedValue[1];
+                    var key = $(this).val();
+                    // // The T4 Form generates a specific Delimiter to Use
+                    // var parsedValue = rawFormValue.split('-:::-:::-');
+                    // // Our search key is After the second item in the resulting array
+                    // var key = parsedValue[1];
+                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.destination').filter(function(i,e) {
                             var value = $(this).text();
@@ -227,9 +233,12 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByLanguage').change(function () {
-                    var rawFormValue = $(this).val();
-                    var parsedValue = rawFormValue.split('-:::-:::-');
-                    var key = parsedValue[1];
+                    var key = $(this).val();
+                    // // The T4 Form generates a specific Delimiter to Use
+                    // var parsedValue = rawFormValue.split('-:::-:::-');
+                    // // Our search key is After the second item in the resulting array
+                    // var key = parsedValue[1];
+                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.language').filter(function(i,e) {
                             var value = $(this).text();
@@ -268,9 +277,12 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByHousing').change(function () {
-                    var rawFormValue = $(this).val();
-                    var parsedValue = rawFormValue.split('-:::-:::-');
-                    var key = parsedValue[1];
+                    var key = $(this).val();
+                    // // The T4 Form generates a specific Delimiter to Use
+                    // var parsedValue = rawFormValue.split('-:::-:::-');
+                    // // Our search key is After the second item in the resulting array
+                    // var key = parsedValue[1];
+                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.housing').filter(function(i,e) {
                             var value = $(this).text();
