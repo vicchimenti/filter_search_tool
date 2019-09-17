@@ -185,7 +185,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#input-28832').change(function () {
+                $('#SelectBox-ByDestination').change(function () {
                     var rawFormValue = $(this).val();
                     var parsedValue = rawFormValue.split('-:::-:::-');
                     var key = parsedValue[1];
