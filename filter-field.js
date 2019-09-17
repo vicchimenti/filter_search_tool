@@ -1,7 +1,6 @@
 try {
   var fieldInstructions = content.get("Instructions");
-  var fieldFieldCode = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<iframe id="t4-form-2236" width="560" height="700" src="https://us.formbank.us/embed/MjIzNi1lbg==" frameborder="0" scrolling="no"></iframe>
-<script>function uif(e){var t=document.getElementById("t4-form-2236");t.setAttribute("height",e.height)}var domain="https://us.formbank.us",iframe=document.getElementById("t4-form-2236").contentWindow;setInterval(function(){iframe.postMessage("",domain)},3e3),window.addEventListener("message",function(e){"https://us.formbank.us"===e.origin&&uif(e.data)},!1);</script>");
+  var fieldFieldCode = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='form' name='Education Abroad Search Filters' id='2236' />");
   var fieldNoResultsMessage = content.get("No Results Message");
   var message = "";
   var fieldZone = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Zone' output='normal' display_field='value' />");
