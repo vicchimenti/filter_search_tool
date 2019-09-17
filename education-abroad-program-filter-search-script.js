@@ -11,9 +11,9 @@
 
 
 //   ***   Supress results message when page loads   ***  //
-// $(function () {
-//     $('.noResultsToShow').addClass('hideResultsMessage');
-// });
+$(function () {
+    $('.noResultsToShow').addClass('hideResultsMessage');
+});
 
 
 //   ***   Keyword Search   ***   //
