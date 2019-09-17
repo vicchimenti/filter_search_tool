@@ -3,31 +3,17 @@
 /***
 *   Education Abroad Program Filter Search Script
 *   Victor Chimenti MSCS 2020
-*   Last Modified 20190912
+*   Last Modified 20190917
 *   jQuery
 *
 *
 */
 
 
-// access iframe
-//   ***   Disable Default Form Button   ***   //
-$(function () {
-    $(window).load(function () {
-        setTimeout(function () {
-            $(function access() {
-                // find the button in the t4-form and disable it
-                $('#t4-form-2236').contents().find('.form-group').addClass("inside");
-            });
-        }, 2000);
-    });
-});
-
-
 //   ***   Supress results message when page loads   ***  //
-$(function () {
-    $('.noResultsToShow').addClass('hideResultsMessage');
-});
+// $(function () {
+//     $('.noResultsToShow').addClass('hideResultsMessage');
+// });
 
 
 //   ***   Keyword Search   ***   //
