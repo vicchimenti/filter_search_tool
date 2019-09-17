@@ -267,7 +267,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#input-28836').change(function () {
+                $('#SelectBox-ByHousing').change(function () {
                     var rawFormValue = $(this).val();
                     var parsedValue = rawFormValue.split('-:::-:::-');
                     var key = parsedValue[1];
