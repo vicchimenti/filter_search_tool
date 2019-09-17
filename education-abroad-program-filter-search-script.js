@@ -315,19 +315,4 @@ $(function () {
 });
 
 
-//   ***   Disable Default Form Button   ***   //
-// $(function () {
-//     $(window).load(function () {
-//         setTimeout(function () {
-//             $(function disableButton() {
-//                 // find the button in the t4-form and disable it
-//                 $('#t4-form-2236').contents().find('.btn').prop({
-//                     disabled: true
-//                 });
-//             });
-//         }, 2000);
-//     });
-// });
-
-
 </script>
