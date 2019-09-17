@@ -39,6 +39,7 @@ $(function () {
             $(function () {
                 // scan the keyword each character the user inputs
                 $('#id_search').on('keyup', function () {
+                    // Assign Search Key
                     var key = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
                     $(function () {
@@ -120,6 +121,7 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByProgramFee').change(function () {
+                    // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
@@ -181,6 +183,7 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByDestination').change(function () {
+                    // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
@@ -221,6 +224,7 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByLanguage').change(function () {
+                    // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
@@ -261,6 +265,7 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 $('#SelectBox-ByHousing').change(function () {
+                    // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
