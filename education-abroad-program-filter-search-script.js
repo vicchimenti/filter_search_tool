@@ -12,7 +12,7 @@
 
 //   ***   Supress results message when page loads   ***  //
 $(function () {
-    $('.noResultsToShow').addClass('hideResultsMessage');
+    $(t4-form-2236).contents().find('.noResultsToShow').addClass('hideResultsMessage');
 });
 
 
@@ -295,7 +295,7 @@ $(function () {
         setTimeout(function () {
             $(function disableButton() {
                 // find the button in the t4-form and disable it
-                $('.form-group').find('.btn').prop({
+                $(t4-form-2236).contents().find('.btn').prop({
                     disabled: true
                 });
             });
