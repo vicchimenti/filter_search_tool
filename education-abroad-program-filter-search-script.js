@@ -76,12 +76,8 @@ $(function () {
             $(function() {
                 // When the Dropdown Menu Selector Academic Terms Change - Execute change function
                 $('#SelectBox-ByTerm').change(function () {
-                    // T4 List Values Must Parse Out Extra Characters
+                    // Assign Search Key
                     var key = $(this).val();
-                    // // The T4 Form generates a specific Delimiter to Use
-                    // var parsedValue = rawFormValue.split('-:::-:::-');
-                    // // Our search key is After the second item in the resulting array
-                    // var key = parsedValue[1];
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
                         $('.term').filter(function(i,e) {
