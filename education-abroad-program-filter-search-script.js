@@ -10,9 +10,23 @@
 */
 
 
+// access iframe
+//   ***   Disable Default Form Button   ***   //
+$(function () {
+    $(window).load(function () {
+        setTimeout(function () {
+            $(function access() {
+                // find the button in the t4-form and disable it
+                $('#t4-form-2236').contents().find('.form-group').addClass("inside");
+            });
+        }, 2000);
+    });
+});
+
+
 //   ***   Supress results message when page loads   ***  //
 $(function () {
-    $(t4-form-2236).contents().find('.noResultsToShow').addClass('hideResultsMessage');
+    $('.noResultsToShow').addClass('hideResultsMessage');
 });
 
 
@@ -295,7 +309,7 @@ $(function () {
         setTimeout(function () {
             $(function disableButton() {
                 // find the button in the t4-form and disable it
-                $(t4-form-2236).contents().find('.btn').prop({
+                $('#t4-form-2236').contents().find('.btn').prop({
                     disabled: true
                 });
             });
