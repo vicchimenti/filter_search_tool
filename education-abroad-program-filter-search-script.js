@@ -75,7 +75,7 @@ $(function () {
         setTimeout(function () {
             $(function() {
                 // When the Dropdown Menu Selector Academic Terms Change - Execute change function
-                $('#input-28833').change(function () {
+                $('#SelectBox-ByTerm').change(function () {
                     // T4 List Values Must Parse Out Extra Characters
                     var rawFormValue = $(this).val();
                     // The T4 Form generates a specific Delimiter to Use
