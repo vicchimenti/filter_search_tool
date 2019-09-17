@@ -10,9 +10,6 @@
 */
 
 
-//   ***   Prevent jQuery Conflicts   ***   //
-// var jq = $.noConflict(true);
-
 //   ***   Supress results message when page loads   ***  //
 $(function () {
     $('.noResultsToShow').addClass('hideResultsMessage');
