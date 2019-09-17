@@ -11,11 +11,11 @@
 
 
 //   ***   Prevent jQuery Conflicts   ***   //
-var jq = $.noConflict();
+// var jq = $.noConflict(true);
 
 //   ***   Supress results message when page loads   ***  //
-jq(function () {
-    jq('.noResultsToShow').addClass('hideResultsMessage');
+$(function () {
+    $('.noResultsToShow').addClass('hideResultsMessage');
 });
 
 
