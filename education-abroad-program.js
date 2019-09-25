@@ -26,6 +26,7 @@ try {
   var provider = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Provider' output='normal' display_field='value' />");
   var listOfProviders = "";
   var prerequisites = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Prerequisites' output='normal' display_field='value' />");
+  var budget = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Budgets' output='normal' display_field='value' />");
   var city = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='City' output='normal' display_field='value' />");
 
 
@@ -175,11 +176,18 @@ try {
   document.write('<div class="col-xs-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul class="field">' + listOfStudyAreas + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 5 Details --*/
-  if (prerequisites != "") {
+  if (budget != "") {
       document.write('<div class="row five">');
+      document.write('<div class="col-xs-12 programDetails budget"><h3>Program Budgets</h3>' + budget + '</div>');
+      document.write('</div>');
+  }
+  /* -- Write Program Level 6 Details --*/
+  if (prerequisites != "") {
+      document.write('<div class="row six">');
       document.write('<div class="col-xs-12 programDetails prerequisites"><h3>Additional Prerequisites</h3>' + prerequisites + '</div>');
       document.write('</div>');
   }
+
 
   /* -- Write Closing Tags -- */
   document.write('</div></div></div></div>');
