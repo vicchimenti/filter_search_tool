@@ -48,8 +48,8 @@ $(function () {
                     });
                 });
             });
-        // Delay the .on keyup function for 2 Seconds
-        }, 2000);
+        // Delay the .on keyup function
+        }, 200);
     });
 });
 
@@ -95,8 +95,8 @@ $(function () {
                     });
                 });
             });
-        // Delay the change function for 2 Seconds
-        }, 2000);
+        // Delay the change function
+        }, 200);
     });
 });
 
@@ -158,7 +158,7 @@ $(function () {
                     });
                 });
             });
-        }, 2000);
+        }, 200);
     });
 });
 
@@ -199,7 +199,7 @@ $(function () {
                     });
                 });
             });
-        }, 2000);
+        }, 200);
     });
 });
 
@@ -240,7 +240,7 @@ $(function () {
                     });
                 });
             });
-        }, 2000);
+        }, 200);
     });
 });
 
@@ -281,7 +281,7 @@ $(function () {
                     });
                 });
             });
-        }, 2000);
+        }, 200);
     });
 });
 
