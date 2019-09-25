@@ -3,7 +3,7 @@
 /***
 *   Education Abroad Program Filter Search Script
 *   Victor Chimenti MSCS 2020
-*   Last Modified 20190917
+*   Last Modified 20190925
 *   jQuery
 *
 *
@@ -49,7 +49,7 @@ $(function () {
                 });
             });
         // Delay the .on keyup function
-        }, 200);
+        }, 10);
     });
 });
 
@@ -96,7 +96,7 @@ $(function () {
                 });
             });
         // Delay the change function
-        }, 200);
+    }, 10);
     });
 });
 
@@ -158,7 +158,7 @@ $(function () {
                     });
                 });
             });
-        }, 200);
+        }, 10);
     });
 });
 
@@ -199,7 +199,7 @@ $(function () {
                     });
                 });
             });
-        }, 200);
+        }, 10);
     });
 });
 
@@ -240,7 +240,7 @@ $(function () {
                     });
                 });
             });
-        }, 200);
+        }, 10);
     });
 });
 
@@ -281,7 +281,7 @@ $(function () {
                     });
                 });
             });
-        }, 200);
+        }, 10);
     });
 });
 
