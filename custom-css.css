@@ -10,8 +10,9 @@
 }
 
 @media (min-width:767.999px) {
-    #filterFieldWrapper {
-        padding-bottom: 2rem;
+    #filterField {
+        padding: 15px 0 30px 0;
+        border-top: 0;
     }
 }
 
