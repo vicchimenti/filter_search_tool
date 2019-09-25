@@ -131,6 +131,13 @@
     text-decoration: none;
 }
 
+@media (max-width:767.999px) {
+    .educationAbroadItemWrapper .educationAbroadItem .card-body {
+        display: inline;
+    }
+}
+
+
 .accordion .accordion-group .card {
     height: auto;
 }
