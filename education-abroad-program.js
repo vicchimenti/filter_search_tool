@@ -127,38 +127,26 @@ try {
   var buttonLink = '<button class="btn btn-link" type="button" id="button<t4 type=\'meta\' meta=\'content_id\' />" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
   var collapseDiv = '<div class="collapse" id="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
 
-  /* -- Write all the collapsible header -- */
+  /* -- Write the card header -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write('<div class="card">');
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
-  if (generalDescription != "") {
-      document.write('<div class="descriptionWrapper"><p class="programDescription">' + generalDescription + '</p></div>');
-  } else {
-      document.write('<div class="noDescription"></div>');
-  }
-  document.write('</div>');
+  document.write('<div class="programCity"><h5>' + city + '</h5></div>');
+  document.write('<div class="descriptionWrapper"><div class="card-img-top"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /></div><p class="programDescription">' + generalDescription + '</p></div>');
 
-  /* -- Write all the collapsible body -- */
+  /* -- Write the collapsible body -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, collapseDiv));
 
   /* -- Write Program Cards--*/
   document.write('<div class="card-body">');
   document.write('<div class="container-fluid">');
 
-  /* -- Write Program Image and Link- IF they are not null --*/
-  document.write('<div class="row image-link">');
-  if (city != "") {
-      document.write('<div class="programCity"><h5>' + city + '</h5></div>');
-  }
-  if (programImageMedia != "") {
-      document.write('<div class="card-img-top"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /></div>');
-  }
+  /* -- Write Program Link- IF not null --*/
   if (externalWebsiteLink != "") {
-      document.write('<div class="externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
+      document.write('<div class="row externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
   }
-  document.write('</div>');
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row one">');
