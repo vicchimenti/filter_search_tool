@@ -63,17 +63,17 @@
 
 .educationAbroadItemWrapper .educationAbroadItem .card {
     height: auto;
-    padding: 0 20px 30px 35px;
+    padding: 0 20px 30px 5px;
 }
 
-@media screen and (max-width:767.999px) {
+/* @media screen and (max-width:767.999px) {
     .educationAbroadItemWrapper .educationAbroadItem .card {
         padding-left: 5px;
     }
     .educationAbroadItemWrapper .educationAbroadItem button {
         padding-left: 5px;
     }
-}
+} */
 
 
 .educationAbroadItemWrapper .educationAbroadItem .card-Header {
@@ -85,7 +85,7 @@
     display: inline-block;
     line-height: 20px;
     min-height: 60px;
-    padding: 20px 20px 5px 35px;
+    padding: 20px 20px 5px 5px;
     text-align: left;
     text-decoration: none;
 }
