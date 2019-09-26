@@ -120,6 +120,13 @@
     text-decoration: none;
 }
 
+.descriptionWrapper img {
+   float: right;
+   padding: 10px;
+   margin: 0 0 30px 30px;
+   border: 1px solid #999;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .card-body {
     color: black;
     display: block;
@@ -151,6 +158,16 @@
 
 .educationAbroadItemWrapper .educationAbroadItem .externalLink {
     padding-left: 20px;
+}
+
+a.programItemExternalWebsiteLink {
+   background: #a00;
+   padding: 10px 15px;
+   color: #fff;
+   margin: 15px 0;
+   display: inline-block;
+   border-radius: 50px;
+   text-decoration: none;
 }
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
