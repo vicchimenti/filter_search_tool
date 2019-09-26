@@ -92,7 +92,7 @@ $(document).ready(function () {
                     });
                 });
             // Delay the change function
-        }, 10);
+            }, 10);
         });
     });
 
