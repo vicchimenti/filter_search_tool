@@ -133,8 +133,8 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
-  document.write('<div class="programCity"><h5>' + city + '</h5></div>');
-  document.write('<div class="descriptionWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><p class="programDescription">' + generalDescription + '</p></div>');
+  // document.write('<div class="programCity"><h5>' + city + '</h5></div>');
+  document.write('<div class="descriptionWrapper"><figure><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption>' + city + '</figcaption></figure><p class="programDescription">' + generalDescription + '</p></div>');
   document.write('</div>');
 
   /* -- Write the collapsible body -- */
