@@ -1,7 +1,7 @@
 /***
 *   Education Abroad Program JavaScript
 *   Victor Chimenti MSCS 2020
-*   Last Modified 20190926
+*   Last Modified 20190927
 *
 */
 
@@ -133,7 +133,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
-  document.write('<div class="destinations"><h5>Destination: </h5><ul class="destination">' + listOfDestinations + '</ul></div>');
+  document.write('<div class="destinations"><h5>Destination: "' + destination + '"</h5></div>');
   document.write('<div class="descriptionWrapper"><figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption class="programImageCaption">' + city + '</figcaption></figure><p class="programDescription">' + generalDescription + '</p></div>');
   document.write('</div>');
 
