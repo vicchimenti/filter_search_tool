@@ -111,6 +111,10 @@
     display: none;
 }
 
+.programDestination {
+    padding-left: 10px;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
     color: black;
     display: block;
