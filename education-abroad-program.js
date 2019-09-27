@@ -43,7 +43,7 @@ try {
 
   /* parse the list of destinations, add <li> tags*/
   if (destination != "") {
-    var arrayOfDestinations = destination.split(', ');
+    var arrayOfDestinations = destination.split(',');
     for (i=0; i < arrayOfDestinations.length; i++) {
       listOfDestinations += '<li>' + arrayOfDestinations[i] + '</li>';
     }
@@ -168,7 +168,6 @@ try {
   /* -- Write Program Level 4 Details --*/
   document.write('<div class="row levelFour">');
   document.write('<div class="col-xs-12 programDetails features"><h3>Features</h3><ul class="feature">' + listOfFeatures + '</ul></div>');
-  document.write('<div class="col-xs-12 programDetails fieldOfStudy"><h3>Field of Study</h3><ul class="field">' + listOfStudyAreas + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 5 Details --*/
   document.write('<div class="row levelFive">');
