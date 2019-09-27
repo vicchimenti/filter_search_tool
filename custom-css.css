@@ -120,13 +120,18 @@
     text-decoration: none;
 }
 
+.programDescription {
+    margin: 5px;
+    padding: 5px;
+}
+
 figure {
+    border: 1px solid #999;
     display: inline-block;
     float: right;
 }
 
 figure img {
-    border: 1px solid #999;
     padding: 15px 15px 10px 15px;
     vertical-align: top;
 }
