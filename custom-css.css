@@ -116,6 +116,13 @@ h5.programDestination {
     padding-left: 10px;
 }
 
+@media (max-width:767.999px) {
+    h5.programDestination {
+        padding-left: 30px;
+    }
+}
+
+
 .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
     color: black;
     display: block;
