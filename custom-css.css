@@ -63,6 +63,7 @@
 
 .educationAbroadItemWrapper .educationAbroadItem .card {
     height: auto;
+
     padding: 0 20px 30px 10px;
 }
 
@@ -147,6 +148,12 @@ figure figcaption.programImageCaption {
     }
 }
 
+@media (max-width:767.999px) {
+    .educationAbroadItemWrapper .educationAbroadItem .descriptionWrapper {
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+    }
+}
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body {
     color: black;
