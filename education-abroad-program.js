@@ -151,17 +151,16 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row one">');
-  // document.write('<div class="col-xs-12 col-sm-3 programDetails destinations"><h3>Destination</h3><ul class="destination">' + listOfDestinations + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-3 programDetails fees"><h3>Fees</h3><ul class="programFee">' + listOfProgramFees + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-3 programDetails gradePoint"><h3>GPA</h3><ul class="gpa"> ' + listOfGPA + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-3 programDetails types"><h3>Type</h3><ul class="programType"> ' + listOfTypes + '</ul></div>');
+  document.write('<div class="col-xs-12 col-sm-3 programDetails housingAccommodations"><h3>Housing</h3><ul class="housing"> ' + listOfHousing + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 2 Summary Stats --*/
   document.write('<div class="row two">');
-  document.write('<div class="col-xs-12 col-sm-6 col-md-3 programDetails housingAccommodations"><h3>Housing</h3><ul class="housing"> ' + listOfHousing + '</ul></div>');
-  document.write('<div class="col-xs-12 col-sm-6 col-md-3 programDetails languages"><h3>Language</h3><ul class="language">' + listOfLanguages + '</ul></div>');
-  document.write('<div class="col-xs-12 col-sm-6 col-md-3 programDetails providers"><h3>Providers</h3><ul class="provider">' + listOfProviders + '</ul></div>');
-  document.write('<div class="col-xs-12 col-sm-6 col-md-3 programDetails terms"><h3>Term</h3><ul class="term">' + listOfTerms + '</ul></div>');
+  document.write('<div class="col-xs-12 col-sm-4 programDetails languages"><h3>Language</h3><ul class="language">' + listOfLanguages + '</ul></div>');
+  document.write('<div class="col-xs-12 col-sm-4 programDetails providers"><h3>Providers</h3><ul class="provider">' + listOfProviders + '</ul></div>');
+  document.write('<div class="col-xs-12 col-sm-4 programDetails terms"><h3>Term</h3><ul class="term">' + listOfTerms + '</ul></div>');
   document.write('</div>');
   /* -- Write Program Level 3 Details --*/
   document.write('<div class="row three">');
