@@ -77,7 +77,7 @@
     display: inline-block;
     line-height: 20px;
     min-height: 60px;
-    padding: 20px 20px 5px 15px;
+    padding: 20px 20px 0 10px;
     text-align: left;
     text-decoration: none;
 }
@@ -85,7 +85,7 @@
 .educationAbroadItemWrapper .educationAbroadItem button span.programTitleBox {
     display: inline-block;
     font-size: 2.0rem;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 .educationAbroadItemWrapper .educationAbroadItem button:hover span.programTitle {
@@ -112,6 +112,7 @@
 }
 
 .programDestination {
+    font-family: sans-serif;
     padding-left: 10px;
 }
 
