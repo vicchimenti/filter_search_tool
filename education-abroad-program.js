@@ -133,7 +133,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>\n');
-  // document.write('<div class="programCity"><h5>' + city + '</h5></div>');
+  document.write('<div class="destinations"><h5>Destination: </h5><ul class="destination">' + listOfDestinations + '</ul></div>');
   document.write('<div class="descriptionWrapper"><figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption class="programImageCaption">' + city + '</figcaption></figure><p class="programDescription">' + generalDescription + '</p></div>');
   document.write('</div>');
 
@@ -151,7 +151,7 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row one">');
-  document.write('<div class="col-xs-12 col-sm-3 programDetails destinations"><h3>Destination</h3><ul class="destination">' + listOfDestinations + '</ul></div>');
+  // document.write('<div class="col-xs-12 col-sm-3 programDetails destinations"><h3>Destination</h3><ul class="destination">' + listOfDestinations + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-3 programDetails fees"><h3>Fees</h3><ul class="programFee">' + listOfProgramFees + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-3 programDetails gradePoint"><h3>GPA</h3><ul class="gpa"> ' + listOfGPA + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-3 programDetails types"><h3>Type</h3><ul class="programType"> ' + listOfTypes + '</ul></div>');
