@@ -111,7 +111,7 @@
     display: none;
 }
 
-.programDestination {
+.card .cardHeader .programDestination {
     font-family: sans-serif;
     padding-left: 10px;
 }
