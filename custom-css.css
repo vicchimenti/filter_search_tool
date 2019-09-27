@@ -120,26 +120,31 @@
     text-decoration: none;
 }
 
-.programDescription {
-    margin: 5px;
-    padding: 5px;
-}
-
-figure {
+figure.programImageWrapper {
     border: 1px solid #999;
     display: inline-block;
     float: right;
+    margin: 0 0 10px 20px;
 }
 
-figure img {
+figure img.programImage {
     padding: 15px 15px 10px 15px;
     vertical-align: top;
 }
 
-figure figcaption {
+figure figcaption.programImageCaption {
     padding-bottom: 5px;
     text-align: center;
 }
+
+@media (max-width:767.999px) {
+    figure.programImageWrapper {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+}
+
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body {
     color: black;
