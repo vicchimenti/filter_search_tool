@@ -120,20 +120,19 @@
     text-decoration: none;
 }
 
-.descriptionWrapper img {
-   padding: 10px;
-   margin: 0 0 30px 30px;
-   border: 1px solid #999;
-}
-
 figure {
     display: inline-block;
     float: right;
 }
+
 figure img {
+    border: 1px solid #999;
+    padding: 15px 15px 10px 15px;
     vertical-align: top;
 }
+
 figure figcaption {
+    padding-bottom: 5px;
     text-align: center;
 }
 
