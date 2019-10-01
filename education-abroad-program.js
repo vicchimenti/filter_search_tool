@@ -115,18 +115,6 @@ try {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   /*  -- Parse out Runtime Generated Content IDs -- */
   var cardHeader = '<div class="card-header" id="heading<t4 type=\'meta\' meta=\'content_id\' />">';
   var buttonLink = '<button class="btn btn-link" type="button" id="button<t4 type=\'meta\' meta=\'content_id\' />" data-toggle="collapse" data-target="#collapse<t4 type=\'meta\' meta=\'content_id\' />" aria-expanded="false" aria-controls="collapse<t4 type=\'meta\' meta=\'content_id\' />">';
@@ -147,8 +135,8 @@ try {
 
   /* -- Write Program Cards--*/
   document.write('<div class="card-body">');
+  document.write('<div class="destinations" style="display: none;"><ul class="destination">' + listOfDestinations + '</ul></div>');
   document.write('<div class="container-fluid">');
-  document.write('<div class="programDetails destinations" style="display: none;"><ul class="destination">' + listOfDestinations + '</ul></div>');
 
   /* -- Write Program Link- IF not null --*/
   if (externalWebsiteLink != "") {
