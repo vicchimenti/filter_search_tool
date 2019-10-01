@@ -32,7 +32,7 @@ try {
 
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="accordion educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
-  var endingHTML = '</div></div>\n';
+  var endingHTML = '</div></div>';
 
   /* parse the list of destinations, add <li> tags*/
   if (destination != "") {
