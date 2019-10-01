@@ -143,6 +143,8 @@ try {
   /* -- Write Program Link- IF not null --*/
   if (externalWebsiteLink != "") {
       document.write('<div class="row externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
+  } else {
+      document.write('<div class="row externalLink" style="display: none;"><h1>No Link Provided</h1></div>');
   }
 
   /* -- Write Program Level 1 Summary Stats --*/
@@ -174,12 +176,16 @@ try {
       document.write('<div class="row levelSix">');
       document.write('<div class="col-xs-12 programDetails budget"><h3>Program Budgets</h3><p>' + budget + '</p></div>');
       document.write('</div>');
+  } else {
+      document.write('<div class="row levelSix budget" style="display: none;"><h1>No Budget Provided</h1></div>');
   }
   /* -- Write Program Level 7 Details --*/
   if (prerequisites != "") {
       document.write('<div class="row levelSeven">');
       document.write('<div class="col-xs-12 programDetails prerequisites"><h3>Additional Prerequisites</h3><p>' + prerequisites + '</p></div>');
       document.write('</div>');
+  } else {
+      document.write('<div class="row levelSeven prerequisites" style="display: none;"><h1>No Prerequisites Provided</h1></div>');
   }
 
 
