@@ -3,6 +3,7 @@ try {
   var program = content.get("Program Name");
   var destination = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Destination' output='normal' display_field='value' />");
   var listOfDestinations = "";
+  var dest ="";
   var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Education Abroad Program Image' output='normal' formatter='path/*' />");
   var altImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Alt Image' output='normal' modifiers='striptags,htmlentities' />");
   var city = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='City' output='normal' display_field='value' />");
@@ -37,6 +38,7 @@ try {
   /* parse the list of destinations, add <li> tags*/
   if (destination != "") {
     var arrayOfDestinations = destination.split(',');
+    dest = arrayOfDestinations[0];
     for (i=0; i < arrayOfDestinations.length; i++) {
       listOfDestinations += '<li>' + arrayOfDestinations[i] + '</li>';
     }
@@ -126,7 +128,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, cardHeader));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, buttonLink));
   document.write('<span class="programTitleBox"><i class="fas fa-minus"></i><i class="fas fa-plus"></i><span class="programTitle">' + program + '</span></span></button>');
-  document.write('<div class="programDestinationWrapper"><h5 class="programDestination">Destination: ' + arrayOfDestinations[0] + '</h5></div>');
+  document.write('<div class="programDestinationWrapper"><h5 class="programDestination">Destination: ' + dest + '</h5></div>');
   document.write('<div class="descriptionWrapper"><figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption class="programImageCaption">' + city + '</figcaption></figure><p class="programDescription">' + generalDescription + '</p></div>');
   document.write('</div>');
 
