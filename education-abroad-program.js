@@ -1,10 +1,3 @@
-/***
-*   Education Abroad Program JavaScript
-*   Victor Chimenti MSCS 2020
-*   Last Modified 20190927
-*
-*/
-
 try {
   /* -- Store all the things -- */
   var program = content.get("Program Name");
