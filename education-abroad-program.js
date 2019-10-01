@@ -30,7 +30,6 @@ try {
   var prerequisites = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Prerequisites' output='normal' display_field='value' />");
 
 
-
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="accordion educationAbroadItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="accordion-group educationAbroadItem standardContent"><t4 type=\'meta\' meta=\'html_anchor\' />';
   var endingHTML = '</div></div>';
@@ -43,14 +42,6 @@ try {
     }
   }
 
-  /* parse the list of academic terms, add <li> tags*/
-  if (term != "") {
-    var arrayOfTerms = term.split(',');
-    for (i=0; i < arrayOfTerms.length; i++) {
-      listOfTerms += '<li>' + arrayOfTerms[i] + '</li>';
-    }
-  }
-
   /* parse the list of fees, add <li> tags*/
   if (programFee != "") {
     var arrayOfProgramFees = programFee.split(',');
@@ -59,19 +50,11 @@ try {
     }
   }
 
-  /* parse the list of study areas, add <li> tags*/
-  if (fieldOfStudy != "") {
-    var arrayOfStudyAreas = fieldOfStudy.split(',');
-    for (i=0; i < arrayOfStudyAreas.length; i++) {
-      listOfStudyAreas += '<li>' + arrayOfStudyAreas[i] + '</li>';
-    }
-  }
-
-  /* parse the list of features, add <li> tags*/
-  if (features != "") {
-    var arrayOfFeatures = features.split(',');
-    for (i=0; i < arrayOfFeatures.length; i++) {
-      listOfFeatures += '<li>' + arrayOfFeatures[i] + '</li>';
+  /* parse the list of gpa ranges, add <li> tags*/
+  if (gpa != "") {
+    var arrayOfGPA = gpa.split(',');
+    for (i=0; i < arrayOfGPA.length; i++) {
+      listOfGPA += '<li>' + arrayOfGPA[i] + '</li>';
     }
   }
 
@@ -91,6 +74,14 @@ try {
     }
   }
 
+  /* parse the list of providers, add <li> tags*/
+  if (provider != "") {
+    var arrayOfProviders = provider.split(',');
+    for (i=0; i < arrayOfProviders.length; i++) {
+      listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
+    }
+  }
+
   /* parse the list of housing, add <li> tags*/
   if (housing != "") {
     var arrayOfHousing = housing.split(',');
@@ -99,21 +90,41 @@ try {
     }
   }
 
-  /* parse the list of gpa ranges, add <li> tags*/
-  if (gpa != "") {
-    var arrayOfGPA = gpa.split(',');
-    for (i=0; i < arrayOfGPA.length; i++) {
-      listOfGPA += '<li>' + arrayOfGPA[i] + '</li>';
+  /* parse the list of academic terms, add <li> tags*/
+  if (term != "") {
+    var arrayOfTerms = term.split(',');
+    for (i=0; i < arrayOfTerms.length; i++) {
+      listOfTerms += '<li>' + arrayOfTerms[i] + '</li>';
     }
   }
 
-  /* parse the list of providers, add <li> tags*/
-  if (provider != "") {
-    var arrayOfProviders = provider.split(',');
-    for (i=0; i < arrayOfProviders.length; i++) {
-      listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
+  /* parse the list of features, add <li> tags*/
+  if (features != "") {
+    var arrayOfFeatures = features.split(',');
+    for (i=0; i < arrayOfFeatures.length; i++) {
+      listOfFeatures += '<li>' + arrayOfFeatures[i] + '</li>';
     }
   }
+
+  /* parse the list of study areas, add <li> tags*/
+  if (fieldOfStudy != "") {
+    var arrayOfStudyAreas = fieldOfStudy.split(',');
+    for (i=0; i < arrayOfStudyAreas.length; i++) {
+      listOfStudyAreas += '<li>' + arrayOfStudyAreas[i] + '</li>';
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   /*  -- Parse out Runtime Generated Content IDs -- */
