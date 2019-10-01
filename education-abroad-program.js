@@ -170,13 +170,13 @@ try {
   /* -- Write Program Level 6 Details --*/
   if (budget != "") {
       document.write('<div class="row levelSix">');
-      document.write('<div class="col-xs-12 programDetails budget"><h3>Program Budgets</h3>' + budget + '</div>');
+      document.write('<div class="col-xs-12 programDetails budget"><h3>Program Budgets</h3><p>' + budget + '</p></div>');
       document.write('</div>');
   }
   /* -- Write Program Level 7 Details --*/
   if (prerequisites != "") {
       document.write('<div class="row levelSeven">');
-      document.write('<div class="col-xs-12 programDetails prerequisites"><h3>Additional Prerequisites</h3>' + prerequisites + '</div>');
+      document.write('<div class="col-xs-12 programDetails prerequisites"><h3>Additional Prerequisites</h3><p>' + prerequisites + '</p></div>');
       document.write('</div>');
   }
 
