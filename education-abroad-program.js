@@ -29,6 +29,7 @@ try {
   var listOfStudyAreas = "";
   var budget = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Budgets' output='normal' display_field='value' />");
   var prerequisites = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Prerequisites' output='normal' display_field='value' />");
+  var keyWords = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Keywords' output='normal' display_field='value' />");
 
 
   /* -- Prepare all the things -- */
@@ -177,7 +178,7 @@ try {
       document.write('<div class="col-xs-12 programDetails budget"><h3>Program Budgets</h3><p>' + budget + '</p></div>');
       document.write('</div>');
   } else {
-      document.write('<div class="row levelSix budget" style="display: none"><h1>No Budget Provided</h1></div>');
+      document.write('<div class="row levelSix budget" style="display: none"><h5>No Budget Provided</h5></div>');
   }
   /* -- Write Program Level 7 Details --*/
   if (prerequisites != "") {
@@ -185,7 +186,15 @@ try {
       document.write('<div class="col-xs-12 programDetails prerequisites"><h3>Additional Prerequisites</h3><p>' + prerequisites + '</p></div>');
       document.write('</div>');
   } else {
-      document.write('<div class="row levelSeven prerequisites" style="display: none"><h1>No Prerequisites Provided</h1></div>');
+      document.write('<div class="row levelSeven prerequisites" style="display: none"><h5>No Prerequisites Provided</h5></div>');
+  }
+  /* -- Write Program Level 8 Details --*/
+  if (keyWords != "") {
+      document.write('<div class="row levelEight">');
+      document.write('<div class="col-xs-12 programDetails keyWords" style="display: none"><h3>Keywords</h3><p>' + keyWords + '</p></div>');
+      document.write('</div>');
+  } else {
+      document.write('<div class="row levelEight keyWords" style="display: none"><h5>No Keywords Provided</h5></div>');
   }
 
 
