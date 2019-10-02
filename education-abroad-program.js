@@ -16,10 +16,15 @@ try {
   var programType = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Program Type' output='normal' display_field='value' />");
   var listOfTypes = "";
   /*   --- Print programType values   --- */
+  document.write("<h2 class='debug-programType'>'" + programType + "'</h2>");
+  document.write("<h2 class='debug-listOfTypes'>'" + listOfTypes + "'</h2>");
   var language = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Language' output='normal' display_field='value' />");
   var listOfLanguages = "";
   var provider = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Provider' output='normal' display_field='value' />");
   var listOfProviders = "";
+  /*   --- Print provider values   --- */
+  document.write("<h2 class='debug-provider'>'" + provider + "'</h2>");
+  document.write("<h2 class='debug-listOfProviders'>'" + listOfProviders + "'</h2>");
   var housing = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Housing Accommodations' output='normal' display_field='value' />");
   var listOfHousing = "";
   var term = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Term' output='normal' display_field='value' />");
@@ -67,6 +72,9 @@ try {
     for (i=0; i < arrayOfTypes.length; i++) {
       listOfTypes += '<li>' + arrayOfTypes[i] + '</li>';
     }
+    /*   --- Print programType values   --- */
+    document.write("<h2 class='debug-programType2'>'" + programType + "'</h2>");
+    document.write("<h2 class='debug-listOfTypes2'>'" + listOfTypes + "'</h2>");
   }
 
   /* parse the list of languages, add <li> tags*/
@@ -83,6 +91,9 @@ try {
     for (i=0; i < arrayOfProviders.length; i++) {
       listOfProviders += '<li>' + arrayOfProviders[i] + '</li>';
     }
+    /*   --- Print provider values   --- */
+    document.write("<h2 class='debug-provider2'>'" + provider + "'</h2>");
+    document.write("<h2 class='debug-listOfProviders2'>'" + listOfProviders + "'</h2>");
   }
 
   /* parse the list of housing, add <li> tags*/
