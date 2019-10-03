@@ -202,7 +202,7 @@ figure figcaption.programImageCaption {
     padding-left: 20px;
 }
 
-a.programItemExternalWebsiteLink {
+/* a.programItemExternalWebsiteLink {
    background: #a00;
    padding: 10px 15px;
    color: #fff;
@@ -210,10 +210,10 @@ a.programItemExternalWebsiteLink {
    display: inline-block;
    border-radius: 50px;
    text-decoration: none;
-}
+} */
 
-a.programItemExternalWebsiteLink:after {
-   color: #000000;
+.boxlinks a.programItemExternalWebsiteLink: {
+   width: max-content;
 }
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
