@@ -1,9 +1,8 @@
 /***
-*   Victor Chimenti
-*   MSCS 2020
+*   Victor Chimenti MSCS 2020
 *   Education Abroad Program
-*   JavaScript
 *   Last Modified: 20191003
+*   JavaScript
 *
 */
 

@@ -212,9 +212,20 @@ figure figcaption.programImageCaption {
    text-decoration: none;
 } */
 
-.boxlinks a.programItemExternalWebsiteLink: {
+.boxlinks a.programItemExternalWebsiteLink {
    width: max-content;
 }
+
+.boxlinks a.programItemExternalWebsiteLink:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.boxlinks a.programItemExternalWebsiteLink:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
     padding-left: 20px;
