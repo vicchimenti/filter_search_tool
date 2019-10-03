@@ -202,28 +202,26 @@ figure figcaption.programImageCaption {
     padding-left: 20px;
 }
 
-/* a.programItemExternalWebsiteLink {
-   background: #a00;
-   padding: 10px 15px;
-   color: #fff;
-   margin: 15px 0;
-   display: inline-block;
-   border-radius: 50px;
-   text-decoration: none;
-} */
-
 .boxlinks a.programItemExternalWebsiteLink {
    width: max-content;
 }
 
-.boxlinks a.programItemExternalWebsiteLink:focus {
-    color: #23527c;
+.educationAbroadItemWrapper .standardContent  .boxlinks a.programItemExternalWebsiteLink:focus {
+    background: #088099;
+    color: #fffff;
     text-decoration: underline;
 }
 
-.boxlinks a.programItemExternalWebsiteLink:hover {
-    color: #23527c;
+.educationAbroadItemWrapper .standardContent  .boxlinks a.programItemExternalWebsiteLink:hover {
+    background: #088099;
+    color: #fffff;
     text-decoration: underline;
+}
+
+.educationAbroadItemWrapper .standardContent  .boxlinks a.programItemExternalWebsiteLink:visited {
+    background: #088099;
+    color: #fffff;
+    text-decoration: none;
 }
 
 
