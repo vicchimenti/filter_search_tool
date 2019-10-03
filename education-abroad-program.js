@@ -190,6 +190,7 @@ try {
   }
   /* -- Write Program Level 8 Details --*/
   if (keyWords != "") {
+      /* -- Keywords is a hidden field that is used to add searchable keywords when creating a program item but is not displayed on the live page -- */
       document.write('<div class="row levelEight">');
       document.write('<div class="col-xs-12 programDetails keyWords" style="display: none"><h5>Keywords</h5><p>' + keyWords + '</p></div>');
       document.write('</div>');
