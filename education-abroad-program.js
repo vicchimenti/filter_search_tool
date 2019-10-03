@@ -143,7 +143,7 @@ try {
 
   /* -- Write Program Link- IF not null --*/
   if (externalWebsiteLink != "") {
-      document.write('<div class="row externalLink"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
+      document.write('<div class="row externalLink boxlinks"><a class="programItemExternalWebsiteLink" target="_blank" href="' + externalWebsiteLink + '">Visit Program Website</a></div>');
   } else {
       document.write('<div class="row externalLink" style="display: none"><h1>No Link Provided</h1></div>');
   }

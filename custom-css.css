@@ -212,6 +212,10 @@ a.programItemExternalWebsiteLink {
    text-decoration: none;
 }
 
+a.programItemExternalWebsiteLink:after {
+   color: #000000;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
     padding-left: 20px;
 }
