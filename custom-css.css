@@ -222,6 +222,10 @@ a.programItemExternalWebsiteLink {
     padding: 5px;
 }
 
+.educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails h5 {
+    font-family: sans-serif;
+}
+
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails ul li {
     background: #4d4d4d;
     color: #ffffff;
