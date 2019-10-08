@@ -208,21 +208,21 @@ figure figcaption.programImageCaption {
     width: max-content;
 }
 
-.educationAbroadItemWrapper .standardContent  .boxlinks a.programItemExternalWebsiteLink:focus {
+.educationAbroadItemWrapper .standardContent .boxlinks a.programItemExternalWebsiteLink:focus {
     background: #088099;
     color: #fff;
     text-decoration: underline;
 }
 
-.educationAbroadItemWrapper .standardContent  .boxlinks a.programItemExternalWebsiteLink:hover {
+.educationAbroadItemWrapper .standardContent .boxlinks a.programItemExternalWebsiteLink:hover {
     background: #088099;
     color: #fff;
     text-decoration: underline;
 }
 
-/* .educationAbroadItemWrapper .standardContent  .boxlinks a.programItemExternalWebsiteLink:visited {
-    background: #088099;
-} */
+.standardContent .boxlinks a.programItemExternalWebsiteLink:visited {
+    text-decoration: none;
+}
 
 
 .educationAbroadItemWrapper .educationAbroadItem .card-body .programDetails {
