@@ -9,9 +9,9 @@
     }
 }
 
-@media (min-width:767.999px) {
-    #filterField {
-        padding: 15px 0 30px 0;
+@media (min-width:767.999px) and (max-width: 991.999px) {
+    #zoneA .col-sm-12 .standardContent #filterField.standardContent {
+        padding: 15px 0 15px 0;
         border-top: 0;
     }
 }
