@@ -46,6 +46,7 @@
     width: 100%;
 }
 
+/* TODO: add hideByFeature , remove hideByLanguage */
 .hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing, .hideResultsMessage {
     display: none;
 }
