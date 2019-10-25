@@ -1,13 +1,13 @@
-<script>
-
 /***
 *   Education Abroad Program Filter Search Script
 *   Victor Chimenti MSCS 2020
-*   Last Modified 20190927
+*   Last Modified 20191025
 *   jQuery
 *
 *
 */
+
+<script>
 
 
 //   ***   Keyword Search   ***   //
