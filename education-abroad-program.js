@@ -159,7 +159,7 @@ try {
 
   /* -- Write Program Level 1 Summary Stats --*/
   document.write('<div class="row levelOne">');
-  document.write('<div class="col-xs-12 col-sm-4 programDetails fees"><h5>Fees</h5><ul class="programFee">' + listOfProgramFees + '</ul></div>');
+  document.write('<div class="col-xs-12 col-sm-4 programDetails fees"><h5>SU Program Fees</h5><ul class="programFee">' + listOfProgramFees + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-4 programDetails gradePoint"><h5>GPA</h5><ul class="gpa"> ' + listOfGPA + '</ul></div>');
   document.write('<div class="col-xs-12 col-sm-4 programDetails types"><h5>Type</h5><ul class="programType"> ' + listOfTypes + '</ul></div>');
   document.write('</div>');
