@@ -30,7 +30,7 @@ $(function () {
                     });
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
@@ -77,7 +77,7 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
@@ -140,7 +140,7 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
@@ -181,7 +181,7 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
@@ -203,26 +203,26 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#SelectBox-ByLanguage').change(function () {
+                $('#SelectBox-ByFeature').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
-                        $('.language').filter(function(i,e) {
+                        $('.feature').filter(function(i,e) {
                             var value = $(this).text();
                             if (value.match(key)) {
-                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByLanguage');
+                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFeature');
                             } else {
-                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByLanguage');
+                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFeature');
                             }
                         });
                     } else {
-                        $('.educationAbroadItemWrapper').removeClass('hideByLanguage');
+                        $('.educationAbroadItemWrapper').removeClass('hideByFeature');
                     }
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
@@ -263,7 +263,7 @@ $(function () {
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByLanguage, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
