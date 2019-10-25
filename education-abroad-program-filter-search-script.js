@@ -197,8 +197,7 @@ $(function () {
     });
 });
 
-// TODO: change to feature search from language search
-//   ***   Language Filter   ***   //
+//   ***   Feature Filter   ***   //
 $(function () {
     $(window).load(function () {
         setTimeout(function () {
