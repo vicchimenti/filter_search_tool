@@ -1,7 +1,7 @@
 /***
 *   Victor Chimenti MSCS 2020
 *   Education Abroad Program
-*   Last Modified: 20191025
+*   Last Modified: 20191212
 *   JavaScript
 *
 *
@@ -185,10 +185,12 @@ try {
   /* -- Write Program Level 6 Details --*/
   if (budget != "") {
       document.write('<div class="row levelSix">');
-      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>' + budget + '</p></div>');
+      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>' + budget + '</p><p>'Students pay SU Tuition + Program Fee'</p></div>');
       document.write('</div>');
   } else {
-      document.write('<div class="row levelSix budget" style="display: none"><h5>No Budget Provided</h5></div>');
+      document.write('<div class="row levelSix">');
+      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>'Students pay SU Tuition + Program Fee'</p></div>');
+      document.write('</div>');
   }
   /* -- Write Program Level 7 Details --*/
   if (prerequisites != "") {
