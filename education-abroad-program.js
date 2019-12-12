@@ -185,11 +185,11 @@ try {
   /* -- Write Program Level 6 Details --*/
   if (budget != "") {
       document.write('<div class="row levelSix">');
-      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>' + budget + '</p><p>'Students pay SU Tuition + Program Fee'</p></div>');
+      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>' + budget + '</p></div>');
       document.write('</div>');
   } else {
       document.write('<div class="row levelSix">');
-      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>'Students pay SU Tuition + Program Fee'</p></div>');
+      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>Students pay SU Tuition + Program Fee</p></div>');
       document.write('</div>');
   }
   /* -- Write Program Level 7 Details --*/
@@ -209,6 +209,10 @@ try {
   } else {
       document.write('<div class="row levelEight keyWords" style="display: none"><h5>No Keywords Provided</h5></div>');
   }
+  /* -- Write Level 9 Disclaimer --*/
+  document.write('<div class="row levelNine">');
+  document.write('<div class="col-xs-12 programDetails disclaimer"><p>Students pay SU Tuition + Program Fee</p></div>');
+  document.write('</div>');
 
 
   /* -- Write Closing Tags -- */
