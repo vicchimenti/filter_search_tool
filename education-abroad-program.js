@@ -207,10 +207,6 @@ try {
   } else {
       document.write('<div class="row levelEight keyWords" style="display: none"><h5>No Keywords Provided</h5></div>');
   }
-  /* -- Write Level 9 Disclaimer --*/
-  document.write('<div class="row levelNine">');
-  document.write('<div class="col-xs-12 programDetails disclaimer"><h5>Fee Disclaimer</h5><p>Students pay SU Tuition + Program Fee</p></div>');
-  document.write('</div>');
 
 
   /* -- Write Closing Tags -- */
