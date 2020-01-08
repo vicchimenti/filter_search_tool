@@ -238,31 +238,31 @@ $(function () {
 });
 
 
-//   ***   Housing Filter   ***   //
+//   ***   Field of Study Filter   ***   //
 $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#SelectBox-ByHousing').change(function () {
+                $('#SelectBox-ByFieldofStudy').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
                     if (key) {
-                        $('.housing').filter(function(i,e) {
+                        $('.fieldOfStudy').filter(function(i,e) {
                             var value = $(this).text();
                             if (value.match(key)) {
-                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousing');
+                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByFieldOfStudy');
                             } else {
-                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousing');
+                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByFieldOfStudy');
                             }
                         });
                     } else {
-                        $('.educationAbroadItemWrapper').removeClass('hideByHousing');
+                        $('.educationAbroadItemWrapper').removeClass('hideByFieldOfStudy');
                     }
                     // check results for null
                     $(function resultsMessage() {
                         // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
+                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByFieldOfStudy');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
