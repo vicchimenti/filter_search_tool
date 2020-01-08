@@ -243,7 +243,7 @@ $(function () {
     $(window).load(function () {
         setTimeout(function () {
             $(function() {
-                $('#SelectBox-ByFieldofStudy').change(function () {
+                $('#SelectBox-ByFieldOfStudy').change(function () {
                     // Assign Search Key
                     var key = $(this).val();
                     // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
