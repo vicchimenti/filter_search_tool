@@ -185,7 +185,7 @@ try {
   /* -- Write Program Level 6 Details --*/
   if (budget != "") {
       document.write('<div class="row levelSix">');
-      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5><p>' + budget + '</p></div>');
+      document.write('<div class="col-xs-12 programDetails budget"><h5>Program Budgets</h5>' + budget + '</div>');
       document.write('</div>');
   } else {
       document.write('<div class="row levelSix budget" style="display: none"><h5>No Budget Provided</h5></div>');
