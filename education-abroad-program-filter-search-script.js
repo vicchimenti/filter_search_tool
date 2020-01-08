@@ -1,7 +1,7 @@
 /***
 *   Education Abroad Program Filter Search Script
 *   Victor Chimenti MSCS 2020
-*   Last Modified 20191025
+*   Last Modified 20200108
 *   jQuery
 *
 *
@@ -263,47 +263,6 @@ $(function () {
                     $(function resultsMessage() {
                         // assign array of currently visible content items
                         var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByFieldOfStudy');
-                        // check to see if array is empty
-                        if (visibleItems.length == 0) {
-                            // when array is empty show the results message
-                            $('.noResultsToShow').removeClass('hideResultsMessage');
-                        } else {
-                            // when array has content items suppress the results message
-                            $('.noResultsToShow').addClass('hideResultsMessage');
-                        }
-                    });
-                });
-            });
-        }, 10);
-    });
-});
-
-
-//   ***   Housing Filter   ***   //
-$(function () {
-    $(window).load(function () {
-        setTimeout(function () {
-            $(function() {
-                $('#SelectBox-ByHousing').change(function () {
-                    // Assign Search Key
-                    var key = $(this).val();
-                    // If Search Key is Not Null then Compare to the Term List Items in Each Content Item
-                    if (key) {
-                        $('.housing').filter(function(i,e) {
-                            var value = $(this).text();
-                            if (value.match(key)) {
-                                $(this).parents('.educationAbroadItemWrapper').removeClass('hideByHousing');
-                            } else {
-                                $(this).parents('.educationAbroadItemWrapper').addClass('hideByHousing');
-                            }
-                        });
-                    } else {
-                        $('.educationAbroadItemWrapper').removeClass('hideByHousing');
-                    }
-                    // check results for null
-                    $(function resultsMessage() {
-                        // assign array of currently visible content items
-                        var visibleItems = $('.educationAbroadItemWrapper').not('.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing');
                         // check to see if array is empty
                         if (visibleItems.length == 0) {
                             // when array is empty show the results message
