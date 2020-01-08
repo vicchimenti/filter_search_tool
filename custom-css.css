@@ -46,7 +46,7 @@
     width: 100%;
 }
 
-.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByHousing, .hideResultsMessage {
+.hideByText, .hideByDestination, .hideByTerm, .hideByProgramFee, .hideByFeature, .hideByFieldOfStudy, .hideResultsMessage {
     display: none;
 }
 
