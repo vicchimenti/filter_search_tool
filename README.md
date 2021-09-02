@@ -1,3 +1,3 @@
-# filter_search_tool
+# Filter Search Tool
 
-Education Abroad Program Application
+Education Abroad Program Search Application
