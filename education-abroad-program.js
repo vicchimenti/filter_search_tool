@@ -51,7 +51,7 @@ try {
     var arrayOfDestinations = destination.split(',');
     dest = arrayOfDestinations[0];
     for (i=0; i < arrayOfDestinations.length; i++) {
-      listOfDestinations += '<li>' + arrayOfDestinations[i] + '</li>';
+      listOfDestinations += '<li>' + arrayOfDestinations[i].trim() + '</li>';
     }
   }
 
